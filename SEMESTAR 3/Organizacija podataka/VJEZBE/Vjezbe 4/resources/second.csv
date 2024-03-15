@@ -1,0 +1,45 @@
+!!zadatak2.Second
+autobus: {brojProdatihKarata: 30, cijena: 500.0, datumPolaska: '2023-11-12', mjestoDolaska: Kragujevac,
+  mjestoPolaska: Niš, peron: 3, planiranoVrijemeDolaska: '16:00', sifraRelacije: RS005,
+  vrijemePolaska: '13:45'}
+duration: {}
+!!zadatak2.Second
+autobus: {brojProdatihKarata: 60, cijena: 800.0, datumPolaska: '2023-11-12', mjestoDolaska: Beograd,
+  mjestoPolaska: Vranje, peron: 3, planiranoVrijemeDolaska: '16:00', sifraRelacije: RS009,
+  vrijemePolaska: '13:45'}
+duration: {}
+!!zadatak2.Second
+autobus: {brojProdatihKarata: 35, cijena: 800.0, datumPolaska: '2023-11-12', mjestoDolaska: Kragujevac,
+  mjestoPolaska: Niš, peron: 2, planiranoVrijemeDolaska: '09:45', sifraRelacije: RS002,
+  vrijemePolaska: '07:30'}
+duration: {}
+!!zadatak2.Second
+autobus: {brojProdatihKarata: 24, cijena: 1000.0, datumPolaska: '2023-11-12', mjestoDolaska: Vranje,
+  mjestoPolaska: Beograd, peron: 3, planiranoVrijemeDolaska: '16:00', sifraRelacije: RS008,
+  vrijemePolaska: '13:45'}
+duration: {}
+!!zadatak2.Second
+autobus: {brojProdatihKarata: 20, cijena: 900.0, datumPolaska: '2023-11-12', mjestoDolaska: Niš,
+  mjestoPolaska: Krusevac, peron: 3, planiranoVrijemeDolaska: '16:00', sifraRelacije: RS004,
+  vrijemePolaska: '13:45'}
+duration: {}
+!!zadatak2.Second
+autobus: {brojProdatihKarata: 19, cijena: 650.0, datumPolaska: '2023-11-12', mjestoDolaska: Niš,
+  mjestoPolaska: Kragujevac, peron: 3, planiranoVrijemeDolaska: '16:00', sifraRelacije: RS002,
+  vrijemePolaska: '13:45'}
+duration: {}
+!!zadatak2.Second
+autobus: {brojProdatihKarata: 45, cijena: 1000.0, datumPolaska: '2023-11-10', mjestoDolaska: Beograd,
+  mjestoPolaska: Novi Sad, peron: 4, planiranoVrijemeDolaska: '16:30', sifraRelacije: RS011,
+  vrijemePolaska: '14:00'}
+duration: {}
+!!zadatak2.Second
+autobus: {brojProdatihKarata: 30, cijena: 1200.0, datumPolaska: '2023-11-12', mjestoDolaska: Novi Pazar,
+  mjestoPolaska: Subotica, peron: 3, planiranoVrijemeDolaska: '16:00', sifraRelacije: RS007,
+  vrijemePolaska: '13:45'}
+duration: {}
+!!zadatak2.Second
+autobus: {brojProdatihKarata: 15, cijena: 800.0, datumPolaska: '2023-11-12', mjestoDolaska: Krusevac,
+  mjestoPolaska: Niš, peron: 3, planiranoVrijemeDolaska: '16:00', sifraRelacije: RS006,
+  vrijemePolaska: '13:45'}
+duration: {}

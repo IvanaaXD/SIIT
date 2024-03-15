@@ -1,0 +1,7 @@
+int* DynamicMatrix::operator[](int rowIndex) {
+    return matrix[rowIndex];
+}
+
+const int* DynamicMatrix::operator[](int rowIndex) const {
+    return matrix[rowIndex];
+}

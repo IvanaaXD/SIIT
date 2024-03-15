@@ -1,0 +1,236 @@
+Vremenska serija - opservacije koje su merene SEKVENCIJALNO PO VREMENU
+tj. kolekcija podataka koji su indeksirani po vremenu
+Diskretna vremenska serija - to sa čime mi radimo, merenja u nekom skupu trenutaka
+Kontinualna vremenska serija - merenja u nekom kontinualnom vremenskom intervalu (npr. audio snimak)
+
+CILJEVI ANALIZE VREMENSKIH SERIJA
+-> Analiza prošlosti (proučavanje oblika, rasklapanje na komponente, tumačenje serije i komponenti)
+-> Predikcija budućnosti (modelovanje procesa koji bi generisao datu vremensku seriju, predikcija za buducnost)
+
+INTERVALI PREDIKCIJE (interval gde se može nači vrednost) SE ŠIRE SA VREMENOM
+Zašto? Jer svaka naredna predikcija zavisi od prethodne, a svaka naša
+predikcija u budućnosti ne može biti 100% tačna
+
+Ne može biti tačna jer predviđamo VAN INTERVALA ZA KOJI IMAMO PODATKE - vršimo EKSTRAPOLACIJU
+(do sada smo vršili INTERPOLACIJU - predikcija unutar intervala za koji imamo podatke)
+EKSTRAPOLACIJA JE ZNAČAJNO TEŽA BAŠ ZBOG TE PROPAGACIJE GREŠKE
+
+Podatke kod kojih je redosled važan (kao ovde, gde je bitno da su podaci sortirani po vremenu)
+se zovu sekvencijalni ili sekvencijalno uređeni podaci
+
+KOMPONENTE VREMENSKIH SERIJA - Šabloni koji utiču na ponašanje vremenske serije
+Obično se mogu videti vizualizacijom vremenske serije, dok se izdvajanje vrši sa numeričkim alatima
+Četiri glavne komponente:
+
+TREND - tendencija da serija postepeno ali KONSTANTNO raste ili opada kroz dug period
+
+SEZONALNOST - fluktuacije koje se pojavljuju u kraćim vremenskim intervalima u periodu do godinu dana
+SEZONALNOST SE REDOVNO POJAVLJUJE I UVEK ISTO TRAJE
+
+CIKLIČNOST - fluktuacije koje se pojavljuju u dužim vremenskim rokovima
+CIKLIČNOST IMA ISTI OBLIK, ALI SE NE POJAVLJUJE REDOVNO I NE TRAJE UVEK ISTO (npr. razvoj AI oblasti)
+
+ŠUM - fluktuacije koje nisu ni trend, ni sezonalnost, ni cikličnost; npr. nepredvidive okolnosti
+ŠUM NEMA FIKSNI PERIOD POJAVLJIVANJA NITI FIKSNI OBLIK (npr. pad/rast cena akcija zbog tvitova poznatih)
+Primer vremenske serije sa puno šuma - kriptovalute
+
+Dva modela vremenske serije uz pomoć komponenti:
+ADITIVNI: trend + sezonalnost + cikličnost + šum
+-Koristi se kada jačina sez, cik i šuma ne zavisi od trenda
+MULTIPLIKATIVNI: trend * sezonalnost * cikličnost * šum
+-Koristi se kada jačina sez, cik i šuma zavisi od trenda
+-Može se konvertovati u aditivni logaritmovanjem
+Ne postoji univerzali način određivanja modela - treba gledati grafik
+
+KORACI ZA DEKOMPOZICIJU VREMENSKE SERIJE (tj. za razdvajanje na komponente)
+1) Odrediti trend
+2) Ukloniti trend
+3) Odrediti sezonalnost
+4) Ukloniti sezonalnost
+5) Ostane šum
+
+ODREĐIVANJE TRENDA - DVE GRUPE METODA
+-Pokretni prosek (Moving Average - MA)
+Odredimo prosek za jedan vremenski interval, pa pomeramo prozor vremenskog intervala i opet određujemo prosek
+-Uklapanje krivih
+Globalno, uklapanje iste krive nad celim rasponom x-ose (lin. regresija pravom ili polinomom)
+Lokalno, uklapanje posebne krive za svaki podeok x-ose (splajn interpolacija, LOWESS)
+
+1) Pokretni prosek - prosek k uzastopnih vrednosti vremenske serije. Tri tipa:
+-SIMPLE MA
+-WEIGHTED MA
+-EXPONENTIAL MA 
+
+SMA - samo običan prosek, zbog toga vrednuje i skorije i davne vrednosti jednako
+Dobar za uklanjanje šuma i određivanje trenda na duži period
+Loš za određivanje trenda u kraćim periodima
+
+WMA - dodaje težinu vrednostima, odnosno više vrednuje skorije a manje davne vrednosti
+
+EMA - trenutna EMA vrednost = A * trenutna vrednost V.S. + (1 - A) * prošla EMA vrednost
+Princip ovakvog računanja je značajan u mnogim oblastima, kao AI
+
+"Odemo u piceriju i uzeli picu koju uvek uzimamo, ali ona bude loša
+Da li ćemo ignorisati ovaj događaj? (A = 0)
+Da li ćemo prestati skroz da naručujemo tu picu? (A = 1)
+Da li ćemo uzeti u obzir i prethodne i trenutni događaj? (A između 0 i 1)"
+
+(slajd 73 i 74) SMA - dosta ravan prosek, WMA i EMA - sa "brdima", male međusobne razlike
+
+2) Uklapanje krivih - globalno
+Koristimo za dobijanje grubog trenda (ovako dobijen trend nije osetljiv na lokalne varijabilnosti)
+Ima ih smisla koristiti KADA VREMENSKA SERIJA PRATI JEDAN TREND
+Ako se trend menja, bolje koristiti pokretni prosek
+Najčešće se koristi linearna regresija pomoću prave, kvadratnog ili kubnog polinoma
+
+3) Uklapanje krivih - lokalno
+Krive se uklapaju za svaki deo x-ose
+Ove metode su BALANS IZMEĐU POKRETNOG PROSEKA I GLOBALNOG UKLAPANJA KRIVIH
+Jedne od najboljih metoda za detekciju trenda, mogu da modeluju i promene
+Najčešće se koristi LOWESS i interpolacija kubnim splajnom
+
+LOWESS - LOcally WEighted Scatterplot Smoothing
+Daje krivu koja se dobija interpolacijom REPREZENTATIVNIH TAČAKA
+REP. TAČKE se dobijaju primenom WLS (Weighted Least Squares) - linearne regresije sa težinama na
+vremenske prozore čija se veličina zadaje unapred
+Greškama dodeljuje težine - što veća greška, to manja težina, i time utiče na pravu što dobijemo
+WLS kod LOWESS-a smanjuje uticaj velikih grešaka zvane autlajeri (outlier)
+Veličina vremenskih prostora je obično procenat skupa podataka, podrazumevano je da bude 10%
+Što manja veličina vremenskih prostora, više se vide promene u trendu (slajd 82 i 83)
+
+LOWESS BRŽE REAGUJE NA PROMENE OD EMA METODE
+
+CIKLIČNOST se teško detektuje kao posebna komponenta, tako da se obično detektuje u sklopu sa trendom
+Ako vremenska serija ima cikličnost, treba koristiti metode pokretnog proseka ili LOKALNOG uklapanja krivih
+
+Da bi se odredila SEZONALNOST, prvo treba ukloniti trend iz vremenske serije
+VREMENSKA SERIJA se umanjuje ili deli sa trendom u zavinosti da li je model aditivan ili multiplikativan
+Time ostaju sezonalnost i šum
+Zatim, GRUPIŠEMO PODATKE ZA SVAKI MESEC U SVAKOJ GODINI KOJU IMAMO, I VRŠIMO AGREGACIJU
+(Neki od metoda agregacije su prosek ili medijan - u prevodu, gledamo njihov prosek ili medijan)
+Time smo dobili sezonalnost
+
+Da bi se odredio ŠUM, treba prvo ukloniti trend, pa zatim i sezonalnost iz vremenske serije
+Sezonalnost koju smo dobili kopiramo za svaki mesec u vremenskoj seriji (videti slajd 92)
+Uklanjamo sezonalnost oduzimanjem ili deljenjem u zavisnosti od modela
+Ostaje nam šum
+
+STL - Seasonal-Trend Decomposition Using LOWESS
+Jedna od najboljih metoda za dekompoziciju vremenske serije, zasnovana na LOWESS-u
+Potrebno je da model bude aditivan (ako imamo multiplikativan, možemo izvršiti logaritmovanje)
+
+AUTOKORELACIJA - mera korelacije između vremenske serije i iste te serije za k vremenskih jedinica nazad
+(tj. mera koliko vrednost u jednom trenutku utiče na vrednost u sledećem, pa u sledećem...)
+AKO VREMENSKA SERIJA NEMA AUTOKORELACIJU -> VREDNOSTI SE SLUČAJNO MENJAJU -> NE MOŽEMO DA JE MODELUJEMO
+Postoji POZITIVNA i NEGATIVNA autokorelacija
+Pozitivna - vrednosti zajedno rastu i opadaju
+Negativna - vrednosti suprotno rastu i opadaju
+
+AUTOKORELOGRAM (ACF) - grafik vrednosti autokorelacije
+Sve što se nalazi u osenčenom delu možemo da smatramo beznačajnim
+Tipičan šablon na grafiku - autokorelacija postepeno pada sa povećanjem vremenskih jedinica
+Ako postoji sezonalnost, može se videti na autokorelogramu i vidu pada pa povećanja pa pada itd. (slajd 104)
+Za šum obično su sve vrednosti u osenčenom delu
+
+VREDNOSTI KOLIKO KOJE K UTIČE NISU TAČNE, ZBOG INDIREKTNE KORELACIJE
+(broj putnika u januaru utiče na broj putnika u februaru,
+broj putnika u februaru utiče na broj putnika u martu,
+onda broj putnika u januaru utiče na broj putnika u martu,
+ALI TO NIJE DIREKTAN UTICAJ, NEGO INDIREKTAN!)
+
+Da bi videli direktan uticaj gleda se PARCIJALNA AUTOKORELACIJA
+PARCIJALNI AUTOKORELOGRAM - grafik vrednosti parcijalne autokorelacije
+Kao i pre, vrednosti u osenčenom delu su nebitne
+(Da se vidi tačno razlika između parcijalne autokorelacije i autokorelacije, videti slajd 115)
+
+---
+
+STACIONARNOST - distribucija iz koje se dobijaju vrednosti se ne menja vremenom
+Konkretno - ne menja se srednja vrednost, varijansa i kovarijansa (slajd 118 za slike šta je šta)
+ZAŠTO JE STACIONARNOST BITNA?
+Kod ne-stacionarnih vremenskih serija, odnos vrednosti u nekom trenutku i vrednosti u trenutku pre tog se menja
+Zbog toga, parametri modela bi trebali isto da se menjaju, u zavisnosti od trenutka kojeg analiziramo
+Ali, ako želimo da radimo PREDIKCIJU (EKSTRAPOLACIJU), biće nemoguće da odredimo parametre jer te podatke nemamo
+To znači da ne možemo obučiti model sa parametrima koji se menjaju kroz vreme
+(videti grafike slajd 124 i slajd 127) - razlika modeliranja ne-stacionarnih i stacionarnih
+
+ADF - Augmented Dickey-Fuller statistički test
+Koristi se za testiranje da li su podaci stacionarni
+Što manji rezultat, to bolje
+
+KAKO SE POSTIŽE STACIONARNOST?
+-Ako se menja srednja vrednost
+Otkrijemo trend pa ga uklonimo ILI diferenciramo vremensku seriju
+-Ako se menja varijansa i/ili kovarijansa
+Otkrijemo sezonalnost i uklonimo je ILI diferenciramo vremensku seriju
+Logaritmujemo ili korenujemo vremensku seriju
+(Ako logaritmujemo ili korenujemo, treba pre uklanjanja trenda, odnosno pre diferenciranja)
+
+Ako uklanjanjem trenda i sezonalnosti (dekompozicijom) šum ne bude stacionaran,
+treba se logaritmovati ili korenovati vremenska serija pre uklanjanja trenda i sezonalnosti
+
+---
+
+PREDIKTIVNI MODELI - pretpostavljaju da trenutna vrednost zavisi od prethodnih
+(vrednost danas zavisi od vrednosti juče, preključe...)
+
+AR model (Autoregressive model) - trenutna vrednost je linearna kombinacija prethodnih p vrednosti
+Parametri se odrede jednom tokom obučavanja i nikada se ne menjaju
+Potrebni stacionarni podaci
+Ako ACF vrednosti postepeno opadaju i PACF ima malo velikih vrednosti za male k -> AR je prikladan za modelovanje
+p se određuje uz pomoć PACF-a
+
+MA model (Moving Average model) - trenutna vrednost je linearna kombinacija prethodnih q grešaka i neke vrednosti
+Ideja je da trenutna vrednost = srednja vrednost + linearna kombinacija varijacija u zadnjih q vremenskih jedinica
+Potrebni stacionarni podaci
+Primer: Pravimo žurku i u proseku smo kupovali 20 piva po žurci
+Odlučimo jedan dan da uzmemo 20 piva, a nakon toga 20 + 2 * koliko je falilo,
+odnosno 20 - 2 * koliko je ostalo viška
+Ako PACF!!! vrednosti postepeno opadaju a ACF!!! ima malo velikih vrednosti za male k -> MA je dobar model
+q se određuje uz pomoć ACF-a
+
+ARMA model - trenutna vrednost je zbir rezultata AR i MA modela
+Potrebni stacionarni podaci
+Ako možemo koristiti i AR i MA modele -> ARMA je dobar model
+(Znači oba korelograma imaju postepen pad)
+p i q se određuju uz pomoć PACF i ACF grafika redom
+
+
+ARIMA model - trenutna vrednost je zbir AR i MA modela, uz mogućnost diferenciranja
+MOŽE SE KORISTITI I SA PODACIMA SA TRENDOM
+Bitno je znati koliko se treba diferencirati da trend nestane (u vežbama parametar d)
+Prvo diferencira vremensku seriju, pa zatim primenjuje ARMA model
+
+-----
+
+METRIKE
+Koristimo ih da predstavimo kvalitet rezultata i da uporedimo modele
+
+1) MSE (Mean Squared Error) - Prosečna kvadratna greška
+PREDNOST: Dobra za optimizacije sa gradijentom
+OSREDNJE: Osteljiva na nagle skokove i padove, može biti prednost ili mana, zavisi od našeg cilja
+MANA: Nije jednostavna za tumačenje jer su vrednosti u kvadratima jedinica vremenske serije
+
+2) RMSE (Root Mean Squared Error) - Koren prosečne kvadratne greške
+Vrednosti se mogu tumačiti jer su u istim jedinicama kao i vremenska serija
+Obično MSE za optimizaciju tokom obučavanja modela, a RMSE za tumačenje i saopštavanje rezultata
+
+3) MAE (Mean Absolute Error) - Prosečna apsolutna greška
+PREDNOST: Jednostavna za računanje, jednostavna za tumačenje
+OSREDNJE: NIJE osetljiva na nagle skokove i padove, može biti prednost ili mana, zavisi od našeg cilja
+MANA: Ne pruža informacije o pozitivnim i negativnim greškama
+
+4) MAPE (Mean Absolute Percentage Error) - Prosečna apsolutna procentualna greška
+PREDNOST: Pogodna za poređenje modela na različitim vremenskim serijama, jer su vrednosti u procentima
+MANA: Problematična za vremenske serije koje imaju vrednosti blizu nule
+MANA: ASIMETRIČNOST! Greške u kojima predikcija precenjuje greške su veče nego gde ih podcenjuje
+(Primer - stvarna vrenost 100 a predikcija 150 ima veću grešku nego stvarna vrednost 150 a predikcija 100)
+
+5) MASE (Mean Absolute Scaled Error) - Prosečna apsolutna skalirana greška
+Mera poredi naš model sa modelom koji koristi samo prethodnu vrednost vremenske serije kao predikciju za trenutnu
+PREDNOST: Invarijantnost na skalu - vrednosti ne zavise od raspona vrednosti vremenske serije
+To omogućava poređenje modela na različitim skupovima podataka
+PREDNOST: Jednostavna za tumačenje - vrednosti ispod 1 znače da je naš model bolji od modela
+koji koristi samo prethodnu vrednost
+PREDNOST: Simetričnost
+MANA: Problematična za vremenske serije koje imaju vrednosti blizu nule

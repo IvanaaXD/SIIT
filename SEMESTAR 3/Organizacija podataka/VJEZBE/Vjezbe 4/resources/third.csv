@@ -1,0 +1,5 @@
+!!zadatak2.Third
+autobus: {brojProdatihKarata: 50, cijena: 1000.0, datumPolaska: '2023-11-10', mjestoDolaska: Novi Sad,
+  mjestoPolaska: Beograd, peron: 3, planiranoVrijemeDolaska: '10:30', sifraRelacije: RS001,
+  vrijemePolaska: '08:00'}
+num: 50000.0

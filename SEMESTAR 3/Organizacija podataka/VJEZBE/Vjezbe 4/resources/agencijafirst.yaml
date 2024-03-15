@@ -1,0 +1,9 @@
+!!zadatak5.RentACar
+brojDanaIznajmljivanja: 5
+cijenaIznajmljivanja: 45.0
+datumIznajmljivanja: '2023-10-20'
+datumVracanja: '2023-10-25'
+mjestoIznajmljivanja: Los Angeles
+osoba: {JMBG: 5555555555, ime: Michael, prezime: Johnson}
+predjenoKilometara: 300.0
+sifraIznajmljivanja: '003'

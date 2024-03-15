@@ -1,0 +1,8 @@
+﻿  GmailUser.cpp
+  GooglePlusUser.cpp
+  main.cpp
+  Person.cpp
+  Picture.cpp
+  Generating Code...
+GmailUser.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/INCREMENTAL:NO' specification
+  Inheritance.vcxproj -> D:\FTN NS\VJEZBE\Semestar 3\Objektno orijentisano programiranje 2\Vjezbe 6\Examples\Debug\Inheritance.exe

@@ -1,0 +1,54 @@
+1. Ucitamo podatke
+df = pd.read_csv('stagod.csv')
+
+2. Uzmemo redove koji nam trebaju i izbacimo nedostajuce vrednosti
+df = df.iloc[:, <pocetna_kolona - 1>:<krajnja_kolona - 1>] (-1 zbog nacina kako indeksi rade)
+df = df.dropna()
+
+3. Ako imamo KATEGORICKE VREDNOSTI (nisu numericke vec obicno string), enkodirati ih
+(Ako su podaci koje mozemo da poredjamo na neki nacin, radi se ordinal encoding)
+df[<osobina>] = df[<osobina>].map({<najmanja logicna vrednost>: 0, <sledeca>: 1, ... <najveca>: max})
+
+(Ako podaci nisu takve prirode, radi se one-shot encoding, sto zamenjuje sa listom [0 0 0 1])
+(Duzina liste zavisi koliko ima opcija, a element koji je 1 znaci da je ta opcija izabrata u podatku)
+df = pd.get_dummies(df, columns=[<osobina1, osobina2...>], drop_first=True).astype(int)
+
+4. Uzmemo x i y
+x = df.drop(columns=[<zavisna prom>])
+y = df[<zavisna prom>]
+
+5. Podelimo podatke kako treba (primer za 90%)
+x_train, x_test, y_train, y_test = train_test_split(x, y, train_size=0.9, random_state=42, shuffle=True)
+
+6. Ako je potrebno (dobra je praksa svakako uraditi) skaliramo podatke
+(fitujemo Scaler nad train podacima, transformisemo test podatke)
+sc = StandardScaler()
+x_train = sc.fit_transform(x_train)
+x_test = sc.transform(x_test)
+
+7. Pravimo PCA Model
+pca_model = PCA(n_components=<lupi>, random_state=<sta se da u zadatku ili 42>)
+
+8. Gledamo da li je % varijanse zadovoljen. Ako nije, ponovimo 7. sa drugim n_components
+
+(sa plotovanjem)
+plot_explained_variance(pca_model)
+plt.show()
+
+(bez plotovanja)
+varijansa = sum(pca_model.explained_variance_ratio_) * 100
+
+9. Kada smo zadovoljni, uzimamo principalne komponente
+principal_components = pca_model.fit_transform(x_train)
+
+10. Pravimo regresioni model i gledamo summary
+model = get_fitted_model(principal_components, y_train)
+print(model.summary())
+
+11. Tumaciti atribute koje i koliko nam se trazi u zadatku
+plot_pc_loading(pca_model, <indeks komponente>, columns=x.columns)
+(Dobije se graf koji treba logicki protumaciti)
+
+12. Ispisati meru koju model dobija nad test podacima, KOJE PRVO TRANSFORMISEMO
+test_principal_components = pca_model.transform(x_test)
+adj_r_squared = get_rsquared_adj(model, test_principal_components, y_test)

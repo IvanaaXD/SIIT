@@ -1,0 +1,131 @@
+[ {
+  "sifraIznajmljivanja" : "001",
+  "mjestoIznajmljivanja" : "Belgrade",
+  "datumIznajmljivanja" : "2023-11-08",
+  "datumVracanja" : "2023-11-15",
+  "predjenoKilometara" : 450.0,
+  "cijenaIznajmljivanja" : 40.0,
+  "brojDanaIznajmljivanja" : 7,
+  "osoba" : {
+    "ime" : "John",
+    "prezime" : "Doe",
+    "jmbg" : 1234567890
+  }
+}, {
+  "sifraIznajmljivanja" : "002",
+  "mjestoIznajmljivanja" : "New York",
+  "datumIznajmljivanja" : "2023-12-01",
+  "datumVracanja" : "2023-12-10",
+  "predjenoKilometara" : 600.0,
+  "cijenaIznajmljivanja" : 50.0,
+  "brojDanaIznajmljivanja" : 9,
+  "osoba" : {
+    "ime" : "Alice",
+    "prezime" : "Smith",
+    "jmbg" : 9876543210
+  }
+}, {
+  "sifraIznajmljivanja" : "003",
+  "mjestoIznajmljivanja" : "Los Angeles",
+  "datumIznajmljivanja" : "2023-10-20",
+  "datumVracanja" : "2023-10-25",
+  "predjenoKilometara" : 300.0,
+  "cijenaIznajmljivanja" : 45.0,
+  "brojDanaIznajmljivanja" : 5,
+  "osoba" : {
+    "ime" : "Michael",
+    "prezime" : "Johnson",
+    "jmbg" : 5555555555
+  }
+}, {
+  "sifraIznajmljivanja" : "004",
+  "mjestoIznajmljivanja" : "Paris",
+  "datumIznajmljivanja" : "2023-11-05",
+  "datumVracanja" : "2023-11-12",
+  "predjenoKilometara" : 550.0,
+  "cijenaIznajmljivanja" : 55.0,
+  "brojDanaIznajmljivanja" : 7,
+  "osoba" : {
+    "ime" : "Sophie",
+    "prezime" : "Martin",
+    "jmbg" : 4444444444
+  }
+}, {
+  "sifraIznajmljivanja" : "005",
+  "mjestoIznajmljivanja" : "London",
+  "datumIznajmljivanja" : "2023-09-15",
+  "datumVracanja" : "2023-09-20",
+  "predjenoKilometara" : 400.0,
+  "cijenaIznajmljivanja" : 60.0,
+  "brojDanaIznajmljivanja" : 5,
+  "osoba" : {
+    "ime" : "William",
+    "prezime" : "Taylor",
+    "jmbg" : 6666666666
+  }
+}, {
+  "sifraIznajmljivanja" : "006",
+  "mjestoIznajmljivanja" : "Tokyo",
+  "datumIznajmljivanja" : "2023-08-10",
+  "datumVracanja" : "2023-08-17",
+  "predjenoKilometara" : 700.0,
+  "cijenaIznajmljivanja" : 70.0,
+  "brojDanaIznajmljivanja" : 7,
+  "osoba" : {
+    "ime" : "Akihiro",
+    "prezime" : "Sato",
+    "jmbg" : 7777777777
+  }
+}, {
+  "sifraIznajmljivanja" : "007",
+  "mjestoIznajmljivanja" : "Berlin",
+  "datumIznajmljivanja" : "2023-07-01",
+  "datumVracanja" : "2023-07-10",
+  "predjenoKilometara" : 800.0,
+  "cijenaIznajmljivanja" : 35.0,
+  "brojDanaIznajmljivanja" : 9,
+  "osoba" : {
+    "ime" : "Lena",
+    "prezime" : "Müller",
+    "jmbg" : 8888888888
+  }
+}, {
+  "sifraIznajmljivanja" : "008",
+  "mjestoIznajmljivanja" : "Sydney",
+  "datumIznajmljivanja" : "2023-06-15",
+  "datumVracanja" : "2023-06-20",
+  "predjenoKilometara" : 350.0,
+  "cijenaIznajmljivanja" : 48.0,
+  "brojDanaIznajmljivanja" : 5,
+  "osoba" : {
+    "ime" : "Olivia",
+    "prezime" : "Brown",
+    "jmbg" : 9999999999
+  }
+}, {
+  "sifraIznajmljivanja" : "009",
+  "mjestoIznajmljivanja" : "Rome",
+  "datumIznajmljivanja" : "2023-05-10",
+  "datumVracanja" : "2023-05-15",
+  "predjenoKilometara" : 200.0,
+  "cijenaIznajmljivanja" : 42.0,
+  "brojDanaIznajmljivanja" : 5,
+  "osoba" : {
+    "ime" : "Giovanni",
+    "prezime" : "Ricci",
+    "jmbg" : 1111111111
+  }
+}, {
+  "sifraIznajmljivanja" : "010",
+  "mjestoIznajmljivanja" : "Madrid",
+  "datumIznajmljivanja" : "2023-04-15",
+  "datumVracanja" : "2023-04-22",
+  "predjenoKilometara" : 550.0,
+  "cijenaIznajmljivanja" : 47.0,
+  "brojDanaIznajmljivanja" : 7,
+  "osoba" : {
+    "ime" : "Maria",
+    "prezime" : "Lopez",
+    "jmbg" : 2222222222
+  }
+} ]
