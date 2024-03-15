@@ -1,0 +1,76 @@
+RAZDVAJANJE VREMENSKE SERIJE NA KOMPONENTE SA STL-OM
+
+1) Pogledati grafik sa df.plot()
+
+2) Ako izgleda kao multiplikativan model (magnituda se povecava), logaritmovati podatke
+df['log_zavisnaProm'] = np.log10(df['zavisnaProm'])
+
+3a) Ako je model bio adicioni (magnituda je ostajala ista), pozvati STL nad originalnim podacima I FITOVATI
+stl = STL(df['zavisnaProm']).fit()
+
+3b) Ako je model bio multiplikativan, pozvati STL nad logaritmovanim podacima I FITOVATI
+stl = STL(df['log_zavisnaProm']).fit()
+
+4) Preuzeti podatke
+trend, sezonalnost, sum = stl.trend, stl.seasonal, stl.resid
+
+Ako treba, prikazati preko stl.plot()
+
+Ako su brojevi kod trenda, sezonalnosti i/ili šuma veliki, TREBA LOGARITMOVATI
+
+------
+
+REKONSTRUKCIJA PODATAKA POMOCU STL-A
+
+Kada smo uradili dekompoziciju, zavisi kakav je model bio
+
+Ako je bio aditivan:
+reconstructed_data = trend + sezonalnost + sum
+
+Ako je bio multiplikativan, znaci da su nam podaci bili logaritmovani, znaci:
+reconstructed_data = np.power(10, trend + sezonalnost + sum)
+
+ILI
+reconstructed_data = np.power(10, trend) * np.power(10, sezonalnost) * np.power(10, sum)
+------
+
+STACIONARNOST BEZ DIFERENCIRANJA
+
+1) Pogledati grafik sa df.plot()
+
+2) Ako izgleda kao multiplikativan model, logaritmovati podatke
+
+3) Napraviti posebnu promenljivu za stacionarne podatke (odnosno podatke koji ce tek biti stacionarni)
+stationary_data = df.['log_zavisnaProm'].copy() ili df.['zavisnaProm'].copy() ako je bio aditivan model
+
+4) Proveriti da li su podaci stacionarni sa is_data_stationary funkcijom iz utils fajla
+is_stationary, p_value = is_data_stationary(stationary_data)
+
+5) Ako nisu, oduzeti trend (koji smo dobili sa STL-om), i ponoviti korak 3
+stationary_data -= trend
+
+6) Ako nisu, oduzeti sezonalnost (isto smo dobili sa STL-om) i ponoviti korak 3
+stationary_data -= sezonalnost
+(posle ovog bi trebalo da bude stacionarno)
+
+Ako treba, prikazati preko plt.plot(<podaci>)
+------
+
+WALK-FORWARD EVALUACIJA
+Evaluacija kada se vrši predikcija korak po korak
+Radi se sa AR, MA, ARMA ili ARIMA modelima, samo se proslede parametri
+
+1) Odrediti parametre p, d i q
+
+2) Pozvati funkciju walk_forward_loop iz fajla utils
+wf_predikcije = walk_forward_loop(train_podaci, test_podaci, column_name='log10(zavisnaProm)', order=(p,d,q))
+wf_pred = np.power(10, wf_pred)
+(logaritmovali smo podatke pa mora np.power)
+------
+
+PREDIKCIJA ZA n MESECI UNAPRED
+Treba nam model za to
+
+predikcija = model.forecast(steps=n)
+
+Vraca listu podataka za 1., 2., 3., ..., n-ti NAREDNI mesec

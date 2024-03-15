@@ -1,0 +1,279 @@
+Uvodna prezentacija
+
+
+Numericki algoritmi su algoritmi ili metode koji nam pruzaju mogucnost da rjesimo odredjene vrste matematickih problema
+Ti matematicki problemi su oni za koje ne postoji analiticko rjesenje, ili se ono dobija previse sporo
+
+Analiticko rjesenje je rjesenje koje se sastoji od logickih koraka koji nam uvijek daju tacno rjesenje
+
+Koristenje numerickih algoritama: GPS, fizika u igricama, prognoza vremena, racunarska grafika itd.
+
+Karakteristike numerickih algoritama:
+	ne radimo sa simbolima vec numerickih vrijednostima
+	ne trazimo analiticka rjesenja vec numericka
+	ne trazimo egzaktna rjesenja vec priblizna
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Linearna regresija 1
+
+Linearna regresija predstavlja metod za pronalazenje trenda u podacima. 
+
+Rezultat linearne regresije moze biti i kvadratna funkcija, rezultat moze biti kombinacija koeficijenata i nekih funkcija, gdje se funkcije zadaju a koeficijenti odredjuju
+
+Ukupna greska se definise kao zbir kvadrata za tacke: SSE = E(i=1,n) (yi - f(xi))^2
+	n-ukupan broj tacki
+
+Minimum funkcije (SSE(k,n)) se trazi analiticki preko parcijalnih izvoda. 
+Nadjemo izvod SSE po k, pa n, i oba izjednacimo sa nula. dSSE(k,n)/dk
+Dobijamo sistem sa dvije jednacine i dvije promjenljive
+
+SSE = E(i=1,n) (yi - f(xi))^2
+
+SST =E(i=1,n)(y - yp)^2		yp je y prosjecno
+totalna suma kvadrata
+
+SSR = E(i=1,n)(f(xi) - yp)^2
+suma kvadrata koji su rezultat regresije
+
+
+SST = SSR + SSE
+Rastojanje od proseka do vrednosti je zbir rastojanja od proseka do prave + od prave do y
+
+SSE(pravo y--regresija), SST(pravo--prosjek), SSR(regresija--prosjek)
+
+Koeficijent determinacije (r^2)
+	r^2 = SSR/SST
+On mjeri koliki procenat rastojanja y u odnosu na svoj prosjek moze da predvidi nasa regresija
+
+Ako je predikcija uvijek prosjek, r^2 = 0
+	SSR = E(f(xi) - yp)^2 = 0
+	r^2 = 0/SST
+
+Ako je rezultat regresije prava koja prolazi kroz sve tacke onda:
+	f(xi) = y
+	SSR = E(y - yprosjek)^2 = SST
+	r^2 = SST/SST = 1
+
+
+Linearna regresija pomoću polinoma je samo specijalan slučaj linearne regresije za funkcije oblika y = x^i
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Linearna regresija 2
+
+To je alat za modelovanje zavisne promjenljive y sa jednom ili vise nezavisnih promjenljivih x
+Modeluje se kao linearna kombinacija zavisnih promjenljivih i parametara
+
+
+Za analizu odnosa dvije promjenljive se koristi:
+	Grafik rasipanja(scatter plot) 
+	Analiza korelacije(mjeri se jacina linearne veze)
+		ne analizira se uticaj jedne promjenljive na drugu
+		samo pruza info o jacini vece
+		obje promjenljive se tretiraju jednako
+
+Regresiona analiza se koristi:
+	za predikciju zavisne prom. (y) na osnovu bar jedne nezavisne prom(x)
+	da se objasni uticaj promjene nezavisne na promjenu zavisne
+
+k-nagib
+n = odsjecak
+
+
+Populacija je skup svih mogucih primjera pojave koja se analizira.
+
+Interpretacija nagiba i odsjecka:
+	nagib je procjena promjene srednje vrijednosti Y za povecanje X za jednu jedinicu
+	odsjecak je procjenjena srednja vrijednost Y kada je x nula
+
+Evaulacija modela (Zakljucivanje o modelu):
+	Jedan od nacina je primjena modela na nepoznate podatke i onda mjerenje njegovih performansi, npr preko srednje vrijednosti kvadrata gresaka
+
+Da bi zaključivanje bilo validno moraju da važe Pretpostavke Linearne Regresije
+
+
+Pretpostavke linearne regresije:
+	-Linearnost (osnovna pretpostavka)
+		odnos izmedju x i y je linearan
+	-Nezavisnost gresaka
+		greske su medjusobno nezavisne(greska za xi ne zavisi od greske za xj)
+	-Normalnost gresaka
+		greske su normalno distribuirane oko srednje vrijednosti 0 za dato X
+	-equal variance 
+		distribucija gresaka oko srednje vrijednosti 0 ima jednaku varijansu za svako X
+
+LINEARNOST se odnosi na vezu izmedju parametara i nezavisne promjenljive, a nezavisna promjenljiva moze biti i transformacija promjenljive X iz podataka.
+Linearnost u smisli paramatera znaci da mozemo da na neki nacin transformisemo x, i dobijemo linearnu regresiju.
+Tj da iako odnos izmedju x i y nije linearan, ali da mozemo naci transformaciju x koja ce biti linearna sa y.
+Takve transformacije se nazivaju osobine ili features
+Ako je linearnost narusena, ako ne mozemo naci transformaciju, moramo koristiti neki nelinearan model
+
+
+NEZAVISNOST GRESAKA, ako pomocu jedne greske (ili y) mozemo da predvidimo drugu (ili drugo y), onda tu informaciju treba da koristimo u modelu.
+npr. temperatura zavisi od prethodne temp
+Testira se preko Durbin-Watson statistickog testa i analiziranjem grafika reziduala.
+Reziduali su procjene gresaka ei = yp - y (y je regresivno izracunato)
+	Grafik reziduala:  ako grafik ima sablon iz koga se moze uociti zavisnost trenutnih vrijednosti od prethodnih
+	Durbin-Watson statisticki test: mjeri autokorelaciju za jednu vremensku jedinicu unazad
+	[0, 1.5) pozitivna autokorelacija
+	[1.5, 2] nema autokorelacije, greske su nezavisne, zelimo da nam je rezultat u ovom rasponu
+	(2, 4]	negativna autokorelacija
+Ako je nezavisnost gresaka narusena, statisticki testovi i intervali povjerenja su nepouzdani(nevalidni)
+Ako rezultati nisu vremenske serije, najcesce rjesenje je pronalazenje dodatnih nezavisnih promjenljivih
+
+NORMALNOST GRESAKA
+Dvije pretpostavke u jednoj:
+-greske su normalno distribuirane
+	imamo puno malih i malo velikih gresaka koje su podjednako pozitivne i negativne
+	testira se pomocu histograma i nekog statistickog testa (npr Shapiro Wilk)
+Histogram je grafik koji prikazuje broj tacaka u podacima koji imaju vrijednost u odgovarajucem rasponu. 
+Statisticki test se primjenjuje nad rezidualima. Vrijednost [0,1] za [0.05, 1] => prate normalnu distribuciju
+
+
+-srednje vrijednosti 0 za greske 
+	za svako dato Xi, regresioni model kao rezultat ima srednju vrijednost Yi u cijeloj populaciji
+	testira se vizuelno pomocu grafika rasipanja reziduala. Da vidimo koliko reziduali odstupaju od nule, zelimo sto ravniju liniju
+Posljedice narusenosti pretpostavke:
+ako je pala normalna distribucija, a broj uzoraka je mali onda mozemo probati popraviti preko transformacije (ne)zavisne promjenljive sa logaritmom ili korjenom
+ako je uzorak veliki, onda se ova pretpostavka ignorise
+Ako je narusena srednja vrijednost gresaka ei, za dato xi nije nula, onda kao za linearnost mozemo probati promjeniti model, transformisati ili dodati parametre
+
+JEDNAKA VARIJANSA Zelimo da kvalitet modela bude jednak za svako x (potrosnja i prihodi domacinstva primjer)
+Testiranje se vrsi preko grafika raspiranja reziduala, "masna", "levak"
+
+
+TESTIRANJE STATISTICKIH HIPOTEZA
+Test mjeri odnos signala i buke (razlika izmedju vrijednosti se zove signal). 
+Signal=varijabilnost podataka koja je objasnjena pomocu modela
+buka=varijabilnsot podataka koju model nije mogao da objasni 
+Buka je mjera nesigurnosti u date podatke. 
+Ono je kolicnik:
+	koliko smo pouzdani u nase podatke
+	velicine uzorka (veci uzorak ublazava varijabilnost)
+Buka treba biti sto manja
+
+T-Test:	T-vrijednost = signal/buka = b1/sb1 
+
+
+P-vrednost je ukupna verovatnoća da ćemo iz t distribucije izvući našu T-vrijednost
+Zelimo sto manju p vrijednost p<=0.05 (signal postoji)
+Tj da postoji <=5% vjerovanoce da cemo dobiti nasu T vrijednost ako vazi B1=0 (nagib)
+Tj sa 95% sigurnoscu mozemo da zakljucimo da je B1 =/= 0
+
+
+
+INTERVAL POVJERENJA za parametre i predikcije
+Interval povjerenja je raspon vrjednosti u kome ce se potencijalno naci prava vrijednost parametara koji procjenjujemo na osnovu podataka
+Prava vrijednost je vrijednost koju bi dobili kada bi imali sve svjetske podatke
+Npr 95% pouzdanosi, ako imamo 100 razlicitih uzoraka podataka, onda ce 95 tih intervala imati pravu vrijednost a 5 nece
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Visestruka linearna regresija
+^
+Y = bo + b1 x1i + b2 x2i + ... bn xni 
+Alat za modelovanje veze zavisne promjenljive Y sa vise nezavisnih promjenljivih x1,..,xn
+
+Populacija je skup svih mogucih primjera pojave koja se analizira.
+
+bi je procjenjena promjena srednje vrjednosti y za povecanje xi, kada su vrijednosti ostalih xi za i=/=j fiksirane
+
+R^2 je prije bilo SSR/SST. 
+r^2 vise nije adekvatno jer dodavanjem svake nove nezvisne promjenljive r^2 raste ili ostaje ista.
+Nezavisna promjenljiva moze biti npr neinformativna. 
+Prilagodjeni r^2 je mjera koja ukazuje na underfitting ili overfitting. 
+
+Overfitting je kada model previse savrseno modeluje date podatke, pa time ne modeluje generalni trend. Onda se ne moze ocekivati da ce raditi
+dobro sa nepoznatim podacima. Overfitting se pojavljuje kod modela sa velikim brojem nezavisnih promjenjivih
+
+Underfitting, nedovoljno prilagodjavanje, kada je model previse jednostavan pa nece dobro opisati trend ni za test ni za trening podatke
+	Radj ^2 = 1-(1-r^2)(n-1)/(n-p-1)
+	prilagodjeni r^2 zavisi od samog r^2, broj uzoraka u podacima n, broj nezavisnih promjenjivih p
+Iz ovoga se zakljucuje da kako raste p, vrijednost opada, a porastom broja primjera vrijednost raste
+
+
+Sem LINE, za visestruku regresiju postoji jos jedna pretpostavka: ne postoji savrsena kolinearnost izmedju bilo koje 2 ili vise nezavisnih promjenjivih
+Savrsena kolinearnost postoji ako za x1 i x2:	x2=ax1+b
+Ako postoji savrsena kolinearnost moramo da uklonimo bar jednu promjenljivu iz svakog para  nezavisnih promjenljih koje su ovako povezane.
+
+Korelacija je termin za linearnu vezu dvije promjenljive.
+Koeficijent korelacije je vrijednost kojim se mjeri jacina linearne veze(korelacije)
+
+Kolinearnost je takodje termin koji se odnosi na linearnu vezu 2 promjenljive, samo sto se on koristi u linearnoj regresiji i odnosi na vezu izmedju nezavisnih promjenljivih
+Kolinearnost izmedju zavisne i nezavisne promjenljive je pozeljna u modelu
+
+Kovarijansa je osnova za dobijanje koef korelacije, mjeri kako x i y variraju zajedno.
+	Ako je kovarijansa pozitivna = velike vrijednosti x odgovaraju velikim vrijednostima y, i male vrijednosti x odgovaraju malim vrijednostima y
+	Ako je negativna = obrnuto, male vrijednosti x odgovaraju velikim y, i velike vrijednosti x odgovaraju malim vrijednostima y
+Posto vrijednost kovarijanse varira u odnosu na raspon vrijednosti x i y, normalizujemo je i dobijemo koeficijent korelacije.
+
+Koeficijent korelacije [-1,1], 1= savrsena pozitivna kolinearnost, -1 savrsena negativna kolinearnost
+[0.8, 1] jaka korelacija
+[0,6, 0.8) srednja korelacija
+
+Jaku korelaciju tipicno detektujemo pomocu matrice korelacije. Ona pokazuje vrijednosti koef korelacije izmedju svih parova promjenljivih.
+Nije dovoljno samo uociti jaku korelaciju, vec treba pofledati onda i grafik rasipanja uocenih promjenjivih.
+ 
+Velika kolinearnost nije problematicna za mnk. Ako se jedna promjenljiva pojavljuje vise puta kroz druge promjenljive, intuitivno je misliti da ce to znaciti da ona previse utice na model.
+U tom slucaju moze se izbaciti jedna od takvih promjenljivih. Medjutim to moze imati ozbiljne posljedice na model, jer je moguce da dvije promjenljive imaju medjusobnu jaku kolinearnost, ali da 
+su obje neophodne za model. Npr plata i potrosnja u nekom modelu mogu biti veoma kolinearne, ali to ukazuje da samo nemamo dovoljno podataka gdje je plata velika a potrosnja jako mala i obrnuto.
+Tako da je najbolje da ne radimo nista, ili trazimo vise podataka.
+
+T-Test
+kod jednostruke je sluzio da statistickim testom provjerimo da li je nagib=0, tj da li postoji linearna veza izmedju x i y.
+Isto tako se koristi i u visestrukoj samo se radi za svaku nezavisnu promjenljivu posebno.
+
+Razlika je da sada gledamo da li postoji znacajna linearna veza izmedju nez promjenljive sa zavisnom u prisustvu drugih promjenljivih.
+Npr broj spavacih soba u jednostrukoj regresiji je vazan, ali ako u visestrukoj imamo broj soba i broj kupatila, broj spavacih soba vise nije relevantan/statisticki znacajan.
+
+F test odgovara na pitanje, da li bar jedna nezavisna promjenljive u modelu ima statisticki znacajnu linearnu vezu sa zavisnom promjenljivom
+Da li je bar jedna vrijednost nagiba razlicita od nule.
+
+F-distribucija = kako su distribuirane F vrijednsoti kada su svi koef (nagib) = 0.
+
+P vrijednost je ukupna vjerovatnoca da cemo iz F distribucije izbuci nasu F vrijednost.
+Ponovo zelimo da je p vrijednost sto manja, manje od 0.05
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Interpolacija je tehnika koja nam omogućava da pronađemo funkciju koja najbolje opisuje (najbolje se uklapa u) naše podatke.
+interpolacija funkcioniše tako što pronalazi polinom koji mora da prođe kroz sve tačke (podatke) koje imamo
+Taj polinom se posle može koristiti da 
+	procenimo vrednosti koje nam nedostaju u opsegu promenljive (interpolacija) ili da
+	predvidimo vrednosti van opsega promenljive (ekstrapolacija)
+
+Ovaj polinom mozemo dobiti sa:
+	Rjesavanje sistena linearnih jednacina koje sistem mora da zadovolji i rjesavanje matrice sistema, ali je ovo previse racunanja.
+	Langranzov interpolacioni polinom
+		p(x) = y1(x)*L1(x) + y2(x)*L2(x) + ... +  yn(x)*Ln(x)
+		L1,L2,.., Ln su polinomi takvi da Li(xj) = {1, i=j;  0, i=/=j }
+	Interpolacija splajnom
+		Prethodne metode nisu pogodne kada je broj interpolacionih tacaka veci, za veci broj tacaka polinom postaje nestabilan (ima velike skokove i padove)
+		Interpolacija splajnom je dio po dio interpolacija, funkcionise tako sto se izmedju svake dvije tacke formira poseban interpolacioni polinom
+		Rezultat je skup polinoma a ne jedan polinom
+
+
+
+Interpolacija splajnom:
+	Linearni splajn
+		Izmedju svake 2 tacke formiramo pravu, za n tacaka, n-1 prava. Linearni splajn je jako jednostavan, ali je veoma grub jer je prelaz izmedju tacaka rjetko bas linearan, ima nagle prelaze iz jedne tacke u drugu.
+	Kvadratni splajn 
+		Izmedju svake 2 tacke se formira polinom drugog stepena. Prelazi vise nisu nagli, jer je uslov da izvodi u unutrasnjim tackama(gdje se 2 splajna spajaju) budu jednaki. Tj nagib koji, se jedan splajn zavrsava isti je kao i nagib kojim sljedeci splajn pocinje.
+		Formiranje kvadratnog splajna:	1. Splajnovi moraju da prolaze kroz date tacke, prvi prolazi kroz 1 i drugu, drugi kroz 2 i 3 itd
+						2. Prvi izvodi splajnova u unutrasnjim tackama moraju da budu jednaki. 
+		Dobice se da imamo jednu manje jednacinu nego broj nepoznatih, to rjesavamo tako sto kazemo da je koef uz x^2 kod prvog splajna 0, pa je prvi splajn prava.
+	Kubni splajn
+		Izmedju svake 2 takce formira se kubni polinom. 
+		Ima dodatni uslov da se i drugi izvod u unutrasnjim tackama treba poklapati, sto znaci da nece biti naglih promjena zakrivljenosti splajna u unutrasnjim tackama.
+		Ponovo nam fale 2 jednacine, pa imamo 2 nacina da ih dobijemo:
+			1. Prirodni splajn = pretpostavljamo da su drugi izvodi u krajnjim tackama jednaki nuli.
+			2. Not-a-knot splajn = pretpostavka da su treci izvodi u drugoj i pretposljednjoj tacki jednaki. Oni zato vise nisu cvorovi, jer je splajn prije i posle njih isti.
+
+Kubni splajn je najcesce koriscen splajn jer ima najbolji odnos kompleksnosti metode i kvaliteta interpolacije.
+		
+	
+Ekstrapolacija je upotreba interpolacionih polinova za izracunavanje vrijednsoti van opsega x-koordinata tacki koje su date.
+Ekstrapolazija moze da rezultuje nepredvidljivim vrijednostima, jer kotsitenje jednog interpolacionog polinoma moze da ima velike oscilacije ako je dato puno tacki. 
+
+
+
+
+
+
+
+

@@ -1,0 +1,8 @@
+﻿  complex2.cpp
+complex2.obj : error LNK2005: "public: __cdecl Complex::Complex(class Complex const &)" (??0Complex@@QEAA@AEBV0@@Z) already defined in complex1.obj
+complex2.obj : error LNK2005: "public: __cdecl Complex::Complex(double,double)" (??0Complex@@QEAA@NN@Z) already defined in complex1.obj
+complex2.obj : error LNK2005: "public: __cdecl Complex::Complex(void)" (??0Complex@@QEAA@XZ) already defined in complex1.obj
+complex2.obj : error LNK2005: "public: void __cdecl Complex::setImag(double)" (?setImag@Complex@@QEAAXN@Z) already defined in complex1.obj
+complex2.obj : error LNK2005: "public: void __cdecl Complex::setReal(double)" (?setReal@Complex@@QEAAXN@Z) already defined in complex1.obj
+complex2.obj : error LNK2005: "public: class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > __cdecl Complex::to_string(void)" (?to_string@Complex@@QEAA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@XZ) already defined in complex1.obj
+D:\FTN NS\VJEZBE\Semestar 3\Objektno orijentisano programiranje 2\Vjezbe 4\ComplexNumber\x64\Debug\ComplexNumber.exe : fatal error LNK1169: one or more multiply defined symbols found

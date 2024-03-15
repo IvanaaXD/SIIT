@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="fef04d89-1752-4383-a774-d2791a7fb8d3" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../Napredni algoritmi i strukture podataka/Vjezbe 2/.idea/Vjezbe 2.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Napredni algoritmi i strukture podataka/Vjezbe 3/.idea/Vjezbe 3.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Napredni algoritmi i strukture podataka/Vjezbe 4/BloomFilter/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Napredni algoritmi i strukture podataka/Vjezbe 4/BloomFilter/.idea/BloomFilter.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Napredni algoritmi i strukture podataka/Vjezbe 4/BloomFilter/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Napredni algoritmi i strukture podataka/Vjezbe 4/BloomFilter/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Napredni algoritmi i strukture podataka/Vjezbe 4/BloomFilter/bloom_filter.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Napredni algoritmi i strukture podataka/Vjezbe 4/BloomFilter/go.mod" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Napredni algoritmi i strukture podataka/Vjezbe 4/BloomFilter/main/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Napredni algoritmi i strukture podataka/Vjezbe 4/HyperLogLog/.idea/HyperLogLog.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Nelinearno programiranje i evolutivni algoritmi/Vjezbe 2/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Nelinearno programiranje i evolutivni algoritmi/Vjezbe 2/.idea/Vjezbe 2.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Nelinearno programiranje i evolutivni algoritmi/Vjezbe 2/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Nelinearno programiranje i evolutivni algoritmi/Vjezbe 2/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Nelinearno programiranje i evolutivni algoritmi/Vjezbe 2/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Nelinearno programiranje i evolutivni algoritmi/Vjezbe 2/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Nelinearno programiranje i evolutivni algoritmi/Vjezbe 2/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Nelinearno programiranje i evolutivni algoritmi/Vjezbe 2/zadatak1.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/Vjezbe 4.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/3. Pretpostavke linearne regresije/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/3. Pretpostavke linearne regresije/.idea/3. Pretpostavke linearne regresije.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/3. Pretpostavke linearne regresije/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/3. Pretpostavke linearne regresije/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/3. Pretpostavke linearne regresije/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/3. Pretpostavke linearne regresije/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/3. Pretpostavke linearne regresije/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/3. Pretpostavke linearne regresije/3. Pretpostavke linearne regresije/.idea/3. Pretpostavke linearne regresije.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/3. Pretpostavke linearne regresije/3. Pretpostavke linearne regresije/3. L.I.N.E. pretpostavke.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/3. Pretpostavke linearne regresije/3. Pretpostavke linearne regresije/requirements.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/3. Pretpostavke linearne regresije/3. Pretpostavke linearne regresije/src/line_pretpostavke.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/3. Pretpostavke linearne regresije/3. Pretpostavke linearne regresije/src/todo1.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/3. Pretpostavke linearne regresije/3. Pretpostavke linearne regresije/src/todo2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/3. Pretpostavke linearne regresije/3. Pretpostavke linearne regresije/src/todo3.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/3. Pretpostavke linearne regresije/__MACOSX/._3. Pretpostavke linearne regresije" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Vjezbe 5/4. Zakljucivanje o modelu/4. Zakljucivanje o modelu/4. Zakljucivanje.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Vjezbe 5/4. Zakljucivanje o modelu/4. Zakljucivanje o modelu/data/housing.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Vjezbe 5/4. Zakljucivanje o modelu/4. Zakljucivanje o modelu/data/skincancer.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Vjezbe 5/4. Zakljucivanje o modelu/4. Zakljucivanje o modelu/requirements.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Vjezbe 5/4. Zakljucivanje o modelu/4. Zakljucivanje o modelu/src/line_pretpostavke.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Vjezbe 5/4. Zakljucivanje o modelu/4. Zakljucivanje o modelu/src/todo1.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Vjezbe 5/4. Zakljucivanje o modelu/4. Zakljucivanje o modelu/src/todo2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../PREDAVANJA/Semestar 1/Arhitektura racunara.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../PREDAVANJA/Semestar 3/Objektno orijentisano programiranje 2/6 Koraci u razvoju Kalkulatora/Koraci u razvoju Kalkulatora/.vs/Koraci u razvoju Kalkulatora/FileContentIndex/ebe7f65c-7366-4e5b-922f-29fef2d8ce90.vsidx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../PREDAVANJA/Semestar 3/Objektno orijentisano programiranje 2/6 Koraci u razvoju Kalkulatora/Koraci u razvoju Kalkulatora/.vs/Koraci u razvoju Kalkulatora/v17/.wsuo" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../PREDAVANJA/Semestar 3/Objektno orijentisano programiranje 2/6 Koraci u razvoju Kalkulatora/Koraci u razvoju Kalkulatora/.vs/Koraci u razvoju Kalkulatora/v17/.wsuo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../PREDAVANJA/Semestar 3/Objektno orijentisano programiranje 2/6 Koraci u razvoju Kalkulatora/Koraci u razvoju Kalkulatora/.vs/Koraci u razvoju Kalkulatora/v17/Browse.VC.db" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../PREDAVANJA/Semestar 3/Objektno orijentisano programiranje 2/6 Koraci u razvoju Kalkulatora/Koraci u razvoju Kalkulatora/.vs/Koraci u razvoju Kalkulatora/v17/Browse.VC.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../PREDAVANJA/Semestar 3/Objektno orijentisano programiranje 2/6 Koraci u razvoju Kalkulatora/Koraci u razvoju Kalkulatora/.vs/VSWorkspaceState.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../PREDAVANJA/Semestar 3/Objektno orijentisano programiranje 2/6 Koraci u razvoju Kalkulatora/Koraci u razvoju Kalkulatora/.vs/VSWorkspaceState.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../PREDAVANJA/Semestar 3/Objektno orijentisano programiranje 2/6 Koraci u razvoju Kalkulatora/Koraci u razvoju Kalkulatora/.vs/slnx.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../PREDAVANJA/Semestar 3/Objektno orijentisano programiranje 2/6 Koraci u razvoju Kalkulatora/Koraci u razvoju Kalkulatora/.vs/slnx.sqlite" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../PROJEKTI/Algoritmi i strukture podataka/projekat2_sv_23_2022.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../PROJEKTI/Objektno orijentisano programiranje 1/.metadata/.bak_0.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../PROJEKTI/Objektno orijentisano programiranje 1/.metadata/.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../PROJEKTI/Objektno orijentisano programiranje 1/.metadata/.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../PROJEKTI/Objektno orijentisano programiranje 1/.metadata/.plugins/org.eclipse.buildship.core/init.d/eclipsePlugin.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../PROJEKTI/Objektno orijentisano programiranje 1/.metadata/.plugins/org.eclipse.buildship.core/project-preferences/KozmetickiSalon" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../PROJEKTI/Objektno orijentisano programiranje 1/.metadata/.plugins/org.eclipse.core.resources/.history/f6/a065b463cde8001d13b1a37cf80df610" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../PROJEKTI/Objektno orijentisano programiranje 1/.metadata/.plugins/org.eclipse.core.resources/.projects/.org.eclipse.egit.core.cmp/.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../PROJEKTI/Objektno orijentisano programiranje 1/.metadata/.plugins/org.eclipse.core.resources/.projects/KozmetickiSalon/.markers" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../PROJEKTI/Objektno orijentisano programiranje 1/.metadata/.plugins/org.eclipse.core.resources/.projects/KozmetickiSalon/org.eclipse.jdt.core/state.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../PROJEKTI/Objektno orijentisano programiranje 1/.metadata/.plugins/org.eclipse.core.resources/.root/.indexes/history.version" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../PROJEKTI/Objektno orijentisano programiranje 1/.metadata/.plugins/org.eclipse.core.resources/.root/.indexes/properties.index" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../PROJEKTI/Objektno orijentisano programiranje 1/.metadata/.plugins/org.eclipse.core.resources/.root/.indexes/properties.version" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../PROJEKTI/Objektno orijentisano programiranje 1/.metadata/.plugins/org.eclipse.core.resources/.root/99.tree" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../PROJEKTI/Objektno orijentisano programiranje 1/.metadata/.plugins/org.eclipse.core.resources/.safetable/org.eclipse.core.resources" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../PROJEKTI/Objektno orijentisano programiranje 1/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.buildship.ui.prefs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../PROJEKTI/Objektno orijentisano programiranje 1/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.core.resources.prefs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../PROJEKTI/Objektno orijentisano programiranje 1/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.debug.core.prefs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../PROJEKTI/Objektno orijentisano programiranje 1/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.debug.ui.prefs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../PROJEKTI/Objektno orijentisano programiranje 1/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.jdt.core.prefs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../PROJEKTI/Objektno orijentisano programiranje 1/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.jdt.debug.ui.prefs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../PROJEKTI/Objektno orijentisano programiranje 1/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.jdt.junit.prefs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../PROJEKTI/Objektno orijentisano programiranje 1/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.jdt.launching.prefs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../PROJEKTI/Objektno orijentisano programiranje 1/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.jdt.ui.prefs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../PROJEKTI/Objektno orijentisano programiranje 1/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.jsch.core.prefs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../PROJEKTI/Objektno orijentisano programiranje 1/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.m2e.discovery.prefs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../PROJEKTI/Objektno orijentisano programiranje 1/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.search.prefs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../PROJEKTI/Objektno orijentisano programiranje 1/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.ui.browser.prefs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../PROJEKTI/Objektno orijentisano programiranje 1/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.ui.editors.prefs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../PROJEKTI/Objektno orijentisano programiranje 1/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.ui.ide.prefs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../PROJEKTI/Objektno orijentisano programiranje 1/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.ui.navigator.prefs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../PROJEKTI/Objektno orijentisano programiranje 1/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.ui.prefs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../PROJEKTI/Objektno orijentisano programiranje 1/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.ui.workbench.prefs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../PROJEKTI/Objektno orijentisano programiranje 1/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.urischeme.prefs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../PROJEKTI/Objektno orijentisano programiranje 1/.metadata/.plugins/org.eclipse.debug.core/.launches/KlijentTabelaModel.launch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../PROJEKTI/Objektno orijentisano programiranje 1/.metadata/.plugins/org.eclipse.debug.core/.launches/MainFrame.launch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../PROJEKTI/Objektno orijentisano programiranje 1/.metadata/.plugins/org.eclipse.debug.core/.launches/MenadzerFrame.launch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../PROJEKTI/Objektno orijentisano programiranje 1/.metadata/.plugins/org.eclipse.debug.core/.launches/Meni.launch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../PROJEKTI/Objektno orijentisano programiranje 1/.metadata/.plugins/org.eclipse.debug.core/.launches/TestScenario1.launch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../PROJEKTI/Objektno orijentisano programiranje 1/.metadata/.plugins/org.eclipse.debug.core/.launches/TestScenario2.launch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../PROJEKTI/Objektno orijentisano programiranje 1/.metadata/.plugins/org.eclipse.debug.core/.launches/Testovi (1).launch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../PROJEKTI/Objektno orijentisano programiranje 1/.metadata/.plugins/org.eclipse.debug.core/.launches/Testovi.changeTeleonKozmeticar.launch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../PROJEKTI/Objektno orijentisano programiranje 1/.metadata/.plugins/org.eclipse.debug.core/.launches/Testovi.changeUernameKlijent.launch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../PROJEKTI/Objektno orijentisano programiranje 1/.metadata/.plugins/org.eclipse.debug.core/.launches/Testovi.launch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../PROJEKTI/Objektno orijentisano programiranje 1/.metadata/.plugins/org.eclipse.debug.core/.launches/mARIJAtEST.launch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../PROJEKTI/Objektno orijentisano programiranje 1/.metadata/.plugins/org.eclipse.debug.ui/dialog_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../PROJEKTI/Objektno orijentisano programiranje 1/.metadata/.plugins/org.eclipse.debug.ui/launchConfigurationHistory.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../PROJEKTI/Objektno orijentisano programiranje 1/.metadata/.plugins/org.eclipse.e4.workbench/workbench.xmi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../PROJEKTI/Objektno orijentisano programiranje 1/.metadata/.plugins/org.eclipse.egit.core/.org.eclipse.egit.core.cmp/.project" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../PROJEKTI/Objektno orijentisano programiranje 1/.metadata/.plugins/org.eclipse.egit.core/.org.eclipse.egit.core.cmp/.settings/org.eclipse.core.resources.prefs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../PROJEKTI/Objektno orijentisano programiranje 1/.metadata/.plugins/org.eclipse.jdt.core/1395102858.index" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../PROJEKTI/Objektno orijentisano programiranje 1/.metadata/.plugins/org.eclipse.jdt.core/1486103645.index" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../PROJEKTI/Objektno orijentisano programiranje 1/.metadata/.plugins/org.eclipse.jdt.core/1532893001.index" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../PROJEKTI/Objektno orijentisano programiranje 1/.metadata/.plugins/org.eclipse.jdt.core/1541145160.index" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../PROJEKTI/Objektno orijentisano programiranje 1/.metadata/.plugins/org.eclipse.jdt.core/1809859638.index" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../PROJEKTI/Objektno orijentisano programiranje 1/.metadata/.plugins/org.eclipse.jdt.core/1865797976.index" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../PROJEKTI/Objektno orijentisano programiranje 1/.metadata/.plugins/org.eclipse.jdt.core/1877626743.index" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../PROJEKTI/Objektno orijentisano programiranje 1/.metadata/.plugins/org.eclipse.jdt.core/207208949.index" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../PROJEKTI/Objektno orijentisano programiranje 1/.metadata/.plugins/org.eclipse.jdt.core/2184353279.index" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../PROJEKTI/Objektno orijentisano programiranje 1/.metadata/.plugins/org.eclipse.jdt.core/2611364108.index" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../PROJEKTI/Objektno orijentisano programiranje 1/.metadata/.plugins/org.eclipse.jdt.core/2740852076.index" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../PROJEKTI/Objektno orijentisano programiranje 1/.metadata/.plugins/org.eclipse.jdt.core/2791220569.index" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../PROJEKTI/Objektno orijentisano programiranje 1/.metadata/.plugins/org.eclipse.jdt.core/2893927231.index" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../PROJEKTI/Objektno orijentisano programiranje 1/.metadata/.plugins/org.eclipse.jdt.core/3255273014.index" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../PROJEKTI/Objektno orijentisano programiranje 1/.metadata/.plugins/org.eclipse.jdt.core/3412811064.index" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../PROJEKTI/Objektno orijentisano programiranje 1/.metadata/.plugins/org.eclipse.jdt.core/3419946099.index" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../PROJEKTI/Objektno orijentisano programiranje 1/.metadata/.plugins/org.eclipse.jdt.core/3538354831.index" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../PROJEKTI/Objektno orijentisano programiranje 1/.metadata/.plugins/org.eclipse.jdt.core/3667868685.index" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../PROJEKTI/Objektno orijentisano programiranje 1/.metadata/.plugins/org.eclipse.jdt.core/3942458598.index" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../PROJEKTI/Objektno orijentisano programiranje 1/.metadata/.plugins/org.eclipse.jdt.core/4000122081.index" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../PROJEKTI/Objektno orijentisano programiranje 1/.metadata/.plugins/org.eclipse.jdt.core/4078911805.index" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../PROJEKTI/Objektno orijentisano programiranje 1/.metadata/.plugins/org.eclipse.jdt.core/4111060058.index" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../PROJEKTI/Objektno orijentisano programiranje 1/.metadata/.plugins/org.eclipse.jdt.core/571542962.index" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../PROJEKTI/Objektno orijentisano programiranje 1/.metadata/.plugins/org.eclipse.jdt.core/924802288.index" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../PROJEKTI/Objektno orijentisano programiranje 1/.metadata/.plugins/org.eclipse.jdt.core/assumedExternalFilesCache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../PROJEKTI/Objektno orijentisano programiranje 1/.metadata/.plugins/org.eclipse.jdt.core/externalFilesCache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../PROJEKTI/Objektno orijentisano programiranje 1/.metadata/.plugins/org.eclipse.jdt.core/externalLibsTimeStamps" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../PROJEKTI/Objektno orijentisano programiranje 1/.metadata/.plugins/org.eclipse.jdt.core/indexNamesMap.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../PROJEKTI/Objektno orijentisano programiranje 1/.metadata/.plugins/org.eclipse.jdt.core/javaLikeNames.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../PROJEKTI/Objektno orijentisano programiranje 1/.metadata/.plugins/org.eclipse.jdt.core/nonChainingJarsCache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../PROJEKTI/Objektno orijentisano programiranje 1/.metadata/.plugins/org.eclipse.jdt.core/savedIndexNames.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../PROJEKTI/Objektno orijentisano programiranje 1/.metadata/.plugins/org.eclipse.jdt.core/variablesAndContainers.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../PROJEKTI/Objektno orijentisano programiranje 1/.metadata/.plugins/org.eclipse.jdt.debug.ui/dialog_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../PROJEKTI/Objektno orijentisano programiranje 1/.metadata/.plugins/org.eclipse.jdt.junit/dialog_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../PROJEKTI/Objektno orijentisano programiranje 1/.metadata/.plugins/org.eclipse.jdt.launching/.install.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../PROJEKTI/Objektno orijentisano programiranje 1/.metadata/.plugins/org.eclipse.jdt.launching/libraryInfos.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../PROJEKTI/Objektno orijentisano programiranje 1/.metadata/.plugins/org.eclipse.jdt.ui/OpenTypeHistory.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../PROJEKTI/Objektno orijentisano programiranje 1/.metadata/.plugins/org.eclipse.jdt.ui/QualifiedTypeNameHistory.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../PROJEKTI/Objektno orijentisano programiranje 1/.metadata/.plugins/org.eclipse.jdt.ui/dialog_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../PROJEKTI/Objektno orijentisano programiranje 1/.metadata/.plugins/org.eclipse.ltk.core.refactoring/.refactorings/KozmetickiSalon/2023/4/18/refactorings.history" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../PROJEKTI/Objektno orijentisano programiranje 1/.metadata/.plugins/org.eclipse.ltk.core.refactoring/.refactorings/KozmetickiSalon/2023/4/18/refactorings.index" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../PROJEKTI/Objektno orijentisano programiranje 1/.metadata/.plugins/org.eclipse.ltk.core.refactoring/.refactorings/KozmetickiSalon/2023/5/19/refactorings.history" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../PROJEKTI/Objektno orijentisano programiranje 1/.metadata/.plugins/org.eclipse.ltk.core.refactoring/.refactorings/KozmetickiSalon/2023/5/19/refactorings.index" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../PROJEKTI/Objektno orijentisano programiranje 1/.metadata/.plugins/org.eclipse.ltk.core.refactoring/.refactorings/KozmetickiSalon/2023/5/23/refactorings.history" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../PROJEKTI/Objektno orijentisano programiranje 1/.metadata/.plugins/org.eclipse.ltk.core.refactoring/.refactorings/KozmetickiSalon/2023/5/23/refactorings.index" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../PROJEKTI/Objektno orijentisano programiranje 1/.metadata/.plugins/org.eclipse.ltk.core.refactoring/.refactorings/KozmetickiSalon/2023/6/23/refactorings.history" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../PROJEKTI/Objektno orijentisano programiranje 1/.metadata/.plugins/org.eclipse.ltk.core.refactoring/.refactorings/KozmetickiSalon/2023/6/23/refactorings.index" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../PROJEKTI/Objektno orijentisano programiranje 1/.metadata/.plugins/org.eclipse.ltk.core.refactoring/.refactorings/KozmetickiSalon/2023/6/24/refactorings.history" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../PROJEKTI/Objektno orijentisano programiranje 1/.metadata/.plugins/org.eclipse.ltk.core.refactoring/.refactorings/KozmetickiSalon/2023/6/24/refactorings.index" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../PROJEKTI/Objektno orijentisano programiranje 1/.metadata/.plugins/org.eclipse.ltk.core.refactoring/.refactorings/KozmetickiSalon/2023/6/25/refactorings.history" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../PROJEKTI/Objektno orijentisano programiranje 1/.metadata/.plugins/org.eclipse.ltk.core.refactoring/.refactorings/KozmetickiSalon/2023/6/25/refactorings.index" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../PROJEKTI/Objektno orijentisano programiranje 1/.metadata/.plugins/org.eclipse.ltk.core.refactoring/.refactorings/KozmetickiSalon/2023/7/27/refactorings.history" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../PROJEKTI/Objektno orijentisano programiranje 1/.metadata/.plugins/org.eclipse.ltk.core.refactoring/.refactorings/KozmetickiSalon/2023/7/27/refactorings.index" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../PROJEKTI/Objektno orijentisano programiranje 1/.metadata/.plugins/org.eclipse.ltk.core.refactoring/.refactorings/KozmetickiSalon/2023/7/28/refactorings.history" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../PROJEKTI/Objektno orijentisano programiranje 1/.metadata/.plugins/org.eclipse.ltk.core.refactoring/.refactorings/KozmetickiSalon/2023/7/28/refactorings.index" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../PROJEKTI/Objektno orijentisano programiranje 1/.metadata/.plugins/org.eclipse.ltk.ui.refactoring/dialog_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../PROJEKTI/Objektno orijentisano programiranje 1/.metadata/.plugins/org.eclipse.m2e.core/workspaceState.ser" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../PROJEKTI/Objektno orijentisano programiranje 1/.metadata/.plugins/org.eclipse.m2e.logback/0.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../PROJEKTI/Objektno orijentisano programiranje 1/.metadata/.plugins/org.eclipse.m2e.logback/logback.2.1.0.20221015-0744.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../PROJEKTI/Objektno orijentisano programiranje 1/.metadata/.plugins/org.eclipse.oomph.setup/workspace.setup" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../PROJEKTI/Objektno orijentisano programiranje 1/.metadata/.plugins/org.eclipse.search/dialog_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../PROJEKTI/Objektno orijentisano programiranje 1/.metadata/.plugins/org.eclipse.tips.ide/dialog_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../PROJEKTI/Objektno orijentisano programiranje 1/.metadata/.plugins/org.eclipse.tm.terminal.view.ui/.executables/data.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../PROJEKTI/Objektno orijentisano programiranje 1/.metadata/.plugins/org.eclipse.ui.ide/dialog_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../PROJEKTI/Objektno orijentisano programiranje 1/.metadata/.plugins/org.eclipse.ui.intro/introstate" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../PROJEKTI/Objektno orijentisano programiranje 1/.metadata/.plugins/org.eclipse.ui.workbench.texteditor/dialog_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../PROJEKTI/Objektno orijentisano programiranje 1/.metadata/.plugins/org.eclipse.ui.workbench/dialog_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../PROJEKTI/Objektno orijentisano programiranje 1/.metadata/.plugins/org.eclipse.ui.workbench/workingsets.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../PROJEKTI/Objektno orijentisano programiranje 1/.metadata/version.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../PROJEKTI/Osnove programiranja/ProjekatKostur/Ivana_Radovanovic_SV_23-2022.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../PROJEKTI/Osnove programiranja/ProjekatKostur/projekat-2022-main/korisnici.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../PROJEKTI/Osnove programiranja/ProjekatKostur/projekat-2022-main/svi_letovi.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../PROJEKTI/Web dizajn" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../PROJEKTI/Web dizajn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Semestar 1/Algebra.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Semestar 1/Arhitektura racunara.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Semestar 2/Objektno orijentisano programiranje 1/Vjezbe 10/VEZBE_10_Swing_II/projekat_kt3_sv_53_2022.zip_expanded/projekat_kt3_sv_53_2022" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Semestar 2/Objektno orijentisano programiranje 1/Vjezbe 10/VEZBE_10_Swing_II/projekat_kt3_sv_53_2022.zip_expanded/projekat_kt3_sv_53_2022" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Semestar 2/Web dizajn, SIiIT, 2022-2023.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Vjezbe 2/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Vjezbe 2/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Vjezbe 2/matplotlib_biblioteka.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Vjezbe 2/matplotlib_biblioteka.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Vjezbe 2/numpy_biblioteka.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Vjezbe 2/numpy_biblioteka.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Vjezbe 2/panda_biblioteka.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Vjezbe 2/panda_biblioteka.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Vjezbe 3/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Vjezbe 3/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Vjezbe 3/2. Uvod u linearnu regresiju/2. Uvod u  linearnu regresiju/src/todo3.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Vjezbe 3/2. Uvod u linearnu regresiju/2. Uvod u  linearnu regresiju/src/todo3.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Vjezbe 3/2. Uvod u linearnu regresiju/2. Uvod u  linearnu regresiju/src/todo4.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Vjezbe 3/2. Uvod u linearnu regresiju/2. Uvod u  linearnu regresiju/src/todo4.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Objektno orijentisano programiranje 2/Vjezbe 2/Vjezbe2/.vs/Vjezbe2/v17/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/../../Objektno orijentisano programiranje 2/Vjezbe 2/Vjezbe2/.vs/Vjezbe2/v17/.suo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Objektno orijentisano programiranje 2/Vjezbe 2/Vjezbe2/.vs/Vjezbe2/v17/Browse.VC.db" beforeDir="false" afterPath="$PROJECT_DIR$/../../Objektno orijentisano programiranje 2/Vjezbe 2/Vjezbe2/.vs/Vjezbe2/v17/Browse.VC.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Objektno orijentisano programiranje 2/Vjezbe 2/Vjezbe2/.vs/Vjezbe2/v17/ipch/AutoPCH/372dedb8546e82f9/ZADATAK2.ipch" beforeDir="false" afterPath="$PROJECT_DIR$/../../Objektno orijentisano programiranje 2/Vjezbe 2/Vjezbe2/.vs/Vjezbe2/v17/ipch/AutoPCH/372dedb8546e82f9/ZADATAK2.ipch" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Objektno orijentisano programiranje 2/Vjezbe 2/Vjezbe2/.vs/Vjezbe2/v17/ipch/AutoPCH/4c6ea6bd51ee463c/ZADATAK1.ipch" beforeDir="false" afterPath="$PROJECT_DIR$/../../Objektno orijentisano programiranje 2/Vjezbe 2/Vjezbe2/.vs/Vjezbe2/v17/ipch/AutoPCH/4c6ea6bd51ee463c/ZADATAK1.ipch" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Objektno orijentisano programiranje 2/Vjezbe 2/Vjezbe2/.vs/Vjezbe2/v17/ipch/AutoPCH/4dad436cde6a54c9/VJEZBE2.ipch" beforeDir="false" afterPath="$PROJECT_DIR$/../../Objektno orijentisano programiranje 2/Vjezbe 2/Vjezbe2/.vs/Vjezbe2/v17/ipch/AutoPCH/4dad436cde6a54c9/VJEZBE2.ipch" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Objektno orijentisano programiranje 2/Vjezbe 2/Vjezbe2/.vs/Vjezbe2/v17/ipch/AutoPCH/b29fcac16f180da2/ZADATAK3.ipch" beforeDir="false" afterPath="$PROJECT_DIR$/../../Objektno orijentisano programiranje 2/Vjezbe 2/Vjezbe2/.vs/Vjezbe2/v17/ipch/AutoPCH/b29fcac16f180da2/ZADATAK3.ipch" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Objektno orijentisano programiranje 2/Vjezbe 3/SimpleCalculator/.vs/SimpleCalculator/v17/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/../../Objektno orijentisano programiranje 2/Vjezbe 3/SimpleCalculator/.vs/SimpleCalculator/v17/.suo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Objektno orijentisano programiranje 2/Vjezbe 3/SimpleCalculator/.vs/SimpleCalculator/v17/Browse.VC.db" beforeDir="false" afterPath="$PROJECT_DIR$/../../Objektno orijentisano programiranje 2/Vjezbe 3/SimpleCalculator/.vs/SimpleCalculator/v17/Browse.VC.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Organizacija podataka/Vjezbe 1/01_csv" beforeDir="false" afterPath="$PROJECT_DIR$/../../Organizacija podataka/Vjezbe 1/01_csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Organizacija podataka/Vjezbe 2/02_JSON/02_JSON_Examples/02_json-master/02_JSON/src/rs/ac/uns/ftn/siit/op/json/example03/JSONTreeStream.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Organizacija podataka/Vjezbe 2/02_JSON/02_JSON_Examples/02_json-master/02_JSON/src/rs/ac/uns/ftn/siit/op/json/example03/JSONTreeStream.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Organizacija podataka/Vjezbe 2/02_JSON/02_JSON_Examples/02_json-master/02_JSON/src/zadatak1/casopis.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Organizacija podataka/Vjezbe 2/02_JSON/02_JSON_Examples/02_json-master/02_JSON/src/zadatak1/knjiga.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../.." />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
+  <component name="ProjectId" id="2XTmyGow0ynMGGAIjQBs0dR4fp2" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "D:/FTN NS/VJEZBE/Semestar 3/Numericki algoritmi i numericki softver/Vjezbe 5",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="fef04d89-1752-4383-a774-d2791a7fb8d3" name="Changes" comment="" />
+      <created>1698661699764</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1698661699764</updated>
+      <workItem from="1700817982516" duration="2674000" />
+      <workItem from="1701525849989" duration="3394000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

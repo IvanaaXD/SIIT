@@ -1,0 +1,76 @@
+1. Učitamo podatke
+df = pd.read_csv(<stagod>)
+
+2. Postavimo šta nam treba kao indeks, pretvorimo prvo u datetime
+df['Month'] = pd.to_datetime(df['Month'])
+df = df.set_index(df['Month'])
+(obicno je month ali TREBA GLEDATI ZADATAK ZA SVAKI SLUČAJ)
+
+3. Sortiramo podatke
+df = df.sort_index()
+
+(Ako hoćemo, prikažemo kako izgledaju)
+df.plot()
+
+(Ako vidimo da nedostaju vrednosti)
+4. Tražimo gde su nedostajaće vrednosti
+nan_months = df[df.isna().values]
+
+5. Nađemo gde počinju nedostajuće vrednosti, uzmemo sve vrednosti pre njih da bi istrenirali model za predikciju
+first_nan_month = nan_months.index[0]
+nan_months_train_df = df.loc[:first_nan_month].iloc[-1]
+
+6. Tražimo stacionarne podatke sa np.log10() i .diff(). Sto manje diff to bolje
+nan_months_train_df['log10(<stagod>)'] = np.log10(nan_months_train_df['<stagod>'])
+nan_months_train_df['stationary'] = nan_months_train_df['log10(<stagod>)'].diff().diff()
+
+is_stationary, _ = is_data_stationary(nan_months_train_df['stationary'].dropna())
+if is_stationary: print('ekstra')
+else: print('nije ekstra, radi jos diff')
+
+7. U zavisnosti koji model nam treba, gledamo PACF i/ili ACF grafike i računamo p i/ili q
+plot_pacf(<stacionarni podaci>, lags=<koliko hocemo>, method='ols')
+plot_acf(<stacionarni podaci>, lags=<koliko hocemo>)
+plt.show()
+lags gledamo da bude otprilike kako ide sezonalnost
+(npr. u godini ima 12 meseci, necemo uzeti za lags 50, nego blizu 12. obicno 15)
+
+8. Gledamo koje tacke strce izvan isencenog, to su nam potencijalni kandidati za p i/ili q
+p = <nesto>
+d = <broj .diff() za stacionarnost>
+q = <nesto>
+(AKO JE AR MODEL, q = 0, AKO JE MA MODEL, p = 0, INACE SE GLEDAJU OBA)
+
+9. Treniramo model
+model = ARIMA(<log10 podaci>!!!!!!, order=(p, d, q)).fit())
+
+10. Predikujemo podatke i eksponentiramo (jer smo logaritmovali)
+nan_months_pred = model.predict(start=nan_months.index[0], end=nan_months.index[-1])
+nan_months_pred = np.power(10, nan_months_pred)
+(Ako ne radi nan_months.index[0], staviti nan_months.index[q])
+
+11. Iscrtamo grafik da vidimo da li je sve okej
+plt.plot(<originalni podaci>, color='sta god', linewidth=4, alpha=0.3, label='sta hocemo')
+plt.plot(nan_months_pred, color='nesto drugo', label='isto nesto')
+
+(Ako smo zadovoljni)
+12. Dopunimo missing dataset
+df['<zavisna prom>'].loc[nan_months.index] = nan_months_pred
+
+13. Podelimo dataset kako zelimo (primer za 90%)
+dataset_split = int(len(df['<zavisna prom>']) * 0.9)
+train_df = df[:dataset_split].copy()
+test_df = df[dataset_split:].copy()
+Moze i sa train_test_split ali onda ne smemo shuffle=True !!!!
+
+14. Ponovimo ceo proces (6. - 11.) ali sa train_df podacima, odnosno pravimo model sa kompletnim podacima
+
+15. Evaluiramo sa cime treba da evaluiramo (primer za MSE) (bice importovano najvrv)
+actual_data = test_df['<zavisna prom>']
+mse = mean_absolute_error(actual_data, y_pred)
+(SA TEST PODACIMA!!!!!!)
+
+Bolji model ima manju gresku.
+(Ako budu trazili metriku MASE, bolji model ima vrednost sto blizu 1)
+
+BITNO JE ZAPAMTITI, SA TRAIN PODACIMA SA PRAVI MODEL, SA TEST PODACIMA SE GLEDA MERA!!!

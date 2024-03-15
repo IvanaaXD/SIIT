@@ -1,0 +1,17 @@
+Word length 1: 6 occurrences
+Word length 2: 28 occurrences
+Word length 3: 116 occurrences
+Word length 4: 325 occurrences
+Word length 5: 340 occurrences
+Word length 6: 293 occurrences
+Word length 7: 257 occurrences
+Word length 8: 130 occurrences
+Word length 9: 108 occurrences
+Word length 10: 63 occurrences
+Word length 11: 38 occurrences
+Word length 12: 16 occurrences
+Word length 13: 10 occurrences
+Word length 14: 7 occurrences
+Word length 15: 2 occurrences
+Word length 18: 1 occurrences
+Word length 25: 1 occurrences

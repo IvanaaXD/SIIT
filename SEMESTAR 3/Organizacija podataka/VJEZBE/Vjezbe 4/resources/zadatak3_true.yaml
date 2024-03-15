@@ -1,0 +1,6 @@
+!!zadatak1.Autobus {brojProdatihKarata: 24, cijena: 1000.0, datumPolaska: '2023-11-12',
+  mjestoDolaska: Vranje, mjestoPolaska: Beograd, peron: 3, planiranoVrijemeDolaska: '16:00',
+  sifraRelacije: RS008, vrijemePolaska: '13:45'}
+--- !!zadatak1.Autobus {brojProdatihKarata: 60, cijena: 800.0, datumPolaska: '2023-11-12',
+  mjestoDolaska: Beograd, mjestoPolaska: Vranje, peron: 3, planiranoVrijemeDolaska: '16:00',
+  sifraRelacije: RS009, vrijemePolaska: '13:45'}

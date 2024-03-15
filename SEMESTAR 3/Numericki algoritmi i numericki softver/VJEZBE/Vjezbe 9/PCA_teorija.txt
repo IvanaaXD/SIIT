@@ -1,0 +1,59 @@
+Redukovanje dimenzionalnosti: kreiranje podskupa obeležja koji dobro sumarizuje originalna obeležja
+Zašto? 
+-Kompresija (manje zauzeće memorije, ubrzanje obučavanja modela)
+-Uklanjanje šuma (previše nepotrebnih obeležja -> gore performanse)
+-Vizuelizacija (može pomoći sa razumevanjem podataka -> moguće napraviti bolji model)  
+
+Redukciju treba raditi na principijalan način
+-> Odbacujemo podatke = moguć gubitak bitnih podataka za obučavanje
+-> Bitno je sačuvati korisne podatke, a da se šum odbaci
+Načini:
+-Koristiti podskup obeležja sa kojim možemo razlikovati klase
+-Kreirati nova obeležja koja su zapravo kombinacija starih
+
+PCA (Principal Component Analysis)
+Ideja je da se osa rotira sa linearnom transformacijom, kako bismo primetili koje dimenzije su dominantne,
+a koje možemo da odbacimo (šum)
+Cilj je da se konstruiše takav koordinatni sistem gde je većina koordinati mala, da bi se mogle postaviti na 0
+i time se nadamo da smo smanjili dimenzionalnost tako da smo sačuvali većinu važnih podataka
+Druga ideja: koordinatni sistem se određuje tako da ostane što više varijabilnosti (da ukupna razlika između
+povučenih linija i originalnih tačaka bude što manja)
+Nova osa je PRVA GLAVNA KOMPONENTA, sledeca je druga (koja je normalna na prethodnu osu) itd.
+
+Uslovi podataka:
+Podaci moraju biti centrirani (npr. centriranje pomoću srednje vrednosti)
+(svako obeležje - srednja vrednost tog obeležja = nova lokacija)
+Bilo bi lepo da su podaci normalizovani tj. skalirani (npr. podeliti obeležja sa nekim skalarom)
+Nenormalizovani (ne-skalirani) podaci mogu praviti problem kod PCA algoritma ako je opseg mogućih vrednosti velik
+
+Obeležja koja dobijemo sa PCA algoritmom su LINEARNA KOMBINACIJA ORIGINALNIH OBELEŽJA
+Svi koraci PCA algoritma NE ZAVISE OD VREDNOSTI Y (vrednosti zavisne promenljive koje gledamo)
+
+Koliki treba da bude broj novih obeležja?
+-2 ili 3 ako hoćemo da vizualizujemo podatke na grafiku
+-ako hoćemo da koristimo podatke za obučavanje, zavisi koliku varijansu želimo da zadržimo (što veći to bolji)
+
+LOŠE JE KORISTITI PCA ALGORITAM ZA REŠAVANJE OVERFITTOVANJA KRIVE
+
+Obeležja koja vraća PCA su automatski generisana - ne moramo znati ništa o problemu koji rešavamo (prednost)
+To je isto i njegova najveća mana - obeležja koja nam je dao PCA su dobra za rekonstruisanje podataka, ali
+nije sigurno da će ona biti korisna pri rešavanju problema (mana)
+Najbolje: domensko znanje vezana za obeležja + automatske metode za redukciju dimenzionalnosti
+
+KAKO VIDIMO KOLIKO OBELEŽJA ZADRŽAVA KOLIKI PROCENAT VARIJANSE?
+Jedan način - videti koliko se ukupno zadrži varijanse za N komponenti preko grafika
+Drugi način - videti koliko dodatne varijanse donosi svaka naredna komponenta, pa uzeti broj komponenti pre
+nego što varijansa stagnira (metod lakta)
+(RAZLIČITI GRAFICI SE KORISTE ZA OVA DVA NAČINA, VIDETI VEŽBE)
+
+Nedostaci PCA algoritma:
+Interpretacija podataka može biti teška
+Ne mora uvek da pomogne
+Potencijalno katastrofalni rezultati kod nelinearnih podataka (videti slajd 46)
+
+Znači, šta treba gledati?
+1) Podaci treba da imaju linearnu strukturu
+2) Donje glavne komponente su uglavnom male slučajne fluktuacije koje liče na šum, pa samim tim postoji
+mogućnost smanjenja dimenzija (da li je to STVARNO šum ili ne, moramo pogoditi)
+3) Dobijeni rezultati uglavnom zavise od gornjih glavnih komponenti (ako male fluktuacije u donjim glavnim
+komponentama rezultuju u velikim promenama, PCA neće pomoći)
