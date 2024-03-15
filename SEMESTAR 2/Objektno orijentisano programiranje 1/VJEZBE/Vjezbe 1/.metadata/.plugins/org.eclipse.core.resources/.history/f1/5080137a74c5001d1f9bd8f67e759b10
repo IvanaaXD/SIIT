@@ -1,0 +1,17 @@
+package vjezbe_1;
+
+public class zasatak4 {
+
+	public static void main(String[] args) {
+
+		double cm = 12.5;
+		
+		double dm = 10 * cm;
+		double m = 10 * dm;
+		
+		System.out.println("To je: " + dm + "dm.");
+		System.out.println("To je: " + m + "m.");
+		
+	}
+
+}

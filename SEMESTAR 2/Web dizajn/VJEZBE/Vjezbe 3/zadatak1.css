@@ -1,0 +1,122 @@
+*, html{
+	padding: 0;
+	min-height: 100%;
+	margin: 0;
+}
+
+main{
+	background-color: white;
+	margin-left: 25%;
+	margin-right: 25%;
+	margin-top: 0%;
+	margin-bottom: 1%;
+	padding-bottom: 3%;
+}
+
+img{
+	float: right;
+	margin-left: 5px;
+	margin-right: 5px;
+	margin-bottom: 5px;
+	margin-top: 5px;
+	padding-right: 4%;
+	padding-top: 1%;
+}
+
+blockquote{
+	text-align: justify;	
+	padding: 0% 35% 0% 5%;
+}
+
+a{
+	color: red;
+	padding: 2% 5% 1% 5%;
+}
+
+.tekst1{
+	text-align: justify;	
+	padding: 2% 33% 0% 5%;
+
+}
+
+.tekst2{
+	text-align: justify;	
+	padding: 2% 5% 1% 5%;
+
+}
+
+.linija{
+	color: blue;
+	align-self: center;
+	width: 80%;
+	margin-left: 5%;
+	padding-left: 5%;
+	padding-right: 5%;
+	margin-bottom: 2%;
+	margin-top: 2%;
+}
+
+.linijac{
+	color: red;
+	float: left;
+	width: 51%;
+	margin-left: 5%;
+	padding-left: 5%;
+	padding-right: 5%;
+	margin-bottom: 2%;
+	margin-top: 2%;
+}
+
+.vijesti{
+	background-color: blue;
+	width: inherit ;
+	height: 80px;
+	padding: 0% 0% 0% 0%;
+	margin: 0% 0% 0% 0%;
+}
+
+.vijestii{
+	font-size: 20px;
+	color: blue;
+	padding-left: 5%;
+	padding-right: 5%;
+	padding-top: 5px;
+	padding-bottom: 5px;
+
+}
+
+.vijest{
+	color: white;
+	font-size: 30px;
+	padding-left: 25%;
+	padding-top: 25px;
+}
+
+.stranica{
+	color: white;
+	padding-left: 25%;
+	padding-right: 25%;
+}
+
+.body{
+	background: linear-gradient(180deg, rgba(171, 164, 163, 1) 30%, rgba(255,255,255,1) 80%);
+	margin: 0;
+	padding: 0;
+	min-height: 100%;
+}
+
+.naslov{
+	color: red;
+	font-size: 35px;
+	padding-bottom: 0%;
+	padding-left: 5%;
+	padding-top: 3%;
+}
+
+.prvi{
+	background-color: blue;
+	color: white;
+	padding: 15px;
+	margin-left: 5%;
+	margin-right: 5%;
+}

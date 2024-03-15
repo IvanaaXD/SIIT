@@ -1,0 +1,1 @@
+INDEX VERSION 1.131+D:\FTN NS\PREDAVANJA\Semestar 2\Objektno orijentisano programiranje 1\GUI\Swing GUI Uvod\src\.metadata\.plugins\org.eclipse.jdt.core

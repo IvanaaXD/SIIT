@@ -1,0 +1,46 @@
+div {
+    width: 40%;
+    height: 50px;
+  }
+  
+  .class1 {
+    background-color: lightblue;
+    margin-left: 20%;
+    padding: 20px;
+    border: 1px darkblue solid;
+  }
+  
+  .class2 {
+    background-color: lightskyblue;
+    margin: 30px 30%;
+    padding-left: 50px;
+    padding-top: 5px;
+    border: 2px blue dotted;
+  }
+  
+  .class3 {
+    background-color: lightgreen;
+    margin: 10px;
+    padding: 5px;
+    border: 2px green double;
+    border-radius: 5px;
+  }
+  
+  .class4 {
+    background-color: lightgoldenrodyellow;
+    margin-left: 50%;
+    margin-top: 5%;
+    border: 5px yellow dashed;
+    padding: 5px;
+  }
+  
+  .class5 {
+    background-color: lightsalmon;
+    width: 20%;
+    margin-left: 70%;
+    margin-top: 5px;
+    border: 5px red dotted;
+    padding: 10px;
+    border-radius: 25px;
+  }
+  

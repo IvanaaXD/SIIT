@@ -1,0 +1,227 @@
+package vjezbe_4;
+
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class zadatak2 {
+	
+	static Scanner sc = new Scanner(System.in);
+	static int broj = 0;
+	static ArrayList <Artikal> lista = new ArrayList<>();
+	
+	public static void main(String[] args) {
+		
+		System.out.println("==================Menu=================");
+		System.out.println("1. Unos novog artikla");
+		System.out.println("2. Izmjena podataka postojeceg artikla");
+		System.out.println("3. Ispis");
+		System.out.println("4. Sortiranje artikala po nazivu");
+		System.out.println("5. Sortiranje artikala po cijeni");
+		System.out.println("6. Sortiranje artikala po kategoriji");
+		System.out.println("7. Izlazak iz aplikacije");
+
+		System.out.println("Unesite broj zeljene opcije: ");
+		String unos = sc.nextLine();
+		
+		boolean drama = true;
+		while(drama) {
+			
+			switch(unos) {
+			case "1": funkcija_1();
+					break;
+			case "2": funkcija_2();
+					break;
+			case "3": funkcija_3();
+					break;
+			case "4": funkcija_4();
+					break;
+			case "5": funkcija_5();
+					break;
+			case "6": funkcija_6();
+					break;
+			case "7": funkcija_7();
+					drama = false;
+					break;
+			default: System.out.println("Pogresan unos! Pokusajte ponovo!");
+					break;
+			}
+			
+		}
+		
+		sc.close();
+		
+	}
+	
+	public static void funkcija_1() {
+		
+		System.out.println("Unesite podatke o artiklu: ");
+		
+		System.out.println("Sifra: ");
+		String sifra = sc.nextLine();
+		
+		System.out.println("Naziv: ");
+		String naziv = sc.nextLine();
+		
+		System.out.println("Cijena: ");
+		double cijena = sc.nextDouble();
+		sc.nextLine();
+		
+		System.out.println("Raspoloziva kolicina: ");
+		int raspolozivaKolicina = sc.nextInt();
+		sc.nextLine();
+		
+		System.out.println("Opis: ");
+		String opis = sc.nextLine();
+		
+		System.out.println("Kategorija: ");
+		String kategorija = sc.nextLine();
+		
+		Artikal artikal = new Artikal(sifra, naziv, cijena, raspolozivaKolicina, opis, kategorija);
+		lista.add(artikal);
+		
+		broj += 1;
+		System.out.println("Artikal uspjesno dodat!");
+		
+	}
+	
+	public static void funkcija_2() {
+		
+		System.out.println("Unesite sifru artikla koji mijenjate: ");
+		String unos = sc.nextLine();
+		
+		int brojac = 0;
+		int indeks = 0;
+		for (int i = 0; i < lista.size(); i++) {
+			
+			Artikal jej = lista.get(i);
+			if (jej.getSifra() == unos) {
+				
+				brojac = 1;
+				indeks = i;
+			}
+			else {
+				System.out.printf("Artikal sa sifrom %s ne postoji.", unos);
+			}
+		}
+		
+		if (brojac == 1) {
+			
+			Artikal jeeej = lista.get(indeks);
+			
+			System.out.println("Unesite podatke o artiklu: ");
+			
+			System.out.println("Sifra: ");
+			String sifra = sc.nextLine();
+			
+			if (!sifra.equals("")) {
+				
+				jeeej.setSifra(sifra);
+				
+			}
+			
+			System.out.println("Naziv: ");
+			String naziv = sc.nextLine();
+			
+			System.out.println("Cijena: ");
+			double cijena = sc.nextDouble();
+			sc.nextLine();
+			
+			System.out.println("Raspoloziva kolicina: ");
+			int raspolozivaKolicina = sc.nextInt();
+			sc.nextLine();
+			
+			System.out.println("Opis: ");
+			String opis = sc.nextLine();
+			
+			System.out.println("Kategorija: ");
+			String kategorija = sc.nextLine();
+			
+			Artikal artikal = new Artikal(sifra, naziv, cijena, raspolozivaKolicina, opis, kategorija);
+			lista.add(artikal);
+			
+			broj += 1;
+			System.out.println("Artikal uspjesno izmijenjen!");
+			
+		}
+			
+	}
+
+}
+
+class Artikal{
+	
+	protected String sifra;
+	protected String naziv;
+	protected double cijena;
+	protected int raspolozivaKolicina;
+	protected String opis;
+	protected String kategorija;
+
+	Artikal(){	
+	}
+	
+
+	Artikal(String sifra, String naziv, double cijena, int raspolozivaKolicina, String opis, String kategorija){
+		
+		this.sifra = sifra;
+		this.naziv = naziv;
+		this.cijena = cijena;
+		this.raspolozivaKolicina = raspolozivaKolicina;
+		this.opis = opis;
+		this.kategorija = kategorija;
+		
+	}
+	
+	public void setSifra(String sifra){
+		this.sifra = sifra;
+	}
+	
+	public String getSifra(){
+		return sifra;
+	}
+	
+	public void setNaziv(String naziv){
+		this.naziv = naziv;
+	}
+
+	public String getNaziv(){
+		return naziv;
+	}
+	
+	public void setCijena(double cijena){
+		this.cijena = cijena;
+	}
+	
+	public double getCijena(){
+		return cijena;
+	}
+	
+	public void setKolicina(int raspolozivaKolicina){
+		this.raspolozivaKolicina = raspolozivaKolicina;
+	}
+	
+	public int getKolicina(){
+		return raspolozivaKolicina;
+	}
+	
+	public void setOpis(String opis) {
+		this.opis = opis;
+	}
+	
+	public String getOpis(){
+		return opis;
+	}
+	
+	public void setKategorija(String kategorija) {
+		this.kategorija = kategorija;
+	}
+	
+	public String getKategorija(){
+		return kategorija;
+	}
+	
+	
+}
+

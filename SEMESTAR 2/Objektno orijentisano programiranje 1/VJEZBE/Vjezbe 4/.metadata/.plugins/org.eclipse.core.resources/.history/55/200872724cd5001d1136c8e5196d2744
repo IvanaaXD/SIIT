@@ -1,0 +1,23 @@
+package vjezbe_4;
+
+import java.util.ArrayList;
+	
+class Student {
+	
+	private String ime;
+	private String indeks;
+	private String grad;
+
+	
+}		
+		
+		
+		
+
+	public static void main(String[] args) {
+
+		
+		
+	}
+
+

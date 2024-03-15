@@ -1,0 +1,26 @@
+package vjezbe_3;
+
+public class primjer3 {
+
+	public static void main(String[] args) {
+
+		String a = "Ovo Je Tekst";
+		String b = "ovo je tekst";
+		
+		if (a.equals(b)) {
+			System.out.println("1. Nizovi a i b su slicni.");
+		}
+		else {
+			System.out.println("1. Nizovi a i b nisu slicni.");
+		}
+		
+		if (a.equalsIgnoreCase(b)) {
+			System.out.println("2. Nizovi a i b su slicni.");
+		}
+		else {
+			System.out.println("2. Nizovi a i b nisu slicni.");
+		}
+		
+	}
+
+}

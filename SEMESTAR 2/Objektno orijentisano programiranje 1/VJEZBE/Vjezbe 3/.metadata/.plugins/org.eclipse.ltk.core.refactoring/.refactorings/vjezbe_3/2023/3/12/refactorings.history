@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename package &apos;vjezbe_3&apos; to &apos;stringovi&apos;&#x0D;&#x0A;- Original project: &apos;vjezbe_3&apos;&#x0D;&#x0A;- Original element: &apos;vjezbe_3/src/vjezbe_3&apos;&#x0D;&#x0A;- Renamed element: &apos;vjezbe_3/src/stringovi&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename package &apos;vjezbe_3&apos;" flags="589830" hierarchical="false" id="org.eclipse.jdt.ui.rename.package" input="/src&lt;vjezbe_3" name="stringovi" qualified="false" references="true" stamp="1679255805334" textual="false" version="1.0"/>
+</session>
