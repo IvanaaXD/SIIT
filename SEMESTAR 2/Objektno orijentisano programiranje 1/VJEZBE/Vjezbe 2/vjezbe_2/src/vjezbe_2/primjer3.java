@@ -1,0 +1,20 @@
+package vjezbe_2;
+
+public class primjer3 {
+
+	public static void main(String[] args) {
+
+		int n = 4, m = 7;
+		System.out.println("Matrica A je oblika:");
+		
+		for (int i = 1; i <= n; i++) {
+			System.out.println("\t");
+			for (int j = 1; j <= m; j++) {
+				System.out.print(j + " ");
+			}
+			System.out.print("\n");
+		}
+		
+	}
+
+}

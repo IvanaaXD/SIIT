@@ -1,0 +1,28 @@
+package vjezbe_4;
+
+import java.util.ArrayList;
+	
+	class Student {
+		
+		private String ime;
+		private String indeks;
+		private String grad;
+
+		public Student(String ime, String indeks, String grad) {
+			
+			this.ime = ime;
+			this.indeks = indeks;
+			this.grad = grad;
+			
+		}
+		
+		ArrayList Studenti = new ArrayList();
+		
+
+	public static void main(String[] args) {
+
+		
+		
+	}
+
+}

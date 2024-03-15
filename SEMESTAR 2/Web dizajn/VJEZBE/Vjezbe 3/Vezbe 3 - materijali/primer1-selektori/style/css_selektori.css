@@ -1,0 +1,40 @@
+/* OSNOVNI SELEKTORI */
+* {   font-family: Roboto, Verdana, sans-serif;}
+
+div {
+    background-color: antiquewhite;
+}
+  
+p {
+    color: darkslategrey;
+    font-size: large;
+    font-weight: bold;
+}
+  
+.first {
+    background-color: lightgreen;
+}
+
+#second {
+    background-color: beige;
+    font-style: italic;
+}
+/* KOMBINOVANI SELEKTORI */
+h1, h2, h3, h4, h5, h6 {
+    color: lightblue;
+}
+/* SELEKTORI ZA POTOMKE */
+  ul li {   /* selektuje sve lielemente koji su potomci ul elementa, bez obzira da li su direktni potomci ili dublje ugneždeni */
+    font-style: italic;
+    font-size: large;
+    color: paleturquoise;
+  }
+
+  ul>li {        /* selektuje samo one li elemente koji su direktni potomci ul elemnta */
+    color: lightcoral;
+  }
+
+/* SELEKTORI-PSEUDO KLASE */
+  li:hover {
+    background-color: lightgreen;
+  }

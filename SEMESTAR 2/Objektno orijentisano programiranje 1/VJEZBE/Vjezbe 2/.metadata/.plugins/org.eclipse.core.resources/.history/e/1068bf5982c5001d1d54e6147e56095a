@@ -1,0 +1,26 @@
+package vjezbe_2;
+
+public class zadatak10 {
+
+	public static void main(String[] args) {
+
+		int[][] matrica = new int [3][3];
+		
+		int brojac = 1;
+		for (int i = 0; i < matrica.length; i++) {
+			for (int j = 0; j < matrica[i].length; j++) {
+				matrica[i][j] = brojac;
+				brojac += 1;
+			}
+		}
+		
+		for (int i = 0; i < matrica.length; i++) {
+			for (int j = 0; j < matrica[i].length; j++) {
+				System.out.println(matrica[i][j] + " ");
+			}
+			System.out.println("\n");
+		}
+		
+	}
+
+}

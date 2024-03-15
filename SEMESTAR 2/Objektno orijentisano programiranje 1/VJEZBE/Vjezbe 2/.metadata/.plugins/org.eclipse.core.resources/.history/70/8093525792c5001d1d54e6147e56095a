@@ -1,0 +1,66 @@
+package vjezbe_2;
+
+public class zadatak10 {
+
+	public static void main(String[] args) {
+		
+		int[][] matrica = new int [3][3];
+		
+		int brojac = 1;
+		int drama = 0;
+		for (int i = 0; i < matrica.length; i++) {
+			for (int j = 0; j < matrica[i].length; j++) {
+				matrica[i][j] = brojac;
+				brojac += 1;
+			}
+			drama += 1;
+		}
+		
+		for (int i = 0; i < matrica.length; i++) {
+			for (int j = 0; j < matrica[i].length; j++) {
+				System.out.print(matrica[i][j] + "   ");
+			}
+			System.out.print("\n");
+		}
+		
+		System.out.println("\n");
+		
+		int zamjena1 = 0;
+		int zamjena2 = 0;
+		int j1 = 0;
+		int j2 = 0;
+		for (int i = 0; i < matrica.length; i++) {
+			for (int j = 0; j < matrica[i].length; j++) {
+
+				if (i == j) {
+					zamjena1 = matrica[i][j];
+					j1 = i;
+				}
+				
+				if (Math.abs(i - j) == drama - 1) {
+					zamjena2 = matrica[i][j];
+					j2 = j;
+				}
+			}
+			
+			if (zamjena2 != 0) {
+				matrica[i][j1] = zamjena2;
+				matrica[i][j2] = zamjena1;
+			}
+			
+			zamjena1 = 0;
+			zamjena2 = 0;
+
+		}
+		
+		
+		for (int i = 0; i < matrica.length; i++) {
+			for (int j = 0; j < matrica[i].length; j++) {
+				System.out.print(matrica[i][j] + "   ");
+			}
+			System.out.print("\n");
+		}
+		
+	}
+
+}

@@ -1,0 +1,4 @@
+INDEX VERSION 1.131+D:\FTN NS\VJEZBE\Semestar 2\Objektno orijentisano programiranje 1\Vjezbe 2\.metadata\.plugins\org.eclipse.jdt.core
+1865797976.index
+2893927231.index
+4127878575.index

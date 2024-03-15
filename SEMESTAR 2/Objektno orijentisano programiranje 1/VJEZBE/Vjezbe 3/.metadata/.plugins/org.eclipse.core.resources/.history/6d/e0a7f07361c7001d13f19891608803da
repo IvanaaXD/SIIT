@@ -1,0 +1,24 @@
+package zadaci_funkcije_i_stringovi;
+
+public class zadatak2 {
+
+	public static void main(String[] args) {
+
+		int matricaB[][];
+		
+		String a = "4,3,2,1;0,1,0;1,2,3,4";
+		
+		String redovi[] = a.split(";");
+		String kolone[] = ;
+		String red;
+		
+		for (int i = 0; i < redovi.length; i++) {
+			
+			red = redovi[i].toString();
+							
+			kolone[] = red.split(","); 
+				
+		}
+	}
+
+}

@@ -1,0 +1,25 @@
+package vjezbe_2;
+
+public class zadatak15 {
+
+	public static void main(String[] args) {
+
+		int n = 7;
+		String minus = "-";
+		String zvijezda = "*";
+		String wuhu = "";
+		
+		int brojac1 = n + 1;
+		int brojac2 = 0;
+		for (int i = 0; i < n*2; i++) {
+			
+			brojac1 -= 1;
+			brojac2 += 1;
+
+			wuhu = minus.repeat(brojac1) + zvijezda.repeat(brojac2) + minus.repeat(brojac1);
+			System.out.println(wuhu);
+		}
+		
+	}
+
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>HTML Forms - Reservation</title>
+	<meta name="viewport" content="width=devvice-witdh">
+</head>
+
+<body>
+	<h1>Courts Reservation Page</h1>
+    <form action="#" method="get">
+
+		<fieldset>
+
+		<legend> Client Data </legend>
+
+			<br>
+	        <label for="frame"> Full Name: </label>
+	        <input type="text" name="ime"/>
+	        <br><br>
+	        <label for="frame"> Email: </label>
+	        <input type="text" name="mejl"/>
+
+	        <p> Are you a Member? </p>
+	        <input type="radio" id="yes" name="drama" value="Yes"> 
+	        <label for="yes"> Yes </label>
+	        <input type="radio" id="no" name="drama" value="No"> 
+	        <label for="no"> No </label>
+
+	    </fieldset>
+
+	    <fieldset>
+			
+		<legend> Reservation Data </legend>
+
+			<br>
+	        <label for="Courts"> Court: </label>
+	        <select name="Courts" id="Courts">
+	        	<option value="basketball"> basketball </option>
+	        	<option value="volleyball"> volleyball </option>
+	        	<option value="football"> football </option>
+	        </select>
+	        <br><br>
+
+	        <label for="start"> Select a reservation date and time: </label>
+	        <input type="date" id="start" name="trip-start" value="mm/dd/yyyy" min="2023-01-01" max="2030-12-31"> 
+	        <input type="time" id="start" name="start" min="09:00" max="18:00">
+
+	        <br><br>
+	        <label for="frame"> Num. of players: </label>
+	        <input type="text" name="igraci"/>
+	        <br><br>
+
+	        <label for="frame"> Note: </label>
+	        <br>
+
+	        <textarea rows = "5" cols = "60" name = "description">
+	        </textarea><br>
+
+	    </fieldset>
+	
+		<input type="checkbox" name="slaganje">
+		<label for="slaganje"> I agree to the club's reservation policy.</label>
+
+		<br><br>
+
+		<input type="submit" name="submit" value="submit">
+		<input type="reset" name="reset" value="reset">
+
+	</form>
+</body>
+
+</html>

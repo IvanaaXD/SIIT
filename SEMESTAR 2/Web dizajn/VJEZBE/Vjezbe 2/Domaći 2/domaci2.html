@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>HTML Forms - Registration</title>
+	<meta name="viewport" content="width=devvice-witdh">
+</head>
+
+<body>
+	<h1>Create an Account</h1>
+    <form action="#" method="get">
+
+        <label for="frame"> Full Name: </label>
+        <br>
+        <input type="text" name="ime" required/>
+        <br><br>
+        <label for="frame"> Email: </label>
+        <br>
+        <input type="text" name="mejl" required/>
+		<br><br>
+        <label for="frame"> Password: </label>
+        <br>
+        <input type="password" name="lozinka" required/>
+		<br><br>
+
+        <label for="god"> Age: </label>
+        	<br>
+	        <select name="god" id="god" value="--Select Age--">
+	        	<option value="select"> -- Select Age -- </option>
+	        	<option value="under18"> Under 18 </option>
+	        	<option value="18to30"> 18 to 30 </option>
+	        	<option value="31to45"> 31 to 45 </option>
+	        	<option value="46to60"> 46 to 60 </option>
+	        	<option value="61+"> 61+ </option>
+	        </select>
+	    <br>
+        
+    	<p> Gender: </p>
+        <input type="radio" id="male" name="drama" value="Male"> 
+        <label for="male"> Male </label>
+        <input type="radio" id="female" name="drama" value="Female"> 
+        <label for="female"> Female </label>
+
+        <br><br>
+
+		<label for="frame"> Tell us a little about yourself: </label>
+        <br>
+
+        <textarea rows = "5" cols = "40" name = "description">
+        </textarea>
+
+        <br><br>
+
+        <input type="checkbox" name="slaganje">
+		<label for="slaganje"> I agree to the <a href="http://www.dumb.com/terms" target="blank"> Terms & Conditions </a></label>
+
+		<br><br>
+
+        <input type="submit" name="submit" value="Sign up">
+
+    </form>
+
+</body>
+
+</html>

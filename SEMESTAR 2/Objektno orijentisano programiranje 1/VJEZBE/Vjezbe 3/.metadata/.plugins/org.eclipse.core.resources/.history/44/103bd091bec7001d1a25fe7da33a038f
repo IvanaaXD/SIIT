@@ -1,0 +1,12 @@
+package zadaci_funkcije_i_stringovi;
+
+public class zadatak5 {
+
+	public static void main(String[] args) {
+
+		String a = "Coko plazma|s01|Bambi|85.30|akcija\nSmoki|s02|Stark|55.00|nije na akciji\nCipsi|s03|Marbo |115.20|nije na akciji\nKrem Bananica|s04|Stark|11.00|akcija\n";
+		
+		
+	}
+
+}

@@ -1,0 +1,46 @@
+package vjezbe_4;
+
+public class Krug {
+
+	double x;
+	double y;
+	double r;
+	
+	Krug(double x, double y, double r){
+		
+		this.x = x;
+		this.y = y;
+		this.r = r;
+		
+	}
+	
+	public void povrsina(double r) {
+		
+		double povrsina = r * r * Math.PI;
+		System.out.println("Povrsina je: " + povrsina);
+		
+	}
+	
+	public void obim(double r) {
+		
+		double obim = 2 * r * Math.PI;
+		System.out.println("Obim je: " + obim);
+		
+	}
+	
+	public void provjera(double X, double Y) {
+		
+		double d = Math.sqrt((x - X)*(x - X) + (y - Y)*(y - Y));
+		
+		if (d < r) {
+			System.out.println("Tacka se nalazi unutar kruga.");
+		}
+	}
+	
+	public static void main(String[] args) {
+
+		System.out.println("Unesite koordinate tacke [x,y]");
+		String unos;
+	}
+
+}
