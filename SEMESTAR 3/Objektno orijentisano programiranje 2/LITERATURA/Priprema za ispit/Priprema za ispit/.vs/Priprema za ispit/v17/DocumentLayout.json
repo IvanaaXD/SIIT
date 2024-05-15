@@ -1,0 +1,102 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\SIIT\\SEMESTAR 3\\Objektno orijentisano programiranje 2\\LITERATURA\\Priprema za ispit\\Priprema za ispit\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{D81859A1-5323-4943-B17E-821B1660F155}|Priprema za ispit.vcxproj|D:\\SIIT\\SEMESTAR 3\\Objektno orijentisano programiranje 2\\LITERATURA\\Priprema za ispit\\Priprema za ispit\\zvezda.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{D81859A1-5323-4943-B17E-821B1660F155}|Priprema za ispit.vcxproj|solutionrelative:zvezda.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D81859A1-5323-4943-B17E-821B1660F155}|Priprema za ispit.vcxproj|D:\\SIIT\\SEMESTAR 3\\Objektno orijentisano programiranje 2\\LITERATURA\\Priprema za ispit\\Priprema za ispit\\brisanjeizseta2.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{D81859A1-5323-4943-B17E-821B1660F155}|Priprema za ispit.vcxproj|solutionrelative:brisanjeizseta2.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D81859A1-5323-4943-B17E-821B1660F155}|Priprema za ispit.vcxproj|D:\\SIIT\\SEMESTAR 3\\Objektno orijentisano programiranje 2\\LITERATURA\\Priprema za ispit\\Priprema za ispit\\brisanjeizseta.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{D81859A1-5323-4943-B17E-821B1660F155}|Priprema za ispit.vcxproj|solutionrelative:brisanjeizseta.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D81859A1-5323-4943-B17E-821B1660F155}|Priprema za ispit.vcxproj|D:\\SIIT\\SEMESTAR 3\\Objektno orijentisano programiranje 2\\LITERATURA\\Priprema za ispit\\Priprema za ispit\\polaliste.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{D81859A1-5323-4943-B17E-821B1660F155}|Priprema za ispit.vcxproj|solutionrelative:polaliste.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D81859A1-5323-4943-B17E-821B1660F155}|Priprema za ispit.vcxproj|D:\\SIIT\\SEMESTAR 3\\Objektno orijentisano programiranje 2\\LITERATURA\\Priprema za ispit\\Priprema za ispit\\set.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{D81859A1-5323-4943-B17E-821B1660F155}|Priprema za ispit.vcxproj|solutionrelative:set.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "zvezda.cpp",
+              "DocumentMoniker": "D:\\SIIT\\SEMESTAR 3\\Objektno orijentisano programiranje 2\\LITERATURA\\Priprema za ispit\\Priprema za ispit\\zvezda.cpp",
+              "RelativeDocumentMoniker": "zvezda.cpp",
+              "ToolTip": "D:\\SIIT\\SEMESTAR 3\\Objektno orijentisano programiranje 2\\LITERATURA\\Priprema za ispit\\Priprema za ispit\\zvezda.cpp",
+              "RelativeToolTip": "zvezda.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-04-11T14:31:45.065Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "brisanjeizseta2.cpp",
+              "DocumentMoniker": "D:\\SIIT\\SEMESTAR 3\\Objektno orijentisano programiranje 2\\LITERATURA\\Priprema za ispit\\Priprema za ispit\\brisanjeizseta2.cpp",
+              "RelativeDocumentMoniker": "brisanjeizseta2.cpp",
+              "ToolTip": "D:\\SIIT\\SEMESTAR 3\\Objektno orijentisano programiranje 2\\LITERATURA\\Priprema za ispit\\Priprema za ispit\\brisanjeizseta2.cpp",
+              "RelativeToolTip": "brisanjeizseta2.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-04-11T11:44:54.687Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "brisanjeizseta.cpp",
+              "DocumentMoniker": "D:\\SIIT\\SEMESTAR 3\\Objektno orijentisano programiranje 2\\LITERATURA\\Priprema za ispit\\Priprema za ispit\\brisanjeizseta.cpp",
+              "RelativeDocumentMoniker": "brisanjeizseta.cpp",
+              "ToolTip": "D:\\SIIT\\SEMESTAR 3\\Objektno orijentisano programiranje 2\\LITERATURA\\Priprema za ispit\\Priprema za ispit\\brisanjeizseta.cpp",
+              "RelativeToolTip": "brisanjeizseta.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-04-11T11:44:53.074Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "polaliste.cpp",
+              "DocumentMoniker": "D:\\SIIT\\SEMESTAR 3\\Objektno orijentisano programiranje 2\\LITERATURA\\Priprema za ispit\\Priprema za ispit\\polaliste.cpp",
+              "RelativeDocumentMoniker": "polaliste.cpp",
+              "ToolTip": "D:\\SIIT\\SEMESTAR 3\\Objektno orijentisano programiranje 2\\LITERATURA\\Priprema za ispit\\Priprema za ispit\\polaliste.cpp",
+              "RelativeToolTip": "polaliste.cpp",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAACUAAAACAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-04-11T11:36:13.351Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "set.cpp",
+              "DocumentMoniker": "D:\\SIIT\\SEMESTAR 3\\Objektno orijentisano programiranje 2\\LITERATURA\\Priprema za ispit\\Priprema za ispit\\set.cpp",
+              "RelativeDocumentMoniker": "set.cpp",
+              "ToolTip": "D:\\SIIT\\SEMESTAR 3\\Objektno orijentisano programiranje 2\\LITERATURA\\Priprema za ispit\\Priprema za ispit\\set.cpp",
+              "RelativeToolTip": "set.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-04-11T11:35:06.182Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
