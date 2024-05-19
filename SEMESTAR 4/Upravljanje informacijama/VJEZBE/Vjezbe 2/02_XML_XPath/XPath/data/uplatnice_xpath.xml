@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xpath>
+
+	<expression>//uplatnica</expression>
+	<expression>//uplatnica[@mesto="Novi Sad"]</expression>
+	<expression>//uplatnica/duznik/naziv</expression>
+	<expression>//uplatnica/primalac[racun[starts-with(.,'380')]]</expression>
+	<expression>//uplatnica[uplata[valuta="RSD"]]</expression>
+	<expression>//uplatnica/duznik/adresa[grad="Beograd"]</expression>
+	<expression>//uplatnica[@mesto='Subotica']/primalac/naziv | //uplatnica[@mesto='Subotica']/primalac/adresa</expression>
+	<expression>//uplatnica[duznik[poziv_na_broj[starts-with(., '123')]] | /primalac[poziv_na_broj[starts-with(., '123')]]]</expression>
+	<expression>//uplatnica/uplata[valuta="EUR"]/iznos</expression>
+	<expression>//uplatnica[duznik[broj_modela="97"]]</expression>
+
+</xpath>

@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Observer\**" />
+    <EmbeddedResource Remove="Observer\**" />
+    <None Remove="Observer\**" />
+    <Page Remove="Observer\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CRUDExample\CRUDExample.csproj" />
+  </ItemGroup>
+
+</Project>

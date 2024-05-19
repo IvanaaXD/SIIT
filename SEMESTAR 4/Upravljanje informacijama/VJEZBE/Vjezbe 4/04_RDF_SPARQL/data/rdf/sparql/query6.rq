@@ -1,0 +1,6 @@
+SELECT ?company (COUNT(?person) as ?employeeCount)
+WHERE { 
+  	?person <http://www.example.org/rdf/examples/predicate/worksAt> ?company .
+}
+GROUP BY ?company
+

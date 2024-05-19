@@ -1,0 +1,85 @@
+3) Варирати величину табле и број итерација. Коментарисати резултате убрзања у зависности од броја језгара.
+
+
+NUM_OF_ITERATIONS - овај број сам изабрала на основу тога што у main.срр-у постоји само једна инстанца GameOfLife game, па како би и серијско и паралелно покретање почињали истим обликом, овај број треба бити дјељив са 3, осим код random врсте игре.
+
+TABLE_SIZE - овај број сам изабрала на основу броја итерација, гдје се приликом различитих тестирања испоставило да на крају покретања серијски и паралелни бројеви поново рођених ћелија, тј. rebornCells, не морају бити исти. Приликом тестирања сљедећих примјера нисам уочила неки специфичан шаблон по ком би се могла изабрати величина табеле.
+
+
+
+#define NUM_OF_ITERATIONS 12
+#define TABLE_SIZE 24
+
+Serial Game of Life initiated...
+Serial time:                    0.0002321 seconds
+Reborn cells:                   256
+Parallel Game of Life initiated...
+Parallel time:                  0.002102 seconds
+Reborn cells:                   256
+
+
+
+#define NUM_OF_ITERATIONS 12
+#define TABLE_SIZE 28
+
+Serial Game of Life initiated...
+Serial time:                    0.0003326 seconds
+Reborn cells:                   256
+Parallel Game of Life initiated...
+Parallel time:                  0.001965 seconds
+Reborn cells:                   178
+
+
+
+#define NUM_OF_ITERATIONS 12
+#define TABLE_SIZE 32
+
+Serial Game of Life initiated...
+Serial time:                    0.0003181 seconds
+Reborn cells:                   256
+Parallel Game of Life initiated...
+Parallel time:                  0.0024018 seconds
+Reborn cells:                   256
+
+
+
+#define NUM_OF_ITERATIONS 12
+#define TABLE_SIZE 36
+
+Serial Game of Life initiated...
+Serial time:                    0.0006542 seconds
+Reborn cells:                   256
+Parallel Game of Life initiated...
+Parallel time:                  0.0020434 seconds
+Reborn cells:                   256
+
+
+
+#define NUM_OF_ITERATIONS 12
+#define TABLE_SIZE 40
+
+Serial Game of Life initiated...
+Serial time:                    0.0006519 seconds
+Reborn cells:                   256
+Parallel Game of Life initiated...
+Parallel time:                  0.0025489 seconds
+Reborn cells:                   256
+
+
+На основу ових тестирања видимо да како повећавамо величину табеле тако и серијско и паралелно вријеме извршавања расту. Испоставило се да што је већ разлика између броја итерација и величине табеле, то се повећава разлика између брзина извршавања. 
+
+Тестирајући са бројем итерација једнаким 12, нисам наишла на случај када је паралелно извршавање брже, то се испоставило тек у сљедећем случају:
+
+
+
+#define NUM_OF_ITERATIONS 30
+#define TABLE_SIZE 80
+
+Serial Game of Life initiated...
+Serial time:                    0.0063646 seconds
+Reborn cells:                   640
+Parallel Game of Life initiated...
+Parallel time:                  0.0041868 seconds
+Reborn cells:                   640
+
+Дакле, тек код већег броја итерација и код веће величине табеле долази до потребе за паралелизацијом програма.

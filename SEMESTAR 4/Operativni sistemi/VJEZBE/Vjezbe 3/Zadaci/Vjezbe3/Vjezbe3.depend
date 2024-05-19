@@ -1,0 +1,26 @@
+# depslib dependency file v1.0
+1713219912 source:d:\siit\semestar 4\operativni sistemi\vjezbe\vjezbe 3\zadaci\vjezbe3\02 - visina.cpp
+	<iostream>
+	<mutex>
+	<thread>
+
+1713221254 source:d:\siit\semestar 4\operativni sistemi\vjezbe\vjezbe 3\zadaci\vjezbe3\03 - brojac monitor.cpp
+	<iostream>
+	<mutex>
+	<thread>
+
+1713028527 source:d:\siit\semestar 4\operativni sistemi\vjezbe\vjezbe 3\zadaci\vjezbe3\05 - kruznica.cpp
+
+1713219284 source:d:\siit\semestar 4\operativni sistemi\vjezbe\vjezbe 3\zadaci\vjezbe3\06 - list.cpp
+
+1713223168 source:d:\siit\semestar 4\operativni sistemi\vjezbe\vjezbe 3\zadaci\vjezbe3\04 - racuni.cpp
+	<iostream>
+	<mutex>
+	<random>
+	<thread>
+
+1713219468 source:d:\siit\semestar 4\operativni sistemi\vjezbe\vjezbe 3\zadaci\vjezbe3\01 - brojac.cpp
+	<iostream>
+	<mutex>
+	<thread>
+

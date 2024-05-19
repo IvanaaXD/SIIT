@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:pred="http://www.example.org/rdf/examples/predicate/">
+
+<rdf:Description rdf:about="http://www.example.org/rdf/examples/person/Emma_Green">
+<pred:bornOn>1978-04-22</pred:bornOn>
+<pred:graduatedFrom rdf:resource="http://www.example.org/rdf/examples/university/StateUniversity"></pred:graduatedFrom>
+<pred:hasDegreeIn>Biology</pred:hasDegreeIn>
+<pred:worksAt rdf:resource="http://www.example.org/rdf/examples/company/TechInnovations"></pred:worksAt>
+<pred:hasRole>QA</pred:hasRole>
+<pred:marriedTo rdf:resource="http://www.example.org/rdf/examples/person/Bob_Green"></pred:marriedTo>
+<pred:interestIn>Classical Music</pred:interestIn>
+<pred:favouriteAuthor rdf:resource="http://www.example.org/rdf/examples/author/Mary_Shelley"></pred:favouriteAuthor>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.example.org/rdf/examples/person/Bob_Green">
+<pred:bornOn>1975-08-17</pred:bornOn>
+<pred:hasDegreeIn>Computer Science</pred:hasDegreeIn>
+<pred:worksAt rdf:resource="http://www.example.org/rdf/examples/company/TechInnovations"></pred:worksAt>
+<pred:marriedTo rdf:resource="http://www.example.org/rdf/examples/person/Emma_Green"></pred:marriedTo>
+<pred:interestIn>Classical Music</pred:interestIn>
+<pred:favouriteAuthor rdf:resource="http://www.example.org/rdf/examples/author/Isaac_Asimov"></pred:favouriteAuthor>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.example.org/rdf/examples/person/Charles_Green">
+<pred:bornOn>1948-11-03</pred:bornOn>
+<pred:retiredFrom rdf:resource="http://www.example.org/rdf/examples/company/GlobalIndustries"></pred:retiredFrom>
+<pred:interestIn>Classical Music</pred:interestIn>
+<pred:favouriteCity>Paris</pred:favouriteCity>
+</rdf:Description>
+
+<!--================================================================================================================================-->
+
+<rdf:Description rdf:about="http://www.example.org/rdf/examples/university/StateUniversity">
+<pred:locatedIn>New York</pred:locatedIn>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.example.org/rdf/examples/company/TechInnovations">
+<pred:foundedIn>1999-03-15</pred:foundedIn>
+<pred:ceo rdf:resource="http://www.example.org/rdf/examples/person/Nancy_Wells"></pred:ceo>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.example.org/rdf/examples/company/GlobalIndustries">
+<pred:industry>Manufacturing</pred:industry>
+</rdf:Description>
+
+<!--================================================================================================================================-->
+
+<rdf:Description rdf:about="http://www.example.org/rdf/examples/author/Mary_Shelley">
+<pred:wrote>Frankenstein</pred:wrote>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.example.org/rdf/examples/author/Isaac_Asimov">
+<pred:wrote>Foundation</pred:wrote>
+</rdf:Description>
+
+<!--================================================================================================================================-->
+
+<rdf:Description rdf:about="http://www.example.org/rdf/examples/person/Isaac_Asimov">
+<pred:interestIn>Artificial Intelligence</pred:interestIn>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.example.org/rdf/examples/person/Nancy_Wells">
+<pred:interestIn>Artificial Intelligence</pred:interestIn>
+<pred:bornOn>1965-07-08</pred:bornOn>
+</rdf:Description>
+
+</rdf:RDF>

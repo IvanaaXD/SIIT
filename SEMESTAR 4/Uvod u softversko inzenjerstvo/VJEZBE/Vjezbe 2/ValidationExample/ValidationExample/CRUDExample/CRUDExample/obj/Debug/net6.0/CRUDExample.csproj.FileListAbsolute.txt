@@ -1,0 +1,15 @@
+D:\SIIT\SEMESTAR 4\Uvod u softversko inzenjerstvo\VJEZBE\Vjezbe 2\ValidationExample\ValidationExample\CRUDExample\CRUDExample\bin\Debug\net6.0\CRUDExample.exe
+D:\SIIT\SEMESTAR 4\Uvod u softversko inzenjerstvo\VJEZBE\Vjezbe 2\ValidationExample\ValidationExample\CRUDExample\CRUDExample\bin\Debug\net6.0\CRUDExample.deps.json
+D:\SIIT\SEMESTAR 4\Uvod u softversko inzenjerstvo\VJEZBE\Vjezbe 2\ValidationExample\ValidationExample\CRUDExample\CRUDExample\bin\Debug\net6.0\CRUDExample.runtimeconfig.json
+D:\SIIT\SEMESTAR 4\Uvod u softversko inzenjerstvo\VJEZBE\Vjezbe 2\ValidationExample\ValidationExample\CRUDExample\CRUDExample\bin\Debug\net6.0\CRUDExample.dll
+D:\SIIT\SEMESTAR 4\Uvod u softversko inzenjerstvo\VJEZBE\Vjezbe 2\ValidationExample\ValidationExample\CRUDExample\CRUDExample\bin\Debug\net6.0\CRUDExample.pdb
+D:\SIIT\SEMESTAR 4\Uvod u softversko inzenjerstvo\VJEZBE\Vjezbe 2\ValidationExample\ValidationExample\CRUDExample\CRUDExample\obj\Debug\net6.0\CRUDExample.GeneratedMSBuildEditorConfig.editorconfig
+D:\SIIT\SEMESTAR 4\Uvod u softversko inzenjerstvo\VJEZBE\Vjezbe 2\ValidationExample\ValidationExample\CRUDExample\CRUDExample\obj\Debug\net6.0\CRUDExample.AssemblyInfoInputs.cache
+D:\SIIT\SEMESTAR 4\Uvod u softversko inzenjerstvo\VJEZBE\Vjezbe 2\ValidationExample\ValidationExample\CRUDExample\CRUDExample\obj\Debug\net6.0\CRUDExample.AssemblyInfo.cs
+D:\SIIT\SEMESTAR 4\Uvod u softversko inzenjerstvo\VJEZBE\Vjezbe 2\ValidationExample\ValidationExample\CRUDExample\CRUDExample\obj\Debug\net6.0\CRUDExample.csproj.CoreCompileInputs.cache
+D:\SIIT\SEMESTAR 4\Uvod u softversko inzenjerstvo\VJEZBE\Vjezbe 2\ValidationExample\ValidationExample\CRUDExample\CRUDExample\obj\Debug\net6.0\CRUDExample.sourcelink.json
+D:\SIIT\SEMESTAR 4\Uvod u softversko inzenjerstvo\VJEZBE\Vjezbe 2\ValidationExample\ValidationExample\CRUDExample\CRUDExample\obj\Debug\net6.0\CRUDExample.dll
+D:\SIIT\SEMESTAR 4\Uvod u softversko inzenjerstvo\VJEZBE\Vjezbe 2\ValidationExample\ValidationExample\CRUDExample\CRUDExample\obj\Debug\net6.0\refint\CRUDExample.dll
+D:\SIIT\SEMESTAR 4\Uvod u softversko inzenjerstvo\VJEZBE\Vjezbe 2\ValidationExample\ValidationExample\CRUDExample\CRUDExample\obj\Debug\net6.0\CRUDExample.pdb
+D:\SIIT\SEMESTAR 4\Uvod u softversko inzenjerstvo\VJEZBE\Vjezbe 2\ValidationExample\ValidationExample\CRUDExample\CRUDExample\obj\Debug\net6.0\CRUDExample.genruntimeconfig.cache
+D:\SIIT\SEMESTAR 4\Uvod u softversko inzenjerstvo\VJEZBE\Vjezbe 2\ValidationExample\ValidationExample\CRUDExample\CRUDExample\obj\Debug\net6.0\ref\CRUDExample.dll

@@ -1,0 +1,33 @@
+<krivicni_zakonik>
+    <ime>KRIVICNI ZAKONIK</ime>
+    <opsti_dio>Opsti dio</opsti_dio>
+
+    <broj_glave>GLAVA PRVA</broj_glave>
+        <naslov_glave>OSNOVNE ODREDBE</naslov_glave>
+
+            <naslov>Nema krivicnog djela niti kazne bez zakona</naslov>
+                <broj_clana>Clan 1</broj_clana>
+                    <tekst>
+                        Nikome ne može biti izrecena kazna ili druga krivicna sankcija za delo 
+                        koje  pre  nego što je  ucinjeno  zakonom  nije  bilo  odredjeno kao krivicno  delo,  niti mu 
+                        se može izreci kazna ili druga krivicna sankcija koja zakonom nije bila propisana pre 
+                        nego što je krivicno delo ucinjeno
+                    </tekst>
+
+            <naslov>Nema kazne bez krivice </naslov>
+            <broj_clana>Clan 2</broj_clana>
+                <tekst>
+                    Kazna i mere upozorenja mogu se izreci samo uciniocu koji je kriv za 
+                    ucinjeno krivicno delo.  
+                </tekst>
+
+            <naslov>Osnov i granice krivicnopravne prinude</naslov>
+            <broj_clana>Clan 3</broj_clana>
+                <tekst>
+                    Zaštita coveka  i drugih  osnovnih  društvenih  vrednosti  predstavlja 
+                    osnov i granice za odredjivanje krivicnih dela, propisivanje krivicnih sankcija i njihovu 
+                    primenu, u meri u kojoj je to nužno za suzbijanje tih dela
+                </tekst>
+
+</krivicni_zakonik>
+        

@@ -1,0 +1,6 @@
+SELECT ?person ?bornOn
+WHERE {
+  ?person <http://www.example.org/rdf/examples/predicate/bornOn> ?bornOn .
+  FILTER (?bornOn > "1970-12-31")
+}
+ORDER BY ASC(?bornOn)

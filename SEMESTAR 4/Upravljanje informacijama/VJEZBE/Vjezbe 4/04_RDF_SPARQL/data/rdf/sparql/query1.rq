@@ -1,0 +1,3 @@
+SELECT * WHERE { 
+	?person <http://www.example.org/rdf/examples/predicate/graduatedFrom> <http://www.example.org/rdf/examples/university/StateUniversity> .
+}

@@ -1,0 +1,5 @@
+SELECT ?author ?book 
+WHERE { 
+	?author <http://www.example.org/rdf/examples/predicate/wrote> ?book .
+  FILTER(?book IN ("Frankenstein","Foundation"))
+}

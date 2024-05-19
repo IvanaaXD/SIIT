@@ -1,0 +1,15 @@
+1) //uplatnica
+2) //uplatnica[@mesto="Novi Sad"]
+3) //uplatnica/duznik/naziv
+4) //uplatnica/primalac[racun[starts-with(.,'380')]]
+5) //uplatnica[uplata[valuta="RSD"]]
+6) //uplatnica/duznik/adresa[grad="Beograd"]
+
+Za narendna 2 upita mozete koristiti operator | koji spaja 2 razlicita upita
+
+7) //uplatnica[@mesto='Subotica']/primalac/naziv | //uplatnica[@mesto='Subotica']/primalac/adresa
+8) //uplatnica[duznik[poziv_na_broj[starts-with(., '123')]] | /primalac[poziv_na_broj[starts-with(., '123')]]]
+
+9) //uplatnica/uplata[valuta="EUR"]/iznos
+10) //uplatnica[duznik[broj_modela="97"]]
+

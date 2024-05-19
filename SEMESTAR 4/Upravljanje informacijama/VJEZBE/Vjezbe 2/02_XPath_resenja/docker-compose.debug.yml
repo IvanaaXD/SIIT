@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  02xpathresenja:
+    image: 02xpathresenja
+    build:
+      context: .
+      dockerfile: ./Dockerfile

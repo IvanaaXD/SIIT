@@ -1,0 +1,7 @@
+SELECT ?person ?interest (COUNT(?otherPerson) AS ?sharedInterestCount)
+WHERE {
+  ?person <http://www.example.org/rdf/examples/predicate/interestIn> ?interest .
+  ?otherPerson <http://www.example.org/rdf/examples/predicate/interestIn> ?interest .
+  FILTER (?person != ?otherPerson)
+}
+GROUP BY ?person ?interest

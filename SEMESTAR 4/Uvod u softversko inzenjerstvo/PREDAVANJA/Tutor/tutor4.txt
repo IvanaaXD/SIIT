@@ -1,0 +1,27 @@
+- SportyCo.ScoreTracker.Presentation
+- CineStar.CinemaManagement.MovieProjections, CineStar.CinemaManagement.Booking
+- HotelSoft.HotelManager.Accommondation, HotelSoft.HotelManager.Accommondation.Repositories, HotelSoft.HotelManager.Restaurant.Reservation
+
+
+- PatientController smestiti u HealthCo.HealthApp.Controllers,
+Appointment smestiti u HealthCo.HealthApp.Domain
+- Patient Service..., Session..., RecordRepository...
+- Character, EnemyFileRepository
+- CharacterViewModel
+- CharacterSevrice
+
+
+- Klase UserController, UserService, UserRepository i User treba da budu grupisane u paket/namespace Users
+- TourServise i TourRepository se smestaju u paket Tours, TourSight se smesta u paket Tours
+- Doctor i Specialization se smestaju u paket Doctors, PatientController i PatientService se smestaju u paket Patiens, Perscription i PerscriptionMedicine se smestaju u paket Perscriptions, DoctorService i DoctorRepository se smestaju u paket Doctors
+
+
+- IGuideRepository
+- Nista od navedenog
+- IContactRepository, ITourRepository, IEmailSender
+
+
+- Application/UseCases
+- Domain/Models
+- WPF/View
+- Application/Utility
