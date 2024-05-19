@@ -131,12 +131,19 @@
     <ClCompile Include="abklase2.cpp" />
     <ClCompile Include="abklase3.cpp" />
     <ClCompile Include="brisanjeizseta.cpp" />
+    <ClCompile Include="brisanjeizseta2.cpp" />
     <ClCompile Include="lista.cpp" />
     <ClCompile Include="mapa.cpp" />
     <ClCompile Include="namespace.cpp" />
+    <ClCompile Include="polaliste.cpp" />
     <ClCompile Include="set.cpp" />
+    <ClCompile Include="vektor3.cpp" />
     <ClCompile Include="structs.cpp" />
     <ClCompile Include="structs2.cpp" />
+    <ClCompile Include="templejt.cpp" />
+    <ClCompile Include="vektor.cpp" />
+    <ClCompile Include="vektor2.cpp" />
+    <ClCompile Include="zvezda.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

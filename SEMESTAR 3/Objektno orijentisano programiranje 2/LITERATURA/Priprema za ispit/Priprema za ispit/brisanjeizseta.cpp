@@ -44,38 +44,3 @@ void foo(std::set<int>& inputSet)
     return 0;
 }
 */
-
-#include <iostream>
-#include <list>
-
-void foo(std::list<int>& inputList)
-{
-    auto it = inputList.begin();
-
-    while (it != inputList.end())
-    {
-        if (*it % 2 != 0)
-        {
-            it = inputList.erase(it); // Briše neparni element
-        }
-        else
-        {
-            ++it;
-        }
-    }
-}
-
-int main()
-{
-    std::list<int> myList = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
-
-    foo(myList);
-
-    // Ispisujemo rezultat
-    for (const auto& element : myList)
-    {
-        std::cout << element << " ";
-    }
-
-    return 0;
-}

@@ -48,5 +48,4 @@ struct c : b
 
     return 0;
 }
-
 */
