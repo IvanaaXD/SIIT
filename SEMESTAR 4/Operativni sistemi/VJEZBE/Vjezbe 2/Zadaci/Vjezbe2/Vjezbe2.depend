@@ -1,0 +1,66 @@
+# depslib dependency file v1.0
+1713191385 source:d:\siit\semestar 4\operativni sistemi\vjezbe\vjezbe 2\zadaci\vjezbe2\t12-1.cpp
+	<vector>
+	<thread>
+	<iostream>
+
+1713191844 source:d:\siit\semestar 4\operativni sistemi\vjezbe\vjezbe 2\zadaci\vjezbe2\t12-2.cpp
+	<thread>
+	<iostream>
+
+1713191949 source:d:\siit\semestar 4\operativni sistemi\vjezbe\vjezbe 2\zadaci\vjezbe2\t12-2014-1a.cpp
+	<thread>
+	<iostream>
+
+1713028476 source:d:\siit\semestar 4\operativni sistemi\vjezbe\vjezbe 2\zadaci\vjezbe2\t12-2014-1b.cpp
+
+1713028476 source:d:\siit\semestar 4\operativni sistemi\vjezbe\vjezbe 2\zadaci\vjezbe2\t12-2014-2.cpp
+
+1713028476 source:d:\siit\semestar 4\operativni sistemi\vjezbe\vjezbe 2\zadaci\vjezbe2\t12-2014-3.cpp
+
+1713028476 source:d:\siit\semestar 4\operativni sistemi\vjezbe\vjezbe 2\zadaci\vjezbe2\t12-2014-4.cpp
+
+1713028476 source:d:\siit\semestar 4\operativni sistemi\vjezbe\vjezbe 2\zadaci\vjezbe2\t12-2014-6a.cpp
+
+1713028476 source:d:\siit\semestar 4\operativni sistemi\vjezbe\vjezbe 2\zadaci\vjezbe2\t12-2014-6b.cpp
+
+1713192559 source:d:\siit\semestar 4\operativni sistemi\vjezbe\vjezbe 2\zadaci\vjezbe2\t12-3.cpp
+	<thread>
+	<iostream>
+	<list>
+
+1713193671 source:d:\siit\semestar 4\operativni sistemi\vjezbe\vjezbe 2\zadaci\vjezbe2\t12-4.cpp
+	<thread>
+	<iostream>
+	<math.h>
+
+1713194954 source:d:\siit\semestar 4\operativni sistemi\vjezbe\vjezbe 2\zadaci\vjezbe2\t12-5.cpp
+	<thread>
+	<map>
+	<iostream>
+
+1713196208 source:d:\siit\semestar 4\operativni sistemi\vjezbe\vjezbe 2\zadaci\vjezbe2\t12-6.cpp
+	<thread>
+	<iostream>
+
+1713198203 source:d:\siit\semestar 4\operativni sistemi\vjezbe\vjezbe 2\zadaci\vjezbe2\t12-7.cpp
+	<thread>
+	<iostream>
+	<vector>
+
+1713190877 source:d:\siit\semestar 4\operativni sistemi\vjezbe\vjezbe 2\zadaci\vjezbe2\spellcheck.cpp
+	<iostream>
+	<string>
+	<thread>
+	<vector>
+
+1713198206 source:d:\siit\semestar 4\operativni sistemi\vjezbe\vjezbe 2\zadaci\vjezbe2\t12-8.cpp
+	<map>
+	<thread>
+	<iostream>
+
+1713187488 source:d:\siit\semestar 4\operativni sistemi\vjezbe\vjezbe 2\zadaci\vjezbe2\krug.cpp
+	<iostream>
+	<thread>
+	<vector>
+

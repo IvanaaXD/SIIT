@@ -1,0 +1,264 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\SIIT\\SEMESTAR 4\\Uvod u softversko inzenjerstvo\\VJEZBE\\Vjezbe 2\\ValidationExampleNet2\\CRUDExample\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{49C73996-FC8C-4B3C-ABDC-E5A56EB0898D}|GUI\\GUI.csproj|D:\\SIIT\\SEMESTAR 4\\Uvod u softversko inzenjerstvo\\VJEZBE\\Vjezbe 2\\ValidationExampleNet2\\CRUDExample\\gui\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{49C73996-FC8C-4B3C-ABDC-E5A56EB0898D}|GUI\\GUI.csproj|solutionrelative:gui\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{49C73996-FC8C-4B3C-ABDC-E5A56EB0898D}|GUI\\GUI.csproj|D:\\SIIT\\SEMESTAR 4\\Uvod u softversko inzenjerstvo\\VJEZBE\\Vjezbe 2\\ValidationExampleNet2\\CRUDExample\\gui\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{49C73996-FC8C-4B3C-ABDC-E5A56EB0898D}|GUI\\GUI.csproj|solutionrelative:gui\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{49C73996-FC8C-4B3C-ABDC-E5A56EB0898D}|GUI\\GUI.csproj|d:\\siit\\semestar 4\\uvod u softversko inzenjerstvo\\vjezbe\\vjezbe 2\\validationexamplenet2\\crudexample\\gui\\view\\addvehicle.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{49C73996-FC8C-4B3C-ABDC-E5A56EB0898D}|GUI\\GUI.csproj|solutionrelative:gui\\view\\addvehicle.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{49C73996-FC8C-4B3C-ABDC-E5A56EB0898D}|GUI\\GUI.csproj|d:\\siit\\semestar 4\\uvod u softversko inzenjerstvo\\vjezbe\\vjezbe 2\\validationexamplenet2\\crudexample\\gui\\dto\\vehicledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{49C73996-FC8C-4B3C-ABDC-E5A56EB0898D}|GUI\\GUI.csproj|solutionrelative:gui\\dto\\vehicledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{07246B51-4574-435A-9D82-F86AC7A9BF9B}|CRUDExample\\CRUDExample.csproj|d:\\siit\\semestar 4\\uvod u softversko inzenjerstvo\\vjezbe\\vjezbe 2\\validationexamplenet2\\crudexample\\crudexample\\model\\dao\\vehiclesdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{07246B51-4574-435A-9D82-F86AC7A9BF9B}|CRUDExample\\CRUDExample.csproj|solutionrelative:crudexample\\model\\dao\\vehiclesdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{07246B51-4574-435A-9D82-F86AC7A9BF9B}|CRUDExample\\CRUDExample.csproj|D:\\SIIT\\SEMESTAR 4\\Uvod u softversko inzenjerstvo\\VJEZBE\\Vjezbe 2\\ValidationExampleNet2\\CRUDExample\\crudexample\\model\\vehicle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{07246B51-4574-435A-9D82-F86AC7A9BF9B}|CRUDExample\\CRUDExample.csproj|solutionrelative:crudexample\\model\\vehicle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{07246B51-4574-435A-9D82-F86AC7A9BF9B}|CRUDExample\\CRUDExample.csproj|D:\\SIIT\\SEMESTAR 4\\Uvod u softversko inzenjerstvo\\VJEZBE\\Vjezbe 2\\ValidationExampleNet2\\CRUDExample\\crudexample\\storage\\storage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{07246B51-4574-435A-9D82-F86AC7A9BF9B}|CRUDExample\\CRUDExample.csproj|solutionrelative:crudexample\\storage\\storage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{07246B51-4574-435A-9D82-F86AC7A9BF9B}|CRUDExample\\CRUDExample.csproj|D:\\SIIT\\SEMESTAR 4\\Uvod u softversko inzenjerstvo\\VJEZBE\\Vjezbe 2\\ValidationExampleNet2\\CRUDExample\\crudexample\\controller\\vehiclecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{07246B51-4574-435A-9D82-F86AC7A9BF9B}|CRUDExample\\CRUDExample.csproj|solutionrelative:crudexample\\controller\\vehiclecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{07246B51-4574-435A-9D82-F86AC7A9BF9B}|CRUDExample\\CRUDExample.csproj|D:\\SIIT\\SEMESTAR 4\\Uvod u softversko inzenjerstvo\\VJEZBE\\Vjezbe 2\\ValidationExampleNet2\\CRUDExample\\crudexample\\observer\\iobserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{07246B51-4574-435A-9D82-F86AC7A9BF9B}|CRUDExample\\CRUDExample.csproj|solutionrelative:crudexample\\observer\\iobserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{07246B51-4574-435A-9D82-F86AC7A9BF9B}|CRUDExample\\CRUDExample.csproj|D:\\SIIT\\SEMESTAR 4\\Uvod u softversko inzenjerstvo\\VJEZBE\\Vjezbe 2\\ValidationExampleNet2\\CRUDExample\\crudexample\\observer\\subject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{07246B51-4574-435A-9D82-F86AC7A9BF9B}|CRUDExample\\CRUDExample.csproj|solutionrelative:crudexample\\observer\\subject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{49C73996-FC8C-4B3C-ABDC-E5A56EB0898D}|GUI\\GUI.csproj|D:\\SIIT\\SEMESTAR 4\\Uvod u softversko inzenjerstvo\\VJEZBE\\Vjezbe 2\\ValidationExampleNet2\\CRUDExample\\gui\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{49C73996-FC8C-4B3C-ABDC-E5A56EB0898D}|GUI\\GUI.csproj|solutionrelative:gui\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{49C73996-FC8C-4B3C-ABDC-E5A56EB0898D}|GUI\\GUI.csproj|D:\\SIIT\\SEMESTAR 4\\Uvod u softversko inzenjerstvo\\VJEZBE\\Vjezbe 2\\ValidationExampleNet2\\CRUDExample\\gui\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{49C73996-FC8C-4B3C-ABDC-E5A56EB0898D}|GUI\\GUI.csproj|solutionrelative:gui\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{49C73996-FC8C-4B3C-ABDC-E5A56EB0898D}|GUI\\GUI.csproj|D:\\SIIT\\SEMESTAR 4\\Uvod u softversko inzenjerstvo\\VJEZBE\\Vjezbe 2\\ValidationExampleNet2\\CRUDExample\\gui\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{49C73996-FC8C-4B3C-ABDC-E5A56EB0898D}|GUI\\GUI.csproj|solutionrelative:gui\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{07246B51-4574-435A-9D82-F86AC7A9BF9B}|CRUDExample\\CRUDExample.csproj|D:\\SIIT\\SEMESTAR 4\\Uvod u softversko inzenjerstvo\\VJEZBE\\Vjezbe 2\\ValidationExampleNet2\\CRUDExample\\crudexample\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{07246B51-4574-435A-9D82-F86AC7A9BF9B}|CRUDExample\\CRUDExample.csproj|solutionrelative:crudexample\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{49C73996-FC8C-4B3C-ABDC-E5A56EB0898D}|GUI\\GUI.csproj|D:\\SIIT\\SEMESTAR 4\\Uvod u softversko inzenjerstvo\\VJEZBE\\Vjezbe 2\\ValidationExampleNet2\\CRUDExample\\gui\\view\\addvehicle.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{49C73996-FC8C-4B3C-ABDC-E5A56EB0898D}|GUI\\GUI.csproj|solutionrelative:gui\\view\\addvehicle.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AddVehicle.xaml.cs",
+              "DocumentMoniker": "D:\\SIIT\\SEMESTAR 4\\Uvod u softversko inzenjerstvo\\VJEZBE\\Vjezbe 2\\ValidationExampleNet2\\CRUDExample\\GUI\\View\\AddVehicle.xaml.cs",
+              "RelativeDocumentMoniker": "GUI\\View\\AddVehicle.xaml.cs",
+              "ToolTip": "D:\\SIIT\\SEMESTAR 4\\Uvod u softversko inzenjerstvo\\VJEZBE\\Vjezbe 2\\ValidationExampleNet2\\CRUDExample\\GUI\\View\\AddVehicle.xaml.cs",
+              "RelativeToolTip": "GUI\\View\\AddVehicle.xaml.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAACEAAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-01T08:43:50.042Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "App.xaml",
+              "DocumentMoniker": "D:\\SIIT\\SEMESTAR 4\\Uvod u softversko inzenjerstvo\\VJEZBE\\Vjezbe 2\\ValidationExampleNet2\\CRUDExample\\GUI\\App.xaml",
+              "RelativeDocumentMoniker": "GUI\\App.xaml",
+              "ToolTip": "D:\\SIIT\\SEMESTAR 4\\Uvod u softversko inzenjerstvo\\VJEZBE\\Vjezbe 2\\ValidationExampleNet2\\CRUDExample\\GUI\\App.xaml",
+              "RelativeToolTip": "GUI\\App.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-03-25T13:50:56.438Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "App.xaml.cs",
+              "DocumentMoniker": "D:\\SIIT\\SEMESTAR 4\\Uvod u softversko inzenjerstvo\\VJEZBE\\Vjezbe 2\\ValidationExampleNet2\\CRUDExample\\GUI\\App.xaml.cs",
+              "RelativeDocumentMoniker": "GUI\\App.xaml.cs",
+              "ToolTip": "D:\\SIIT\\SEMESTAR 4\\Uvod u softversko inzenjerstvo\\VJEZBE\\Vjezbe 2\\ValidationExampleNet2\\CRUDExample\\GUI\\App.xaml.cs",
+              "RelativeToolTip": "GUI\\App.xaml.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-25T13:59:59.579Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\SIIT\\SEMESTAR 4\\Uvod u softversko inzenjerstvo\\VJEZBE\\Vjezbe 2\\ValidationExampleNet2\\CRUDExample\\CRUDExample\\Program.cs",
+              "RelativeDocumentMoniker": "CRUDExample\\Program.cs",
+              "ToolTip": "D:\\SIIT\\SEMESTAR 4\\Uvod u softversko inzenjerstvo\\VJEZBE\\Vjezbe 2\\ValidationExampleNet2\\CRUDExample\\CRUDExample\\Program.cs",
+              "RelativeToolTip": "CRUDExample\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-25T13:51:18.543Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Subject.cs",
+              "DocumentMoniker": "D:\\SIIT\\SEMESTAR 4\\Uvod u softversko inzenjerstvo\\VJEZBE\\Vjezbe 2\\ValidationExampleNet2\\CRUDExample\\CRUDExample\\Observer\\Subject.cs",
+              "RelativeDocumentMoniker": "CRUDExample\\Observer\\Subject.cs",
+              "ToolTip": "D:\\SIIT\\SEMESTAR 4\\Uvod u softversko inzenjerstvo\\VJEZBE\\Vjezbe 2\\ValidationExampleNet2\\CRUDExample\\CRUDExample\\Observer\\Subject.cs",
+              "RelativeToolTip": "CRUDExample\\Observer\\Subject.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-21T18:16:47.084Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "IObserver.cs",
+              "DocumentMoniker": "D:\\SIIT\\SEMESTAR 4\\Uvod u softversko inzenjerstvo\\VJEZBE\\Vjezbe 2\\ValidationExampleNet2\\CRUDExample\\CRUDExample\\Observer\\IObserver.cs",
+              "RelativeDocumentMoniker": "CRUDExample\\Observer\\IObserver.cs",
+              "ToolTip": "D:\\SIIT\\SEMESTAR 4\\Uvod u softversko inzenjerstvo\\VJEZBE\\Vjezbe 2\\ValidationExampleNet2\\CRUDExample\\CRUDExample\\Observer\\IObserver.cs",
+              "RelativeToolTip": "CRUDExample\\Observer\\IObserver.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-21T18:16:45.608Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "D:\\SIIT\\SEMESTAR 4\\Uvod u softversko inzenjerstvo\\VJEZBE\\Vjezbe 2\\ValidationExampleNet2\\CRUDExample\\GUI\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "GUI\\MainWindow.xaml",
+              "ToolTip": "D:\\SIIT\\SEMESTAR 4\\Uvod u softversko inzenjerstvo\\VJEZBE\\Vjezbe 2\\ValidationExampleNet2\\CRUDExample\\GUI\\MainWindow.xaml",
+              "RelativeToolTip": "GUI\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-03-25T13:51:40.757Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "VehicleDTO.cs",
+              "DocumentMoniker": "D:\\SIIT\\SEMESTAR 4\\Uvod u softversko inzenjerstvo\\VJEZBE\\Vjezbe 2\\ValidationExampleNet2\\CRUDExample\\GUI\\DTO\\VehicleDTO.cs",
+              "RelativeDocumentMoniker": "GUI\\DTO\\VehicleDTO.cs",
+              "ToolTip": "D:\\SIIT\\SEMESTAR 4\\Uvod u softversko inzenjerstvo\\VJEZBE\\Vjezbe 2\\ValidationExampleNet2\\CRUDExample\\GUI\\DTO\\VehicleDTO.cs",
+              "RelativeToolTip": "GUI\\DTO\\VehicleDTO.cs",
+              "ViewState": "AQIAABsAAAAAAAAAAAAYwDIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-01T06:58:46.513Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Storage.cs",
+              "DocumentMoniker": "D:\\SIIT\\SEMESTAR 4\\Uvod u softversko inzenjerstvo\\VJEZBE\\Vjezbe 2\\ValidationExampleNet2\\CRUDExample\\CRUDExample\\Storage\\Storage.cs",
+              "RelativeDocumentMoniker": "CRUDExample\\Storage\\Storage.cs",
+              "ToolTip": "D:\\SIIT\\SEMESTAR 4\\Uvod u softversko inzenjerstvo\\VJEZBE\\Vjezbe 2\\ValidationExampleNet2\\CRUDExample\\CRUDExample\\Storage\\Storage.cs",
+              "RelativeToolTip": "CRUDExample\\Storage\\Storage.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-29T13:30:41.784Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Vehicle.cs",
+              "DocumentMoniker": "D:\\SIIT\\SEMESTAR 4\\Uvod u softversko inzenjerstvo\\VJEZBE\\Vjezbe 2\\ValidationExampleNet2\\CRUDExample\\CRUDExample\\Model\\Vehicle.cs",
+              "RelativeDocumentMoniker": "CRUDExample\\Model\\Vehicle.cs",
+              "ToolTip": "D:\\SIIT\\SEMESTAR 4\\Uvod u softversko inzenjerstvo\\VJEZBE\\Vjezbe 2\\ValidationExampleNet2\\CRUDExample\\CRUDExample\\Model\\Vehicle.cs",
+              "RelativeToolTip": "CRUDExample\\Model\\Vehicle.cs",
+              "ViewState": "AQIAAB0AAAAAAAAAAAAswAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-28T14:17:40.239Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "VehiclesDAO.cs",
+              "DocumentMoniker": "D:\\SIIT\\SEMESTAR 4\\Uvod u softversko inzenjerstvo\\VJEZBE\\Vjezbe 2\\ValidationExampleNet2\\CRUDExample\\CRUDExample\\Model\\DAO\\VehiclesDAO.cs",
+              "RelativeDocumentMoniker": "CRUDExample\\Model\\DAO\\VehiclesDAO.cs",
+              "ToolTip": "D:\\SIIT\\SEMESTAR 4\\Uvod u softversko inzenjerstvo\\VJEZBE\\Vjezbe 2\\ValidationExampleNet2\\CRUDExample\\CRUDExample\\Model\\DAO\\VehiclesDAO.cs",
+              "RelativeToolTip": "CRUDExample\\Model\\DAO\\VehiclesDAO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-28T14:15:01.782Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "VehicleController.cs",
+              "DocumentMoniker": "D:\\SIIT\\SEMESTAR 4\\Uvod u softversko inzenjerstvo\\VJEZBE\\Vjezbe 2\\ValidationExampleNet2\\CRUDExample\\CRUDExample\\Controller\\VehicleController.cs",
+              "RelativeDocumentMoniker": "CRUDExample\\Controller\\VehicleController.cs",
+              "ToolTip": "D:\\SIIT\\SEMESTAR 4\\Uvod u softversko inzenjerstvo\\VJEZBE\\Vjezbe 2\\ValidationExampleNet2\\CRUDExample\\CRUDExample\\Controller\\VehicleController.cs",
+              "RelativeToolTip": "CRUDExample\\Controller\\VehicleController.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-25T13:55:56.874Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "D:\\SIIT\\SEMESTAR 4\\Uvod u softversko inzenjerstvo\\VJEZBE\\Vjezbe 2\\ValidationExampleNet2\\CRUDExample\\GUI\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "GUI\\MainWindow.xaml.cs",
+              "ToolTip": "D:\\SIIT\\SEMESTAR 4\\Uvod u softversko inzenjerstvo\\VJEZBE\\Vjezbe 2\\ValidationExampleNet2\\CRUDExample\\GUI\\MainWindow.xaml.cs",
+              "RelativeToolTip": "GUI\\MainWindow.xaml.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAANAAAA",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAH\u002BSURBVDhP7ZRPaNNQHMe/TdNma2NrW1jUFYZYN0YKHqZischAMCCjh94siEfp0buIeBZ2LYKXHvSWQ4toDkKC0F7EU93NQyEthkFnG9uuaf6YhIcusknBHTz4gR\u002B/x\u002B/7e1/ee8l7IRzhmbi3s0TTzc3zcYQpp3R3K9sk0sJQJPtscgmcSzJ4\u002BeErPvemj99\u002B6t0j0sKEcF96SsbgV\u002BOX\u002BQvxyvu9A9zaSOL2\u002BrK8Zn9R6vU66QBomkYul0OpVNJns9mLYrGoE8mHhhPaImNoI4Nboikcmjb29TkYOr6dZtPbPM\u002BTDmAwGGAymaDb7Q44jttvt9tSoVDQiOyu8AhvPqo7\u002BqHVfP5OReXGCgQ\u002BiRU2BMMwSAcgSZIfiUQC5XIZLMs\u002BSKVSYj6f/\u002B7pgTPs9CbofTPw6E4WQj6JTAyYz\u002BdE/YXjONB1HaIoQtO03el0\u002BpBIQcPrq6Ybbr64jLOMA8e2/MnHYds2RqMR3C2nG43GGVJGmGSfm1evrI8PtMqltSzoMOVPOo5MJuN/GC/6/T5UVVU6nY7saYEVyrKMVquF8Xh8oplnIgjCz/DMTdMk6m\u002BGlmX5Z3bSNhchYHga/Df8e/59Q5pkn2g0CoqioCgKGIYh1T8zHA4Ri7mXnhB4barV6jX3hjzxmryffBG8VycSibyu1WqvSOk0AX4A4Q67Z\u002BxJ14gAAAAASUVORK5CYII=",
+              "WhenOpened": "2024-03-25T13:56:28.013Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "App.config",
+              "DocumentMoniker": "D:\\SIIT\\SEMESTAR 4\\Uvod u softversko inzenjerstvo\\VJEZBE\\Vjezbe 2\\ValidationExampleNet2\\CRUDExample\\GUI\\App.config",
+              "RelativeDocumentMoniker": "GUI\\App.config",
+              "ToolTip": "D:\\SIIT\\SEMESTAR 4\\Uvod u softversko inzenjerstvo\\VJEZBE\\Vjezbe 2\\ValidationExampleNet2\\CRUDExample\\GUI\\App.config",
+              "RelativeToolTip": "GUI\\App.config",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKcSURBVDhPrVRPSJphGP/5aaUrAw2L7Wa2LgkWsXXcQCIopoghJAMv0aHbFh08jAW7Kju7o3gsdlilHRRJJLSBgoThIVC72D/7Y2pY2vO9fH5szFqO/eDh9Xue9/v5fr/n97z435AIKxYXF\u002Beq1erc1dWVkGmNjo4ODA0NwWw2F7u6uj7o9fozocQgEjocjpW\u002Bvr7PtEHItMbBwQGKxSJoX2lkZMTT29v7bXR0NCOUIRNWlMtlaLVaTE1NCZnW2NraYhGPx3sISxqNphyLxXwTExOMlGO72kSj0cD19TX8fj\u002BOj48/3d3dLZyfn6v52j8RNnF7e4twOIzDw8MF0vYrn2ubcGxsDPPz82KQ7qATKqn0\u002Bwmnp6dBOkAul6OzsxNSqRQSidgzEf39/aBmiNHd3c0kaIIRkg6vdDrdS54gkUggm83i5uYGHMe1JH0M3NHR0fN6vb60t7dncrlccDqd8Hq9jJTyjLQdcPTSTzrFd4PB4JmdnUWtVkMwGMTa2hrS6TRkMtFZTwLndrtfRCKRj6RFqVKpfOF1IZHZp\u002BdyOaZlO\u002BCi0ShCodDr1dXVN6lUSndycsIILy4umNnb1pBGh3c9dnZ23hYKBXsmk2H\u002B4rXjNeTJ2yHljEYj81I\u002Bn8f\u002B/j4janb38vISp6enD1qoFTi73Q6LxQJqClQqFQuaT9DNg83NTfh8Ptaop5JyCoXCxAeZ2UTPpsHBQcfy8vLZ\u002BPg4qEnY3t6Gx\u002BNhNwxP\u002BDcbydRq9Q/hN8PGxkYPmVpDw79AfzLMd5uaxiZiZmYGpVKJ2akJvnm/WusPkw0MDJRocdPAP6P1PX3ucDKZZN4kS\u002B2SroVAICCOm1KpZJcuPe\u002ByxGOgRq2sr683JicnG1artWGz2d4JpQcA3AOOGSI59OotsgAAAABJRU5ErkJggg==",
+              "WhenOpened": "2024-03-25T13:50:52.865Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "AddVehicle.xaml",
+              "DocumentMoniker": "D:\\SIIT\\SEMESTAR 4\\Uvod u softversko inzenjerstvo\\VJEZBE\\Vjezbe 2\\ValidationExampleNet2\\CRUDExample\\GUI\\View\\AddVehicle.xaml",
+              "RelativeDocumentMoniker": "GUI\\View\\AddVehicle.xaml",
+              "ToolTip": "D:\\SIIT\\SEMESTAR 4\\Uvod u softversko inzenjerstvo\\VJEZBE\\Vjezbe 2\\ValidationExampleNet2\\CRUDExample\\GUI\\View\\AddVehicle.xaml",
+              "RelativeToolTip": "GUI\\View\\AddVehicle.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-03-25T13:50:50.412Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

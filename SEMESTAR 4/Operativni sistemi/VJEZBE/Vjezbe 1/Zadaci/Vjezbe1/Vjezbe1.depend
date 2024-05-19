@@ -1,0 +1,26 @@
+# depslib dependency file v1.0
+1713029622 source:d:\siit\semestar 4\operativni sistemi\vjezbe\vjezbe 1\zadaci\vjezbe1\03_referenca_nit.cpp
+	<thread>
+
+1713030037 source:d:\siit\semestar 4\operativni sistemi\vjezbe\vjezbe 1\zadaci\vjezbe1\04_pokretanje_vise_niti.cpp
+	<thread>
+
+1713030450 source:d:\siit\semestar 4\operativni sistemi\vjezbe\vjezbe 1\zadaci\vjezbe1\05_suma_vektora_sekvencijalno.cpp
+	<vector>
+
+1713031195 source:d:\siit\semestar 4\operativni sistemi\vjezbe\vjezbe 1\zadaci\vjezbe1\06_suma_vektora_2_niti.cpp
+	<vector>
+	<thread>
+
+1713032216 source:d:\siit\semestar 4\operativni sistemi\vjezbe\vjezbe 1\zadaci\vjezbe1\07_suma_vektora_nniti.cpp
+	<vector>
+	<thread>
+
+1713028426 source:d:\siit\semestar 4\operativni sistemi\vjezbe\vjezbe 1\zadaci\vjezbe1\08_zbir_korespodentnih_elemenata.cpp
+
+1713029426 source:d:\siit\semestar 4\operativni sistemi\vjezbe\vjezbe 1\zadaci\vjezbe1\01_pozdrav_iz_niti.cpp
+	<thread>
+
+1713029528 source:d:\siit\semestar 4\operativni sistemi\vjezbe\vjezbe 1\zadaci\vjezbe1\02_zbir_brojeva_nit.cpp
+	<thread>
+

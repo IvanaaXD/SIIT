@@ -1,0 +1,32 @@
+- Struktura podataka
+- Koordinatorska klasa
+- Struktura podataka
+- Pametna funkcionalna klasa
+- Pametna funkcionalna klasa
+- Hibrid
+- Pametna klasa
+
+
+- Kohezija je 0.75
+- Kohezija Course klase je 0.5, a CourseValidator klase nije moguće izračunati
+- StudentService 1, CourseService 1
+- ProductStorage sadrzi LoadInventory, ProductStorage sadzri _lineSeparator, ProductCache sadrzi GetProduct, ProductStorage sadzri _fileLocation, ProductCache sadrzi _availableProducts, ProductStorage sadzri RefreshInventory
+
+
+
+- obje 0.5
+- PublicationService treba da sadrzi Upvote, PublicationService treba da sadrzi Report, MemberService treba da sadrzi PromoteToModerator, MemberService treba da sadrzi UpdateProfil
+- EmployeePDFReporter po odgovornosti skladistenja zaposlenih je 0, EmployeeReporter po odgovornosti skladistenja zaposlenih je 0,33
+- MemberService sadrzi UpdateProfil, MemberService sadrzi GetRecentPosts, UserService sadrzi DisableAccount, UserService sadrzi ChangePassword
+
+
+- 7,8,9,10
+- 5
+- efferentCoupling(FindSuitableBlog) = 5, couplingStrength(FindSuitableBlog, BlogPost class) = 3, couplingStrength(FindSuitableBlog, SqlCommand class) = 2
+- Evaluation, Submission, ChallengeSubmission, CaDETProject, ChallengeEvaluation
+
+
+- 3
+- Strukture podataka..., Pametne klase..., Niska semanticka kohezija...
+- 2
+- 3

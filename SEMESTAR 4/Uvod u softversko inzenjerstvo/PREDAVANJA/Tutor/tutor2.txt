@@ -1,0 +1,43 @@
+- 3
+- GenerateDropletsBetweenEvents(Event current, Event previous) sadrzi kod izmedju dva komentara
+- 1
+- 8-16, 22-36, 39-50
+
+
+- 1
+- 8
+- 6
+- !age.HasValue || pet.Age == age.Value
+
+
+- GetScore
+- 7,11
+- Niz instrukcija koji sadrzi vise od  5 tacaka..., Niz instrukcija koji sadrzi vise od 3 tacke...
+- 3-12, 28-37
+
+
+- nodeComments
+- 9
+- 3,4,5,6
+
+
+- Promocija parametra type u atribut klase FileSeliazer, promocija parametra isJson u atribut klase FileSeliazer
+- Promovisanje contentType da bude atribut, Promovisanje method u konstantnu vrijednost.
+- Nije potrebno redukovati broj parametara funkcije.
+- Ukljanjanje image parametra, uklanjanje registered parametra
+
+
+- Ukloni linije 39-42, Premjesti trenutnu liniju 10 na liniju 23
+- Zamijeni trenutnu liniju 3..., Definisi promjenljivu selectedShapes
+- Izdvoj racunanje rezultata..., Definisi promjenljivu shapes, Ukloni linije 13,14 i 32, Zamijeni trenutnu liniju 16 
+
+
+- CreateDirectory, CloneRepository, Checkout
+- 3,9,10,12
+- 6-21, 25-30, 8-13 25-40
+
+
+- FindAll
+- GetSuitableDoctors
+- Cilj nam je da funkcija rjesava jedan zadatak, Izrazi sa vise razlicitih operatora..., Formiranje cistih funkcija je izazovno..., Sitne funkcije sa jasnim nazivima...
+- IsCapable

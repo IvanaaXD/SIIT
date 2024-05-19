@@ -1,0 +1,5 @@
+SELECT ?person1 ?person2 ?workAt WHERE { 
+	?person1 <http://www.example.org/rdf/examples/predicate/marriedTo> ?person2 .
+  	?person1 <http://www.example.org/rdf/examples/predicate/worksAt> ?workAt .
+  	?person2 <http://www.example.org/rdf/examples/predicate/worksAt> ?workAt .
+}

@@ -1,0 +1,46 @@
+<nalozi>
+    <nalog1>
+        <duznik>
+            <ime>Fakultet tehnickih nauka</ime>
+            <adresa>
+            <ulica>Trg Dositeja Obradovica</ulica>
+            <broj>16</broj>
+            <grad>Novi Sad</grad>
+            <postanski_broj>21000</postanski_broj>
+            </adresa>
+            <racun_duznika>840-1710660-30</racun_duznika>
+        </duznik>
+        
+        <svrha_placanja>Uplata po fakturi br. 16</svrha_placanja>
+
+        <povjerilac>
+            <ime>Telekom Srbija fiksna telefonija Novi Sad</ime>
+            <adresa>
+                <ulica>Sutjeska</ulica>
+                <broj>2</broj>
+                <grad>Novi Sad</grad>
+                <postanski_broj>21000</postanski_broj>
+            </adresa>
+        </povjerilac>
+
+        <sifra_placanja>153</sifra_placanja>
+        
+        <valuta>RSD</valuta>
+        
+        <iznos>8000.00</iznos>
+            
+        <broj_modela>97</broj_modela>
+
+        <poziv_na_broj>123-456</poziv_na_broj>
+
+        <mjesto_prijema>Novi Sad</mjesto_prijema>
+
+        <datum_prijema>15.06.2012.</datum_prijema>
+
+        <datum_valute>15.06.2012.</datum_valute>
+
+        <hitno>0</hitno>
+    </nalog1>
+
+
+</nalozi>

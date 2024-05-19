@@ -1,0 +1,29 @@
+- sve sem Premestitit NumberOfDoors u klasu Vehicle
+- sve sem string Sickness
+- Premesti polje Email, Premesti polje Name
+- svi odgovori
+
+
+- Izbaciti IsWaterResistant, Izbaciti CheckWaterRes..., Premestiti BatteryCapacity...
+- Treba izbaciti SalesEmployee, Treba izbaciti WarehourseEmployee
+- Premesti VacationRequests, Ukloni klasu..., Premesti Examinations
+
+
+- Ne mozemo uvesti smislenu hijerarhiju
+- Klasu event ce da nasledi sportsevent i theatreevent
+- Nasledjivanje nema strukturalnog smisla, Nema semantickog smisla
+
+
+- Mouseclicklistener sadrzi mouseclicked, mousepressed i mousereleased, a mousemovementlistener mouseexited, mouseentered
+- IPayment sadrzi gettotal, iloan sadrzi initiate..., ipayment sadrzi status
+- ILoan sadrzi initiateRePayments, ibank sadrzi initiatePayments, ipayment sadrzi getPayments
+
+
+- Uvodimo IPainter interfejs koji definise Paint metodu. Za svaku vrstu lika bih definisao Painter klasu
+- Uvodimo "IPaymentService" ... Za svaku vrstu plaćanja bih uveo klasu koja implementira dati interfejs, Uvodimo paymentservice apstraktnu klasu...
+- Treba uvesti interfejs za obračun kamate kako bi se olakšalo proširenje sistema sa različitim vrstama bankovnih računa
+
+
+- tiltwings u airplane, spinrotor u helicopter, preimenovati u aircraft
+- Uvesti klasu Payment...
+- cryptoPaymentService, cardPaymentService, IPaymentService koji bi implementirale CardPayment.. Crypto.. PayPal..

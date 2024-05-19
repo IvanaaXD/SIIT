@@ -1,0 +1,25 @@
+# depslib dependency file v1.0
+1713256333 source:d:\siit\semestar 4\operativni sistemi\vjezbe\vjezbe 4\zadaci\vjezbe4\01 - a_pre_b.cpp
+	<thread>
+	<iostream>
+	<mutex>
+	<condition_variable>
+
+1713258687 source:d:\siit\semestar 4\operativni sistemi\vjezbe\vjezbe 4\zadaci\vjezbe4\03 - a_i_b_pre_c.cpp
+	<mutex>
+	<iostream>
+	<thread>
+	<condition_variable>
+
+1713255223 source:d:\siit\semestar 4\operativni sistemi\vjezbe\vjezbe 4\zadaci\vjezbe4\04 - message_box.cpp
+	<thread>
+	<iostream>
+
+1713258588 source:d:\siit\semestar 4\operativni sistemi\vjezbe\vjezbe 4\zadaci\vjezbe4\02_parking_n_mesta.cpp
+	<thread>
+	<iostream>
+	<mutex>
+	<condition_variable>
+
+1713255213 source:d:\siit\semestar 4\operativni sistemi\vjezbe\vjezbe 4\zadaci\vjezbe4\05 - multi_message_box.cpp
+

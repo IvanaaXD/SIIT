@@ -1,0 +1,3 @@
+﻿  Counter.cpp
+Clip.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/INCREMENTAL:NO' specification
+  Parallel.vcxproj -> C:\Users\Korisnik\Downloads\PP_Zadatak1\PP_Zadatak1\Windows\DigitalSignalProcessing\Debug\Parallel.exe

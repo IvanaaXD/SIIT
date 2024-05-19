@@ -1,0 +1,9 @@
+1) //title
+2) /bookstore/book/title
+3) /bookstore/book/title[@lang="en"]
+4) /bookstore/book/title[@lang="en"]/..
+5) /bookstore/book[position()=1]/title
+6) /bookstore/book[last()-1]/author
+7) /bookstore/book[@category="WEB"]/author
+8) /bookstore/book[price > 35.00]/title
+9) /bookstore/book[@category="WEB"][price > 40.00]

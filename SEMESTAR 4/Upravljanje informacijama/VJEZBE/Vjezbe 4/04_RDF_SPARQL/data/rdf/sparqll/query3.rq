@@ -1,0 +1,7 @@
+SELECT ?person ?hobby ?favouriteTeam
+WHERE {
+  ?person <http://www.ftn.uns.ac.rs/rdf/examples/predicate/hobby> ?hobby .
+  OPTIONAL {
+  ?person <http://www.ftn.uns.ac.rs/rdf/examples/predicate/favouriteTeam> ?favouriteTeam .
+}
+} 

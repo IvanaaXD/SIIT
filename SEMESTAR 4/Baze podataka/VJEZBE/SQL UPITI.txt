@@ -1,0 +1,123 @@
+					SQL UPITI
+
+- Tabela faze_projekta – Zadatak za vežbu (21) 
+- Izmena definicije tabele – Zadatak za vežbu: (25)
+	U tabelu faze_projekta dodati atribut:
+ 		Datz - datum završetka faze projekta
+ 		Datz ne sme biti manji od Datp
+- Brisanje definicije tabele – Zadatak za vežbu: (27)
+	Izbrisati tabelu faze_projekta.
+- Upiti nad jednom tabelom – Primer: (40)
+	Izlistati sadržaj svih tabela
+- Upiti nad jednom tabelom – Zadatak za vežbu (42)
+	Prikazati imena i prezimena svih radnika.
+- Izlistati različita imena radnika, tj. imena bez ponovljenih vrednosti (43)
+- Izlistati različita imena i prezime radnika, tj. imena i prezimena radnika bez ponovljenih vrednosti (44)
+- Izlistati mbr, ime i prezime radnika koji imaju platu veću od 25000 (45)
+- Izlistati za svakog radnika mbr, ime, prezime, mesečnu i godišnju platu (47)
+- Izlistati mbr, ime i prezime radnika koji nemaju šefa (48)
+- Izlistati mbr, ime i prezime radnika koji imaju šefa (48)
+- Izlistati mbr, ime, prezime radnika čija je plata između 20000 i 24000 dinara (49)
+- Izlistati ime, prezime i godinu rođenja radnika koji nisu rođeni između 1973 i 1980 (50)
+- Izlistati mbr, ime, prezime radnika čije prezime počinje na slovo M (51)
+- Izlistati mbr, ime, prezime radnika čije ime sadrži slovo a na drugoj poziciji (52)
+- Izlistati imena radnika koja počinju na slovo E. Imena ne bi trebalo da se ponavljaju (53)
+- Izlistati radnike koji u svom prezimenu imaju slovo E (e) (54)
+- Izlistati matične brojeve, imena i prezimena radnika čije ime ne počinje slovom A (55)
+- Izlistati matične brojeve radnika koji rade na projektima sa šifrom 10, 20 ili 30 (56)
+- Izlistati matične brojeve radnika koji rade na projektu sa šifrom 10 ili rade 2, 4 ili 6 sati (57)
+- Izlistati matične brojeve, imena i prezimena radnika koji se ne zovu Ana ili Sanja (58)
+- Prikazati matične brojeve, imena i prezimena radnika koji imaju šefa sortirano po prezimenu (59)
+- Prikazati matične brojeve, imena, prezimena i plate radnika po opadajućem redosledu iznosa plate (63)
+- Prikazati matične brojeve, imena, prezimena i platu radnika koji se zovu Pera ili Moma (64)
+- Prikazati matične brojeve, imena, prezimena i platu radnika koji se ne zovu Pera ili Moma (65)
+-  Prikazati matične brojeve i plate radnika uvećane za godišnju premiju. Ukoliko za nekog radnika vrednost premije ne postoji, smatrati da ona iznosi 0 (67)
+- Koliko ima radnika? Koliko ima sefova? (69)
+- Prikazati minimalnu i maksimalnu platu radnika (70)
+- Prikazati broj radnika i ukupnu mesečnu platu svih radnika (71)
+- Prikazati broj radnika, prosečnu mesečnu platu i ukupnu godišnju platu svih radnika (72)
+- Prikazati prosečnu platu svih radnika pomnoženu sa koren iz 2 (1,41) zaokruženo na dve decimale (74)
+- Prikazati koliko radnika radi na svakom projektu i koliko je ukupno angažovanje na tom projektu? (78)
+- Izlistati mbr radnika koji rade na više od dva projekta, pored mbr-a, prikazati i broj projekata na kojima radnici rade (79)
+- Izlistati u rastućem redosledu plate mbr, ime, prz i plt radnika koji imaju platu veću od prosečne (81)
+- Izlistati mbr, ime, prz radnika koji rade na projektu sa šifrom 10, a ne rade na projektu sa šifrom 30 (82)
+- Izlistati ime, prz i god najstarijeg radnika (83)
+- Izlistati nazive projekata na kojima radi bar jedan radnik koji radi i na projektu sa šifrom 60 (84)
+- Prikazati 10 radnika koji imaju najveću platu, sortiranih po plati u opadajućem redosledu (86)
+- Prikazati mbr, prz, ime, plt i brc angažovanja svih radnika koji rade na projektu sa šifrom 10 (88)
+- Prikazati mbr, ime, prz i plt radnika koji su rukovodioci projekata (90)
+- Prikazati imena i prezimena rukovodilaca projekata i broj projekata kojima rukovode (91)
+- Prikazati za svakog radnika mbr, prz, ime, ukupan broj projekata i ukupno angažovanje na projektima na kojima radi (92)
+- Izlistati imena, prezimena svih radnika osim rukovodioca projekta sa šifrom 10 (93)
+- Prikazati imena i prezimena rukovodilaca projekata i broj projekata na kojima rade (94)
+- Izlistati nazive projekata na kojima se ukupno radi više od 15 časova (95)
+- Izlistati šifre i nazive projekata na kojima radi više od dva radnika (96)
+- Izlistati nazive i šifre projekata na kojima je prosečno angažovanje veće od prosečnog angažovanja na svim projektima (97)
+- Izlistati nazive i šifre projekata sa najvećim prosečnim angažovanjem (98)
+- Prikazati mbr, ime, prz, plt radnika koji zarađuju više od radnika sa matičnim brojem 40 (99)
+- Prikazati imena, prezimena i plate radnika koji zarađuju bar 1000 dinara manje od rukovodioca projekta na kom radnik radi (100)
+- Prikazati mbr, ime, prz, plt radnika čiji je broj sati angažovanja na nekom projektu veći od prosečnog broja sati angažovanja na
+tom projektu (101)
+- Ko je najstariji radnik? (102)
+- Izlistati radnike koji ne rade ni na jednom projektu. (Ne postoji projekat na kom rade) (103)
+- Izlistati mbr, ime, prz radnika koji ne rade na projektu sa šifrom 10 (ne postoji radnik sa projekta 10 koji je jednak traženom
+radniku) (104)
+- Izlistati radnike koji nisu rukovodioci projekata. (ne postoji projekat kojim rukovodi taj radnik) (105)
+- Ko je najmlađi rukovodilac projekata? (106)
+- Izlistati mbr, ime, prz radnika koji rade na projektu sa šifrom 20 ili im je plata veća od prosečne (107)
+- Izlistati mbr, ime, prz radnika čije prezime počinje na slovo M ili slovo R i mbr, ime, prz radnika čije prezime počinje na slovo M ili slovo P (109)
+- Izlistati mbr, ime, prz radnika čije prezime počinje na slovo M ili slovo R i mbr, ime, prz radnika čije prezime počinje na slovo M ili
+slovo P. (110)
+- Prikazati ime i prz radnika koji rade na projektu sa šifrom 30. (111)
+- Prikazati ime i prz radnika koji rade na projektu sa šifrom 30. (112)
+- Prikazati mbr, ime i prz radnika i šifre projekata na kojima rade. Prikazati, takođe, iste podatke i za radnike koji ne rade ni na jednom projektu, pri čemu za šifru projekta treba, u tom slučaju, prikazati nedostajuću vrednost. (114)
+- Prikazati mbr, ime i prz svih radnika i nazive projekata kojima rukovode. Ukoliko radnik ne rukovodi ni jednim projektom ispisati: ne rukovodi projektom. (115)
+- Prikazati nazive svih projekata i mbr radnika koji rade na njima. Ukoliko na projektu ne radi ni jedan radnik ispisati nulu umesto matičnog broja. (116)
+- Prikazati za sve radnike i projekte na kojima rade mbr, prz, ime, spr i nap. Za radnike koje ne rade ni na jednom projektu, treba prikazati mbr, prz, ime, dok za vrednosti obeležja spr i nap treba zadati, redom, konstante 0 i "Ne postoji". Urediti izlazni rezultat saglasno rastućim vrednostima obeležja mbr (118)
+- Prikazati matične brojeve, imena i prezimena radnika, zajedno sa šiframa projekata na kojima rade. Prikazati, takođe, iste
+podatke i za radnike koji ne rade ni na jednom projektu, pri čemu za šifru projekta treba, u tom slučaju, prikazati nedostajuću
+vrednost (119)
+- Prikazati imena i prezimena svih radnika i prezimena njihovih šefova ako ih imaju. Ako nema šefa ispisati: Nema sefa (120)
+- Za svaku satnicu angažovanja (brc), prikazati koliko radnika radi na nekom projektu sa tom satnicom. Rezultate urediti u opadajućem redosledu satnice (122)
+- Za svakog radnika prikazati matični broj, ime, prezime, kao i broj projekata kojima rukovodi, pri čemu je potrebno prikazati isključivo one radnike koji su rukovodioci na manjem broju projekata od prosečnog broja projekata na kojima rade radnici čije
+se prezime ne završava na “ic” (123)
+- Za svakog radnika prikazati mbr, ime, prz, kao kategoriju kojoj pripada na osnovu visine plate. Kategorije po visini plate su
+sledeće:
+	Plata manja od 10000 – kategorija: ’mala primanja’,
+	plata između 10000 i 20000 – kategorija: ’srednje visoka primanja’,
+	plata između 20000 i 40000 – kategorija: ’visoka primanja’,
+	plata veća od 40000 – kategorija: ’izuzetno visoka primanja’.
+Takođe, radnike urediti prema kategoriji kojoj pripadaju, u redosledu od najniže ka najvišoj kategoriji po visini plate (126)
+- Za svakog radnika ispisati mbr, ime, prz, platu i mbr šefa. Pri ispisu treba obezbediti da su radnici uređeni saglasno visini plate, od najviše ka najnižoj, pri čemu bi direktor firme trebalo da se ispiše prvi (128)
+- Prikazati za svakog radnika angažovanog na projektu mbr, prz, ime, spr i broj drugih radnika koji su angažovani na istom projektu (130)
+- Prikazati za svakog radnika angažovanog na projektu mbr, prz, ime, spr i udeo u ukupnom broju časova rada na tom projektu (zaokruženo na dve decimale) (131)
+- Prikazati mbr, ime i prz rukovodilaca projekata kao i ukupan broj radnika kojima rukovode na projektima (132)
+- Prikazati mbr, ime, prz, plt radnika čiji je broj sati angažovanja na nekom projektu veći od prosečnog broja sati angažovanja na tom projektu (133)
+- Koliko je ukupno angažovanje svih šefova na projektima? (134)
+- Napraviti pogled koji će za sve radnike prikazati samo njihova imena, prezimena i platu (140)
+- Napraviti pogled koji će za sve radnike prikazati Mbr i ukupan broj sati angažovanja radnika na projektima na kojima radi (141)
+- Napraviti pogled koji će za svakog šefa (rukovodioca radnika) prikazati njegov matični broj, prezime, ime, ukupan broj radnika kojima šefuje i njegovo ukupno angažovanje na svim projektima, na kojima radi. Koristiti prethodno definisani pogled (142)
+- Koliko je ukupno angažovanje svih šefova na projektima? (143)
+- Prikazati radnike čije prezime na početku sadrži prva 3 slova imena, na primer: Petar Petric (151)
+- Prikazati imena i prezimena radnika tako da se sva imena koja imaju poslednje slovo 'a', prikazuju bez poslednjeg slova (152)
+- Svim radnicima promeniti ime tako da poslednje slovo bude uvećano. Primer: Ana -> AnA, Marko -> MarkO (153)
+- Prikazati matične brojeve, spojena (konkatenirana) imena i prezimena radnika, kao i plate, uvećane za 17% (154)
+- Prikazati radnike čije prezime sadrži ime. Na primer Marko Marković, ili Djordje Karadjordjevic (155)
+- Za svakog radnika prikazati ime, prz, i projekte na kojima radi. Ako ne radi ni na jednom projektu, napisati ‘Ne radi na projektu’.
+Imena radnika prikazati velikim slovima, a prezimena malim (157)
+- Za svakog radnika prikazati datum rođenja u formatu yyyy/mm/dd (158)
+
+
+
+
+
+
+
+
+- NAPISATI NA PRSTU: 148, 
+
+
+
+
+
+

@@ -1,0 +1,7 @@
+D:\SIIT\SEMESTAR 4\Uvod u softversko inzenjerstvo\VJEZBE\Vjezbe 2\ValidationExampleNet2\CRUDExample\CRUDExample\bin\Debug\CRUDExample.exe.config
+D:\SIIT\SEMESTAR 4\Uvod u softversko inzenjerstvo\VJEZBE\Vjezbe 2\ValidationExampleNet2\CRUDExample\CRUDExample\bin\Debug\CRUDExample.exe
+D:\SIIT\SEMESTAR 4\Uvod u softversko inzenjerstvo\VJEZBE\Vjezbe 2\ValidationExampleNet2\CRUDExample\CRUDExample\bin\Debug\CRUDExample.pdb
+D:\SIIT\SEMESTAR 4\Uvod u softversko inzenjerstvo\VJEZBE\Vjezbe 2\ValidationExampleNet2\CRUDExample\CRUDExample\obj\Debug\CRUDExample.csproj.AssemblyReference.cache
+D:\SIIT\SEMESTAR 4\Uvod u softversko inzenjerstvo\VJEZBE\Vjezbe 2\ValidationExampleNet2\CRUDExample\CRUDExample\obj\Debug\CRUDExample.csproj.CoreCompileInputs.cache
+D:\SIIT\SEMESTAR 4\Uvod u softversko inzenjerstvo\VJEZBE\Vjezbe 2\ValidationExampleNet2\CRUDExample\CRUDExample\obj\Debug\CRUDExample.exe
+D:\SIIT\SEMESTAR 4\Uvod u softversko inzenjerstvo\VJEZBE\Vjezbe 2\ValidationExampleNet2\CRUDExample\CRUDExample\obj\Debug\CRUDExample.pdb

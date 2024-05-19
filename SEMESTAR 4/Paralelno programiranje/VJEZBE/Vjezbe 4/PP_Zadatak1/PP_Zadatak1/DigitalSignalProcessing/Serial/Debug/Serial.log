@@ -1,0 +1,9 @@
+﻿  Clip.cpp
+  Counter.cpp
+  HighPassFilter.cpp
+  main.cpp
+  ReadInFile.cpp
+  WriteOutFile.cpp
+  Generating Code...
+Clip.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/INCREMENTAL:NO' specification
+  Serial.vcxproj -> C:\Users\Korisnik\Downloads\PP_Zadatak1\PP_Zadatak1\Windows\DigitalSignalProcessing\Debug\Serial.exe

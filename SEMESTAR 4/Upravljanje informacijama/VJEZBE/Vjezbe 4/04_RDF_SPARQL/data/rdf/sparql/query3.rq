@@ -1,0 +1,6 @@
+SELECT ?person ?hasRole WHERE { 
+	?person <http://www.example.org/rdf/examples/predicate/worksAt> <http://www.example.org/rdf/examples/company/TechInnovations> .
+ 	OPTIONAL {
+  		?person <http://www.example.org/rdf/examples/predicate/hasRole> ?hasRole .
+  }
+}

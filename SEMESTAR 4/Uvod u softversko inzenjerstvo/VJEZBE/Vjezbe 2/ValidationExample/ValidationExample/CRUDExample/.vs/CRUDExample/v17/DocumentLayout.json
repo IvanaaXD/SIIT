@@ -1,0 +1,135 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\SIIT\\SEMESTAR 4\\Uvod u softversko inzenjerstvo\\VJEZBE\\Vjezbe 2\\ValidationExample\\ValidationExample\\CRUDExample\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{FF75B613-5BD0-4D9E-A5E6-4FA87936CDAE}|GUI\\GUI.csproj|d:\\siit\\semestar 4\\uvod u softversko inzenjerstvo\\vjezbe\\vjezbe 2\\validationexample\\validationexample\\crudexample\\gui\\view\\addvehicle.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF75B613-5BD0-4D9E-A5E6-4FA87936CDAE}|GUI\\GUI.csproj|solutionrelative:gui\\view\\addvehicle.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{82C91C07-6741-4234-ADBE-BCCE42839CDB}|CRUDExample\\CRUDExample.csproj|d:\\siit\\semestar 4\\uvod u softversko inzenjerstvo\\vjezbe\\vjezbe 2\\validationexample\\validationexample\\crudexample\\crudexample\\controller\\vehiclecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{82C91C07-6741-4234-ADBE-BCCE42839CDB}|CRUDExample\\CRUDExample.csproj|solutionrelative:crudexample\\controller\\vehiclecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{82C91C07-6741-4234-ADBE-BCCE42839CDB}|CRUDExample\\CRUDExample.csproj|d:\\siit\\semestar 4\\uvod u softversko inzenjerstvo\\vjezbe\\vjezbe 2\\validationexample\\validationexample\\crudexample\\crudexample\\storage\\serialization\\serializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{82C91C07-6741-4234-ADBE-BCCE42839CDB}|CRUDExample\\CRUDExample.csproj|solutionrelative:crudexample\\storage\\serialization\\serializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{82C91C07-6741-4234-ADBE-BCCE42839CDB}|CRUDExample\\CRUDExample.csproj|d:\\siit\\semestar 4\\uvod u softversko inzenjerstvo\\vjezbe\\vjezbe 2\\validationexample\\validationexample\\crudexample\\crudexample\\storage\\serialization\\serializable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{82C91C07-6741-4234-ADBE-BCCE42839CDB}|CRUDExample\\CRUDExample.csproj|solutionrelative:crudexample\\storage\\serialization\\serializable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{82C91C07-6741-4234-ADBE-BCCE42839CDB}|CRUDExample\\CRUDExample.csproj|d:\\siit\\semestar 4\\uvod u softversko inzenjerstvo\\vjezbe\\vjezbe 2\\validationexample\\validationexample\\crudexample\\crudexample\\observer\\iobserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{82C91C07-6741-4234-ADBE-BCCE42839CDB}|CRUDExample\\CRUDExample.csproj|solutionrelative:crudexample\\observer\\iobserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{82C91C07-6741-4234-ADBE-BCCE42839CDB}|CRUDExample\\CRUDExample.csproj|d:\\siit\\semestar 4\\uvod u softversko inzenjerstvo\\vjezbe\\vjezbe 2\\validationexample\\validationexample\\crudexample\\crudexample\\observer\\subject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{82C91C07-6741-4234-ADBE-BCCE42839CDB}|CRUDExample\\CRUDExample.csproj|solutionrelative:crudexample\\observer\\subject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{82C91C07-6741-4234-ADBE-BCCE42839CDB}|CRUDExample\\CRUDExample.csproj|d:\\siit\\semestar 4\\uvod u softversko inzenjerstvo\\vjezbe\\vjezbe 2\\validationexample\\validationexample\\crudexample\\crudexample\\console\\consoleviewutils.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{82C91C07-6741-4234-ADBE-BCCE42839CDB}|CRUDExample\\CRUDExample.csproj|solutionrelative:crudexample\\console\\consoleviewutils.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AddVehicle.xaml.cs",
+              "DocumentMoniker": "D:\\SIIT\\SEMESTAR 4\\Uvod u softversko inzenjerstvo\\VJEZBE\\Vjezbe 2\\ValidationExample\\ValidationExample\\CRUDExample\\GUI\\View\\AddVehicle.xaml.cs",
+              "RelativeDocumentMoniker": "GUI\\View\\AddVehicle.xaml.cs",
+              "ToolTip": "D:\\SIIT\\SEMESTAR 4\\Uvod u softversko inzenjerstvo\\VJEZBE\\Vjezbe 2\\ValidationExample\\ValidationExample\\CRUDExample\\GUI\\View\\AddVehicle.xaml.cs",
+              "RelativeToolTip": "GUI\\View\\AddVehicle.xaml.cs",
+              "ViewState": "AQIAABgAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-17T11:08:24.943Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Serializer.cs",
+              "DocumentMoniker": "D:\\SIIT\\SEMESTAR 4\\Uvod u softversko inzenjerstvo\\VJEZBE\\Vjezbe 2\\ValidationExample\\ValidationExample\\CRUDExample\\CRUDExample\\Storage\\Serialization\\Serializer.cs",
+              "RelativeDocumentMoniker": "CRUDExample\\Storage\\Serialization\\Serializer.cs",
+              "ToolTip": "D:\\SIIT\\SEMESTAR 4\\Uvod u softversko inzenjerstvo\\VJEZBE\\Vjezbe 2\\ValidationExample\\ValidationExample\\CRUDExample\\CRUDExample\\Storage\\Serialization\\Serializer.cs",
+              "RelativeToolTip": "CRUDExample\\Storage\\Serialization\\Serializer.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-21T18:13:40.497Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Serializable.cs",
+              "DocumentMoniker": "D:\\SIIT\\SEMESTAR 4\\Uvod u softversko inzenjerstvo\\VJEZBE\\Vjezbe 2\\ValidationExample\\ValidationExample\\CRUDExample\\CRUDExample\\Storage\\Serialization\\Serializable.cs",
+              "RelativeDocumentMoniker": "CRUDExample\\Storage\\Serialization\\Serializable.cs",
+              "ToolTip": "D:\\SIIT\\SEMESTAR 4\\Uvod u softversko inzenjerstvo\\VJEZBE\\Vjezbe 2\\ValidationExample\\ValidationExample\\CRUDExample\\CRUDExample\\Storage\\Serialization\\Serializable.cs",
+              "RelativeToolTip": "CRUDExample\\Storage\\Serialization\\Serializable.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-21T18:13:39.361Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Subject.cs",
+              "DocumentMoniker": "D:\\SIIT\\SEMESTAR 4\\Uvod u softversko inzenjerstvo\\VJEZBE\\Vjezbe 2\\ValidationExample\\ValidationExample\\CRUDExample\\CRUDExample\\Observer\\Subject.cs",
+              "RelativeDocumentMoniker": "CRUDExample\\Observer\\Subject.cs",
+              "ToolTip": "D:\\SIIT\\SEMESTAR 4\\Uvod u softversko inzenjerstvo\\VJEZBE\\Vjezbe 2\\ValidationExample\\ValidationExample\\CRUDExample\\CRUDExample\\Observer\\Subject.cs",
+              "RelativeToolTip": "CRUDExample\\Observer\\Subject.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-21T18:13:26.479Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IObserver.cs",
+              "DocumentMoniker": "D:\\SIIT\\SEMESTAR 4\\Uvod u softversko inzenjerstvo\\VJEZBE\\Vjezbe 2\\ValidationExample\\ValidationExample\\CRUDExample\\CRUDExample\\Observer\\IObserver.cs",
+              "RelativeDocumentMoniker": "CRUDExample\\Observer\\IObserver.cs",
+              "ToolTip": "D:\\SIIT\\SEMESTAR 4\\Uvod u softversko inzenjerstvo\\VJEZBE\\Vjezbe 2\\ValidationExample\\ValidationExample\\CRUDExample\\CRUDExample\\Observer\\IObserver.cs",
+              "RelativeToolTip": "CRUDExample\\Observer\\IObserver.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-21T18:13:15.202Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "VehicleController.cs",
+              "DocumentMoniker": "D:\\SIIT\\SEMESTAR 4\\Uvod u softversko inzenjerstvo\\VJEZBE\\Vjezbe 2\\ValidationExample\\ValidationExample\\CRUDExample\\CRUDExample\\Controller\\VehicleController.cs",
+              "RelativeDocumentMoniker": "CRUDExample\\Controller\\VehicleController.cs",
+              "ToolTip": "D:\\SIIT\\SEMESTAR 4\\Uvod u softversko inzenjerstvo\\VJEZBE\\Vjezbe 2\\ValidationExample\\ValidationExample\\CRUDExample\\CRUDExample\\Controller\\VehicleController.cs",
+              "RelativeToolTip": "CRUDExample\\Controller\\VehicleController.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-21T18:11:57.837Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ConsoleViewUtils.cs",
+              "DocumentMoniker": "D:\\SIIT\\SEMESTAR 4\\Uvod u softversko inzenjerstvo\\VJEZBE\\Vjezbe 2\\ValidationExample\\ValidationExample\\CRUDExample\\CRUDExample\\Console\\ConsoleViewUtils.cs",
+              "RelativeDocumentMoniker": "CRUDExample\\Console\\ConsoleViewUtils.cs",
+              "ToolTip": "D:\\SIIT\\SEMESTAR 4\\Uvod u softversko inzenjerstvo\\VJEZBE\\Vjezbe 2\\ValidationExample\\ValidationExample\\CRUDExample\\CRUDExample\\Console\\ConsoleViewUtils.cs",
+              "RelativeToolTip": "CRUDExample\\Console\\ConsoleViewUtils.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-21T18:11:50.137Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
