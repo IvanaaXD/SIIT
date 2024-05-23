@@ -1,0 +1,5 @@
+﻿  main.cpp
+D:\SIIT\SEMESTAR 4\Paralelno programiranje\VJEZBE\Vjezbe 9\MatrixAddition\main.cpp(250,14): warning C4996: 'clCreateCommandQueue': was declared deprecated
+  utils.cpp
+  Generating Code...
+  MatrixAddition.vcxproj -> D:\SIIT\SEMESTAR 4\Paralelno programiranje\VJEZBE\Vjezbe 9\MatrixAddition\Debug\MatrixAddition.exe
