@@ -1,0 +1,41 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\SIIT\\SEMESTAR 4\\Paralelno programiranje\\VJEZBE\\Vjezbe 8\\v8\\vezba08\\zadatak\\MatrixAddition\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{31E5F2CB-5EDE-4664-AA69-72A7F1CB069A}|MatrixAddition.vcxproj|D:\\SIIT\\SEMESTAR 4\\Paralelno programiranje\\VJEZBE\\Vjezbe 8\\v8\\vezba08\\zadatak\\MatrixAddition\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{31E5F2CB-5EDE-4664-AA69-72A7F1CB069A}|MatrixAddition.vcxproj|solutionrelative:main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "main.cpp",
+              "DocumentMoniker": "D:\\SIIT\\SEMESTAR 4\\Paralelno programiranje\\VJEZBE\\Vjezbe 8\\v8\\vezba08\\zadatak\\MatrixAddition\\main.cpp",
+              "RelativeDocumentMoniker": "main.cpp",
+              "ToolTip": "D:\\SIIT\\SEMESTAR 4\\Paralelno programiranje\\VJEZBE\\Vjezbe 8\\v8\\vezba08\\zadatak\\MatrixAddition\\main.cpp",
+              "RelativeToolTip": "main.cpp",
+              "ViewState": "AQIAADYAAAAAAAAAAAAAAM0BAAAPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-05-22T07:39:18.585Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

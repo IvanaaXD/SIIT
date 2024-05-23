@@ -1,0 +1,3 @@
+﻿  main.cpp
+C:\Users\Matijas\Desktop\skul\PP\Materijali\Vezbe\vezba08\zadatak\MatrixAddition\main.cpp(250,14): warning C4996: 'clCreateCommandQueue': was declared deprecated
+  MatrixAddition.vcxproj -> C:\Users\Matijas\Desktop\skul\PP\Materijali\Vezbe\vezba08\zadatak\MatrixAddition\Debug\MatrixAddition.exe
