@@ -1,0 +1,42 @@
+insert into akcija values (1, 'Black Friday I', 5.0, 5);
+insert into akcija values (2, 'Black Friday II', 10.0, 2);
+insert into akcija values (3, 'Black Friday III', 20.0, 0);
+insert into akcija values (4, 'Vikend akcija I', 5.0, 0);
+insert into akcija values (5, 'Vikend akcija II', 7.0, 1);
+
+insert into racunar values (1, 'Prime Zen Mini');
+insert into racunar values (2, 'Prime Zen Super');
+insert into racunar values (3, 'Aurora Plus');
+
+insert into komponenta values (1, 'X570 Plus', 'maticna', 'MSI', 24900.0, 1);
+insert into komponenta values (2, 'B450 Tomahawk', 'maticna', 'MSI', 15000.0, 5);
+insert into komponenta values (3, '8GB DDR3 KVR100', 'RAM', 'Kingston', 8000.0, null);
+insert into komponenta values (4, '16GB DDR4 HX400 ', 'RAM', 'HYPERX', 14900.0, 1);
+insert into komponenta values (5, 'Radeon RX570', 'GPU', 'AMD', 32000.0, null);
+insert into komponenta values (6, 'GTX 1050ti', 'GPU', 'nVidia', 19900.0, 2);
+insert into komponenta values (7, 'RTX 2060', 'GPU', 'nVidia', 76900.0, null);
+insert into komponenta values (8, '512GB 860 PRO', 'SSD', 'Samsung', 19900.0, null);
+insert into komponenta values (9, '480GB SUV500MS', 'SSD', 'Kingston', 12700.0, 1);
+insert into komponenta values (10, 'i7-10700K 3.8GHz', 'CPU', 'Intel', 56700.0, 2);
+insert into komponenta values (11, 'RYZEN 3 3100 3.6GHz', 'CPU', 'AMD', 14900.0, 1);
+insert into komponenta values (12, 'RYZEN 5 3600 3.8GHz', 'CPU', 'AMD', 29000.0, 1);
+insert into komponenta values (13, '650W V1.3', 'napajanje', 'LC-Power', 6000.0, null);
+insert into komponenta values (14, 'HYPER 212 RGB', 'hladnjak', 'COOLER MASTER', 3250.0, null);
+
+insert into konfiguracija values (1, 1, 1);
+insert into konfiguracija values (1, 3, 4);
+insert into konfiguracija values (1, 5, 1);
+insert into konfiguracija values (1, 9, 1);
+insert into konfiguracija values (1, 11, 1);
+insert into konfiguracija values (1, 13, 1);
+insert into konfiguracija values (2, 1, 1);
+insert into konfiguracija values (2, 3, 2);
+insert into konfiguracija values (2, 7, 2);
+insert into konfiguracija values (2, 9, 1);
+insert into konfiguracija values (2, 12, 1);
+insert into konfiguracija values (2, 13, 1);
+insert into konfiguracija values (3, 2, 1);
+insert into konfiguracija values (3, 4, 1);
+insert into konfiguracija values (3, 8, 1);
+insert into konfiguracija values (3, 10, 1);
+insert into konfiguracija values (3, 13, 1);

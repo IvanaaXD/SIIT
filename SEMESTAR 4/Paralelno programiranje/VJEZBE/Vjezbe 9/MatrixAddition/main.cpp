@@ -16,7 +16,7 @@ using namespace std;
 #define M 8
 #define N 8
 
-typedef struct _opencl_dev_info {
+typedef struct _opencl_dev_info{
 	cl_device_type type;
 	const char* name;
 	cl_uint count;
@@ -24,11 +24,11 @@ typedef struct _opencl_dev_info {
 
 
 // For now only Intel and AMD are supported
-#ifdef OPENCL_ARCH_INTEL
-#define OPENCL_TARGET_PLATFORM "Intel"
-#else
+//#ifdef OPENCL_ARCH_INTEL
+//#define OPENCL_TARGET_PLATFORM "Intel"
+//#else
 #define OPENCL_TARGET_PLATFORM "AMD Accelerated Parallel Processing"
-#endif
+//#endif
 
 #define UTILIZE_OPENCL_CPU 0
 #define UTILIZE_OPENCL_GPU 1
@@ -47,8 +47,8 @@ typedef struct _opencl_dev_info {
 	exit(1);                               \
 }
 
-static char* open_cl_program =
-"__kernel void matrixAdd(						\
+static char *open_cl_program =
+	"__kernel void matrixAdd(						\
 	__global int *A,								\
 	__global int *B									\
 	)												\
@@ -62,18 +62,18 @@ static char* open_cl_program =
 	}";
 
 
-int main(int argc, const char** argv)
+int main (int argc, const char** argv)
 {
 	//-----------------------------------------------------------------------
-	// 1. Allocate memory and initialize host buffers
-
-	const unsigned int data_size = M * N;
+    // 1. Allocate memory and initialize host buffers
+	
+    const unsigned int data_size = M*N;
 	int* host_buffer_A = (int*)malloc(sizeof(int) * data_size);
 	int* host_buffer_B = (int*)malloc(sizeof(int) * data_size);
 
-
-	//TODO:
-	//Add code here
+    
+    //TODO:
+    //Add code here
 
 	init_matrix(host_buffer_A, M, N);
 	init_matrix(host_buffer_B, M, N);
@@ -111,17 +111,17 @@ int main(int argc, const char** argv)
 
 	cout << "Platform names:\n";
 
-	for (cl_uint i = 0; i < num_of_platforms; ++i)
+	for(cl_uint i = 0; i < num_of_platforms; ++i)
 	{
 		// Get the length for the i-th platform name
 		size_t platform_name_length = 0;
 		err = clGetPlatformInfo(
-			platforms[i],				/* platform */
+			platforms[i],				/* platform */ 
 			CL_PLATFORM_NAME,			/* param_name */
 			NULL,						/* param_value_size */
 			NULL,						/* param_value */
 			&platform_name_length		/* param_value_size_ret */
-		);
+			);
 		SIMPLE_CHECK_ERRORS(err);
 
 		// Get the name itself for the i-th platform
@@ -132,14 +132,14 @@ int main(int argc, const char** argv)
 			platform_name_length,
 			platform_name,
 			NULL
-		);
+			);
 		SIMPLE_CHECK_ERRORS(err);
 
 		cout << "    [" << i << "] " << platform_name;
 
 		// Decide if this i-th platform is what we are looking for
 		// We select the first one matched skipping the next one if any
-		if (
+		if(
 			strstr(platform_name, required_platform_subname) &&
 			selected_platform_index == num_of_platforms // Have not selected yet
 			)
@@ -150,10 +150,10 @@ int main(int argc, const char** argv)
 		}
 
 		cout << endl;
-		delete[] platform_name;
+		delete [] platform_name;
 	}
 
-	if (selected_platform_index == num_of_platforms)
+	if(selected_platform_index == num_of_platforms)
 	{
 		cerr
 			<< "There is no found platform with name containing \""
@@ -178,12 +178,12 @@ int main(int argc, const char** argv)
 		{ CL_DEVICE_TYPE_ACCELERATOR, "CL_DEVICE_TYPE_ACCELERATOR", 0 }
 	};
 
-	const int NUM_OF_DEVICE_TYPES = sizeof(all_devices) / sizeof(all_devices[0]);
+	const int NUM_OF_DEVICE_TYPES = sizeof(all_devices)/sizeof(all_devices[0]);
 
 	cout << "Number of devices available for each type:\n";
 
 	// Now iterate over all device types picked above and initialize count
-	for (int i = 0; i < NUM_OF_DEVICE_TYPES; ++i)
+	for(int i = 0; i < NUM_OF_DEVICE_TYPES; ++i)
 	{
 		err = clGetDeviceIDs(
 			platform,					/* platform */
@@ -191,9 +191,9 @@ int main(int argc, const char** argv)
 			NULL,						/* num_entries */
 			NULL,						/* devices */
 			&all_devices[i].count		/* num_devices */
-		);
+			);
 
-		if (CL_DEVICE_NOT_FOUND == err)
+		if(CL_DEVICE_NOT_FOUND == err)
 		{
 			// That's OK to fall here, because not all types of devices, which
 			// you query for may be available for a particular system
@@ -214,7 +214,7 @@ int main(int argc, const char** argv)
 
 	const unsigned int device_type = UTILIZE_OPENCL_GPU;
 	cl_uint device_num = all_devices[device_type].count;
-	cl_device_id* devices = (cl_device_id*)malloc(sizeof(cl_device_id) * device_num);
+	cl_device_id *devices = (cl_device_id*)malloc(sizeof(cl_device_id)*device_num);
 
 	err = clGetDeviceIDs(
 		platform,
@@ -222,7 +222,7 @@ int main(int argc, const char** argv)
 		device_num,
 		devices,
 		&device_num
-	);
+		);
 
 	SIMPLE_CHECK_ERRORS(err);
 
@@ -232,13 +232,13 @@ int main(int argc, const char** argv)
 
 	cl_context context;
 	context = clCreateContext(
-		NULL,					/* properties */
+		NULL,					/* properties */ 
 		device_num,				/* num_devices */
 		devices,				/* devices */
 		NULL,					/* pfn_notify */
-		NULL,					/* user_data */
+		NULL,					/* user_data */ 
 		&err					/* errcode_ret */
-	);
+		); 
 
 	SIMPLE_CHECK_ERRORS(err);
 
@@ -252,19 +252,19 @@ int main(int argc, const char** argv)
 		*devices,				/* devices[0] */
 		NULL,					/* properties */
 		&err					/* errcode_ret */
-	);
+		);
 
 	SIMPLE_CHECK_ERRORS(err);
 
 	// -----------------------------------------------------------------------
 	// 8. Create memory buffers
-
-	cl_mem device_buffer_A;
+	
+    cl_mem device_buffer_A;
 	cl_mem device_buffer_B;
 
 
-	//TODO:
-	//Add code here
+    //TODO:
+    //Add code here
 	device_buffer_A = clCreateBuffer(
 		context,
 		CL_MEM_READ_WRITE,
@@ -273,7 +273,7 @@ int main(int argc, const char** argv)
 		&err
 	);
 	SIMPLE_CHECK_ERRORS(err);
-
+	
 	device_buffer_B = clCreateBuffer(
 		context,
 		CL_MEM_READ_ONLY,
@@ -287,8 +287,8 @@ int main(int argc, const char** argv)
 	// 9. Tranfer data from the host memory to the device memory
 
 
-	//TODO:
-	//Add code here
+    //TODO:
+    //Add code here
 	err = clEnqueueWriteBuffer(
 		cmd_queue,					/* command_queue */
 		device_buffer_A,			/* buffer */
@@ -318,9 +318,9 @@ int main(int argc, const char** argv)
 
 	// -----------------------------------------------------------------------
 	// 10. Create and compile OpenCL program
-
-	//TODO:
-	//Modify open_cl_program kernel code
+    
+    //TODO:
+    //Modify open_cl_program kernel code
 
 	// Create Progam object
 	cl_program program = clCreateProgramWithSource(
@@ -329,38 +329,38 @@ int main(int argc, const char** argv)
 		(const char**)&open_cl_program,		/* strings */
 		NULL,								/* lengths */
 		&err								/* errcode_ret */
-	);
+		);
 
 	// Compile Program object
 	err = clBuildProgram(
 		program,			/* program */
 		1,					/* num_devices */
 		devices,			/* device_list */
-		NULL,				/* options */
+		NULL,				/* options */ 
 		NULL,				/* pfn_notify */
-		NULL				/* user_data */
-	);
+		NULL				/* user_data */ 
+		);
 
 	SIMPLE_CHECK_ERRORS(err);
 
 	// -----------------------------------------------------------------------
 	// 11. Create kernel
-
+    
 	cl_kernel kernel = NULL;
 	kernel = clCreateKernel(
 		program,				/* program */
 		"matrixAdd",			/* kernel_name */
 		&err					/* errcode_ret */
-	);
+		);
 
 	SIMPLE_CHECK_ERRORS(err);
-
+	
 	// -----------------------------------------------------------------------
 	// 12. Set kernel function argument list
-
-
-	//TODO:
-	//Add code here
+    
+    
+    //TODO:
+    //Add code here
 	err = clSetKernelArg(
 		kernel,					/* kernel */
 		0,						/* arg_index */
@@ -379,16 +379,16 @@ int main(int argc, const char** argv)
 
 	SIMPLE_CHECK_ERRORS(err);
 
-
+	
 	// -----------------------------------------------------------------------	
 	// 13. Define work-item and work-group
 
 
-	//TODO:
-	//Modify Global and local work size
+    //TODO:
+    //Modify Global and local work size
 	size_t n_dim = 2;
-	size_t global_work_size[2] = { M, N };
-	size_t local_work_size[2] = { 4 , 4 };
+    size_t global_work_size[2] = {M, N};
+    size_t local_work_size[2]= { 4 , 4 };
 
 
 	// -----------------------------------------------------------------------
@@ -404,37 +404,37 @@ int main(int argc, const char** argv)
 		NULL,					/* num_events_in_wait_list */
 		NULL,					/* event_wait_list */
 		NULL					/* event */
-	);
+		);
 
 	SIMPLE_CHECK_ERRORS(err);
 
 	// -----------------------------------------------------------------------
 	// 15. Get results (output buffer) from global device memory
-
-
-	//TODO:
-	//Add code here
+    
+    
+    //TODO:
+    //Add code here
 	err = clEnqueueReadBuffer(
-		cmd_queue,				/* command_queue */
+	cmd_queue,				/* command_queue */
 		device_buffer_A,		/* buffer */
 		CL_TRUE,				/* blocking_read */
 		0,						/* offset */
-		sizeof(int) * data_size,	/* size */
+		sizeof(int)* data_size,	/* size */
 		host_buffer_A,			/* ptr */
 		NULL,					/* num_events_in_wait_list */
 		NULL,					/* event_wait_list */
 		NULL					/* event */
-	);
+		);
 
-	SIMPLE_CHECK_ERRORS(err);
+		SIMPLE_CHECK_ERRORS(err);
 
 
-
+	
 	// -----------------------------------------------------------------------
 	// 16. Validate returned result
 
-	int* test_buffer_A = (int*)malloc(sizeof(int) * data_size);
-	int* test_buffer_B = (int*)malloc(sizeof(int) * data_size);
+	int *test_buffer_A = (int*)malloc(sizeof(int)*data_size);
+	int *test_buffer_B = (int*)malloc(sizeof(int)*data_size);
 
 	init_matrix(test_buffer_A, M, N);
 	init_matrix(test_buffer_B, M, N);
@@ -445,10 +445,9 @@ int main(int argc, const char** argv)
 
 	matrix_addition_serial(test_buffer_A, test_buffer_B, M, N);
 
-	if (!check_results(test_buffer_A, host_buffer_A, M, N)) {
+	if(!check_results(test_buffer_A, host_buffer_A, M, N)){
 		cout << "ERROR: Invalid result!" << endl;
-	}
-	else {
+	}else{
 		cout << "Result OK!" << endl;
 	}
 
@@ -460,7 +459,7 @@ int main(int argc, const char** argv)
 	free(host_buffer_A);
 	free(host_buffer_B);
 	free(devices);
-	delete[] platforms;
+	delete [] platforms;
 
 	return CL_SUCCESS;
 }

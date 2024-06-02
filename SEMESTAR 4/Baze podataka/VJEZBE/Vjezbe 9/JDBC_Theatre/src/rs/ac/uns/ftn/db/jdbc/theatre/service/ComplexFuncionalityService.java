@@ -2,15 +2,21 @@ package rs.ac.uns.ftn.db.jdbc.theatre.service;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
-import rs.ac.uns.ftn.db.jdbc.theatre.dao.RoleDAO;
+import rs.ac.uns.ftn.db.jdbc.theatre.dao.ActorDAO;
+import rs.ac.uns.ftn.db.jdbc.theatre.dao.AssignmentDAO;
 import rs.ac.uns.ftn.db.jdbc.theatre.dao.PlayDAO;
+import rs.ac.uns.ftn.db.jdbc.theatre.dao.RoleDAO;
 import rs.ac.uns.ftn.db.jdbc.theatre.dao.SceneDAO;
 import rs.ac.uns.ftn.db.jdbc.theatre.dao.ShowingDAO;
 import rs.ac.uns.ftn.db.jdbc.theatre.dao.TheatreDAO;
-import rs.ac.uns.ftn.db.jdbc.theatre.dao.impl.RoleDAOImpl;
+import rs.ac.uns.ftn.db.jdbc.theatre.dao.impl.ActorDAOImpl;
+import rs.ac.uns.ftn.db.jdbc.theatre.dao.impl.AssignmentDAOImpl;
 import rs.ac.uns.ftn.db.jdbc.theatre.dao.impl.PlayDAOImpl;
+import rs.ac.uns.ftn.db.jdbc.theatre.dao.impl.RoleDAOImpl;
 import rs.ac.uns.ftn.db.jdbc.theatre.dao.impl.SceneDAOImpl;
 import rs.ac.uns.ftn.db.jdbc.theatre.dao.impl.ShowingDAOImpl;
 import rs.ac.uns.ftn.db.jdbc.theatre.dao.impl.TheatreDAOImpl;
@@ -21,9 +27,13 @@ import rs.ac.uns.ftn.db.jdbc.theatre.dto.complexquery3.PlayStatsDTO;
 import rs.ac.uns.ftn.db.jdbc.theatre.dto.complexquery3.PlaysForSceneDTO;
 import rs.ac.uns.ftn.db.jdbc.theatre.dto.complexquery4.PlayDTO;
 import rs.ac.uns.ftn.db.jdbc.theatre.dto.complexquery5.ShowingDTO;
+import rs.ac.uns.ftn.db.jdbc.theatre.model.Actor;
+import rs.ac.uns.ftn.db.jdbc.theatre.model.Play;
 import rs.ac.uns.ftn.db.jdbc.theatre.model.Role;
 import rs.ac.uns.ftn.db.jdbc.theatre.model.Scene;
+import rs.ac.uns.ftn.db.jdbc.theatre.model.Showing;
 import rs.ac.uns.ftn.db.jdbc.theatre.model.Theatre;
+import rs.ac.uns.ftn.jdbc.theatre.dto.complexquery7.RoleDTO;
 
 public class ComplexFuncionalityService {
 	private static final TheatreDAO theatreDAO = new TheatreDAOImpl();
@@ -31,6 +41,9 @@ public class ComplexFuncionalityService {
 	private static final ShowingDAO showingDAO = new ShowingDAOImpl();
 	private static final PlayDAO playDAO = new PlayDAOImpl();
 	private static final RoleDAO roleDAO = new RoleDAOImpl();
+	private static final ActorDAO actorDAO = new ActorDAOImpl();
+	private static final AssignmentDAO assignmentDAO = new AssignmentDAOImpl();
+
 	
 	//complex query 1
 	public List<ScenesForTheatreDTO> getScenesForTheatres() throws SQLException{
@@ -98,6 +111,90 @@ public class ComplexFuncionalityService {
 	//complex query 5
 	public List<ShowingDTO> deleteShowings() throws SQLException {
 		return showingDAO.deleteAndInsertIntoShowing();
+	}
+	
+	//complex query 7
+	public List<RoleDTO> showRoles() throws SQLException {
+		
+		ArrayList<RoleDTO> roles = new ArrayList<RoleDTO>();
+		
+		List<Integer> rolesInAss = assignmentDAO.findRoles();
+		Iterable<Role> allRoles = roleDAO.findAll();
+		
+		List<Role> rolesNotInAss = new ArrayList<Role>();
+		for (Role role: allRoles) {
+			if (!rolesInAss.contains(role.getId())) {
+				rolesNotInAss.add(role);
+			}
+		}
+		
+		for (Role r:rolesNotInAss) {
+			RoleDTO d = new RoleDTO(r, new ArrayList<Actor>(), new ArrayList<Theatre>());
+			roles.add(d);
+		}
+
+		HashMap<Role, List<Showing>> sceneIds = new HashMap<Role, List<Showing>>();
+		for (Role role: rolesNotInAss) {
+			List<Showing> s = showingDAO.findShowingByPlayId(role.getPlayId());
+			sceneIds.put(role, s);
+		}
+		
+		HashMap<Role, List<Scene>> scenes = sceneDAO.findTheatreByScene(sceneIds);
+		
+		HashMap<Role, List<Theatre>> ts = new HashMap<Role, List<Theatre>>();
+			
+        for (Map.Entry<Role, List<Scene>> entry : scenes.entrySet()) {
+            Role role = entry.getKey();
+            List<Scene> sceness = entry.getValue();
+
+    		List<Theatre> tsss = new ArrayList<Theatre>();
+    		for (Scene s: sceness) {
+    			Theatre t = theatreDAO.findById(s.getTheatreId());
+    			if(!tsss.contains(t)) {
+    				tsss.add(t);
+    			}
+    		}
+    		ts.put(role, tsss);
+        }
+
+        for (int i = 0; i < roles.size(); i++) {
+        	roles.get(i).setTheatre(ts.get(roles.get(i).getRole()));
+        }
+        
+		List<Integer> actorsInAss = assignmentDAO.findActors();
+		Iterable<Actor> allActors= actorDAO.findAll();
+		
+		List<Actor> actorsNotInAss = new ArrayList<Actor>();
+		for (Actor a: allActors) {
+			if (!actorsInAss.contains(a.getId())) {
+				actorsNotInAss.add(a);
+			}
+		}
+		
+		HashMap<Role, List<Actor>> as = new HashMap<Role, List<Actor>>();
+		
+        for (Map.Entry<Role, List<Theatre>> entry : ts.entrySet()) {
+            Role role = entry.getKey();
+            List<Theatre> sceness = entry.getValue();
+            
+    		List<Actor> actorsInTheatre = new ArrayList<Actor>();
+
+    		for (Actor a: actorsNotInAss) {
+    			for (Theatre t :sceness) {
+    				if (a.getTheatreId() == (t.getId())) {
+    					actorsInTheatre.add(a);
+    					continue;
+    				}
+    			}
+    		}
+    		as.put(role, actorsInTheatre);
+        }
+        
+        for (int i = 0; i < roles.size(); i++) {
+        	roles.get(i).setActor(as.get(roles.get(i).getRole()));
+        }
+		
+		return roles;
 	}
 
 }

@@ -1,0 +1,50 @@
+PRVI ZADATAK
+
+cd home
+pwd
+
+
+DRUGI ZADATAK
+
+ls
+cd ivana
+mkdir os
+cd os
+mkdir vjezba6
+
+
+TRECI ZADATAK
+
+mv vjezba6 v6
+
+
+CETVRTI ZADATAK
+
+cd v6
+ls v6
+
+
+PETI ZADATAK
+
+cd ~/Desktop
+ln -s ~/os/v6 os-v6
+ls
+cd os-v6
+
+
+SESTI ZADATAK
+
+cd ..
+cd ..
+ls -d ???
+
+
+SEDMI ZADATAK
+
+find . -type f -name "*sys*" 
+
+
+OSMI ZADATAK
+
+sudo apt install htop
+

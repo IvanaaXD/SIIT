@@ -5,11 +5,15 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import rs.ac.uns.ftn.db.jdbc.theatre.connection.ConnectionUtil_HikariCP;
 import rs.ac.uns.ftn.db.jdbc.theatre.dao.SceneDAO;
+import rs.ac.uns.ftn.db.jdbc.theatre.model.Role;
 import rs.ac.uns.ftn.db.jdbc.theatre.model.Scene;
+import rs.ac.uns.ftn.db.jdbc.theatre.model.Showing;
 
 public class SceneDAOImpl implements SceneDAO {
 
@@ -150,5 +154,31 @@ public class SceneDAOImpl implements SceneDAO {
 		}
 		return sceneList;
 	}
+	
+	public HashMap<Role, List<Scene>> findTheatreByScene(HashMap<Role, List<Showing>> sceneIds) throws SQLException{
+		
+		HashMap<Role, List<Scene>> ret = new HashMap<Role, List<Scene>> ();
+		List<Scene> allScenes = (List<Scene>) findAll(); 
+		
+        for (Map.Entry<Role, List<Showing>> entry : sceneIds.entrySet()) {
+            Role role = entry.getKey();
+            List<Showing> showings = entry.getValue();
 
+    		List<Scene> scenes = new ArrayList<Scene>();
+    		for (Scene s: allScenes) {
+    			for(Showing sh: showings) {
+        			if (sh.getSceneId() == s.getId()){
+        				if (!scenes.contains(s)) {
+            				scenes.add(s);
+        				}
+        			}
+    			}
+
+    		}
+    		
+    		ret.put(role, scenes);
+        }
+		
+		return ret;
+	}
 }

@@ -175,7 +175,7 @@ public class TheatreUIHandler {
 
 		try {
 			int rowsSaved = theatreService.saveAll(theatreList);
-			System.out.println("Uspesno ažurirano " + rowsSaved + " pozorista.");
+			System.out.println("Uspesno aï¿½urirano " + rowsSaved + " pozorista.");
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}

@@ -21,15 +21,12 @@ def dict_to_list_of_tuples(dict):
 def map_function_implementation(data):
 
     data_list = data.split()
-    dict = {}
+    result_list = []
 
-    for d in data_list:
-        if d not in dict.keys():
-            dict[d] = 1
-        else:
-            dict[d] += 1
+    for word in data_list:
+        result_list.append((word, 1))
 
-    return dict_to_list_of_tuples(dict)
+    return result_list
 
 
 def shuffle_implementation(data):
@@ -40,14 +37,13 @@ def shuffle_implementation(data):
 # Uzima listu key-value parova, treba ba vrati listu key-value parova
 def reduce_function_implementation(data):
 
-    shuffle_implementation(data)
     reduced_data = {}
 
     for d in data:
-        if d[0] not in reduced_data.keys():
-            reduced_data[d[0]] = d[1]
+        if d[0] in reduced_data:
+            reduced_data[d[0]] = reduced_data[d[0]] + d[1]
         else:
-            reduced_data[d[0]] += d[1]
+            reduced_data[d[0]] = d[1]
 
     return dict_to_list_of_tuples(reduced_data)
 

@@ -7,14 +7,14 @@ public class Assignment {
 	private double honorar;
 	private Date startDate;
 	private Date endDate;
-	private String partId;
+	private int partId;
 	private int actorId;
 
 	public Assignment() {
 		super();
 	}
 
-	public Assignment(int id, double honorar, Date startDate, Date endDate, String partId, int actorId) {
+	public Assignment(int id, double honorar, Date startDate, Date endDate, int actorId, int partId) {
 		super();
 		this.id = id;
 		this.honorar = honorar;
@@ -35,7 +35,7 @@ public class Assignment {
 		temp = Double.doubleToLongBits(honorar);
 		result = prime * result + (int) (temp ^ (temp >>> 32));
 		result = prime * result + id;
-		result = prime * result + ((partId == null) ? 0 : partId.hashCode());
+		//result = prime * result + ((partId == null) ? 0 : partId.hashCode());
 		return result;
 	}
 
@@ -64,10 +64,10 @@ public class Assignment {
 			return false;
 		if (id != other.id)
 			return false;
-		if (partId == null) {
-			if (other.partId != null)
+		if (partId == 0) {
+			if (other.partId != 0)
 				return false;
-		} else if (!partId.equals(other.partId))
+		} else if (partId != other.partId)
 			return false;
 		return true;
 	}
@@ -104,11 +104,11 @@ public class Assignment {
 		this.endDate = endDate;
 	}
 
-	public String getPartId() {
+	public int getPartId() {
 		return partId;
 	}
 
-	public void setPartId(String partId) {
+	public void setPartId(int partId) {
 		this.partId = partId;
 	}
 
