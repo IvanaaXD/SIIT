@@ -11,6 +11,7 @@ import rs.ac.uns.ftn.db.jdbc.theatre.connection.ConnectionUtil_HikariCP;
 import rs.ac.uns.ftn.db.jdbc.theatre.dao.PlayDAO;
 import rs.ac.uns.ftn.db.jdbc.theatre.dto.complexquery4.PlayDTO;
 import rs.ac.uns.ftn.db.jdbc.theatre.model.Play;
+import rs.ac.uns.ftn.db.jdbc.theatre.model.Role;
 
 public class PlayDAOImpl implements PlayDAO {
 
@@ -110,6 +111,16 @@ public class PlayDAOImpl implements PlayDAO {
 		}
 
 		return result;
+	}
+	
+	public List<Play> findByRole(List<Role> roles) throws SQLException{
+		List<Play> plays = new ArrayList<Play>();
+		
+		for (Role role : roles) {
+			Play p = findById(role.getPlayId());
+			plays.add(p);
+		}
+		return plays;
 	}
 
 }

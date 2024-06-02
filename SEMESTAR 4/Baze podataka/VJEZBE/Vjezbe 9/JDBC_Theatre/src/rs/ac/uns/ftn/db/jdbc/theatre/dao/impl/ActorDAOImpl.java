@@ -46,8 +46,21 @@ public class ActorDAOImpl implements ActorDAO {
 
 	@Override
 	public Iterable<Actor> findAll() throws SQLException {
-		// TODO Auto-generated method stub
-		return null;
+		String query = "select ID_AC, NAME_AC, DOB_AC, STATUS_AC, SALARY_AC, BONUS_AC, THEATRE_ID_TH  from actor";
+		List<Actor> actorList = new ArrayList<Actor>();
+		
+		Connection connection = ConnectionUtil_HikariCP.getConnection();
+		try (PreparedStatement preparedStatement = connection.prepareStatement(query);
+				ResultSet resultSet = preparedStatement.executeQuery()) {
+
+			while (resultSet.next()) {
+				Actor actor = new Actor(resultSet.getInt(1), resultSet.getString(2), resultSet.getDate(3),
+						resultSet.getString(4), resultSet.getInt(5), resultSet.getInt(6), resultSet.getInt(7));
+				actorList.add(actor);
+			}
+
+		}
+		return actorList;
 	}
 
 	@Override

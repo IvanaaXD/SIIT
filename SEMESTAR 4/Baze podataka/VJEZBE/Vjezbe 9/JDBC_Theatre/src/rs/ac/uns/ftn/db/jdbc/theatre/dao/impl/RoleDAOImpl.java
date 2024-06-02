@@ -9,6 +9,7 @@ import java.util.List;
 
 import rs.ac.uns.ftn.db.jdbc.theatre.connection.ConnectionUtil_HikariCP;
 import rs.ac.uns.ftn.db.jdbc.theatre.dao.RoleDAO;
+import rs.ac.uns.ftn.db.jdbc.theatre.model.Assignment;
 import rs.ac.uns.ftn.db.jdbc.theatre.model.Role;
 
 public class RoleDAOImpl implements RoleDAO {
@@ -45,8 +46,21 @@ public class RoleDAOImpl implements RoleDAO {
 
 	@Override
 	public Iterable<Role> findAll() throws SQLException {
-		// TODO Auto-generated method stub
-		return null;
+		String query = "Select ID_RO, NAME_RO, GENDER_RO, TYPE_RO, PLAY_ID_PL\r\n"
+				+ "FROM role";
+		List<Role> roles = new ArrayList<Role>();
+		
+		Connection connection = ConnectionUtil_HikariCP.getConnection();
+		
+		try (PreparedStatement ps = connection.prepareStatement(query);
+				ResultSet rs = ps.executeQuery()){
+			
+			while (rs.next()) {
+				Role role = new Role(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getInt(5));
+				roles.add(role);
+			}
+		}
+		return roles;	
 	}
 
 	@Override

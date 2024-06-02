@@ -3,10 +3,18 @@ package rs.ac.uns.ftn.db.jdbc.theatre.model;
 import java.util.Date;
 
 public class Actor {
+	@Override
+	public String toString() {
+		return "Actor [id=" + id + ", name=" + name + ", dob=" + dob + ", status=" + status + ", salary=" + salary
+				+ ", bonus=" + bonus + ", theatreId=" + theatreId + "]";
+	}
+
+
+
 	private int id;
 	private String name;
 	private Date dob;
-	private boolean status;
+	private String status;
 	private double salary;
 	private double bonus;
 	private int theatreId;
@@ -15,7 +23,7 @@ public class Actor {
 		super();
 	}
 
-	public Actor(int id, String name, Date dob, boolean status, double salary, double bonus, int theatreId) {
+	public Actor(int id, String name, Date dob, String status, double salary, double bonus, int theatreId) {
 		this.id = id;
 		this.name = name;
 		this.dob = dob;
@@ -38,7 +46,7 @@ public class Actor {
 		result = prime * result + id;
 		temp = Double.doubleToLongBits(salary);
 		result = prime * result + (int) (temp ^ (temp >>> 32));
-		result = prime * result + (status ? 1231 : 1237);
+		result = prime * result + ((status == null) ? 0 : status.hashCode());
 		return result;
 	}
 
@@ -98,11 +106,11 @@ public class Actor {
 		this.dob = dob;
 	}
 
-	public boolean isStatus() {
+	public String isStatus() {
 		return status;
 	}
 
-	public void setStatus(boolean status) {
+	public void setStatus(String status) {
 		this.status = status;
 	}
 
@@ -130,10 +138,7 @@ public class Actor {
 		this.theatreId = teahtreId;
 	}
 
-	@Override
-	public String toString() {
-		return String.format("%-6d %-10d %-20.20s %-10d %-10d %-10d %-10d", id, name, dob.toString(), status, salary, bonus, theatreId);
-	}
+
 
 	public static String getFormattedHeader() {
 		return String.format("%-6s %-10s %-20s %-10s %-10s %-10s %-10s", "ID", "IME", "DATUM RODJENJA", "STATUS", "PLATA", "BONUS", "ID POZORISTA");

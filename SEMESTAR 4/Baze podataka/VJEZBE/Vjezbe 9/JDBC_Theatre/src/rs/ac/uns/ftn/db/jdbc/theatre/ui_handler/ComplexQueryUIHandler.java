@@ -9,13 +9,15 @@ import rs.ac.uns.ftn.db.jdbc.theatre.dto.complexquery3.PlayStatsDTO;
 import rs.ac.uns.ftn.db.jdbc.theatre.dto.complexquery3.PlaysForSceneDTO;
 import rs.ac.uns.ftn.db.jdbc.theatre.dto.complexquery4.PlayDTO;
 import rs.ac.uns.ftn.db.jdbc.theatre.dto.complexquery5.ShowingDTO;
-import rs.ac.uns.ftn.db.jdbc.theatre.model.Role;
+import rs.ac.uns.ftn.db.jdbc.theatre.model.Actor;
 import rs.ac.uns.ftn.db.jdbc.theatre.model.Play;
+import rs.ac.uns.ftn.db.jdbc.theatre.model.Role;
 import rs.ac.uns.ftn.db.jdbc.theatre.model.Scene;
 import rs.ac.uns.ftn.db.jdbc.theatre.model.Showing;
 import rs.ac.uns.ftn.db.jdbc.theatre.model.Theatre;
 import rs.ac.uns.ftn.db.jdbc.theatre.service.ComplexFuncionalityService;
 import rs.ac.uns.ftn.db.jdbc.theatre.service.ShowingService;
+import rs.ac.uns.ftn.jdbc.theatre.dto.complexquery7.RoleDTO;
 
 public class ComplexQueryUIHandler {
 
@@ -100,10 +102,10 @@ public class ComplexQueryUIHandler {
 				// TODO implementirati
 				break;
 			case "7":
-				// TODO implementirati
+				showAllNotAssignedRoles();
 				break;
 			case "8":
-				// TODO implementirati
+				//showActorsAndTheirRoles();
 				break;
 			case "9":
 				// TODO implementirati
@@ -192,8 +194,7 @@ public class ComplexQueryUIHandler {
 						System.out.println("\t\tID predstave: " + sopDTO.getPlayId());
 						if (sopDTO.getTotalNumOfSpecs() > 400) {
 
-							System.out
-									.println("\t\tUkupan broj gledalaca za predstavu: " + sopDTO.getTotalNumOfSpecs());
+							System.out.println("\t\tUkupan broj gledalaca za predstavu: " + sopDTO.getTotalNumOfSpecs());
 							System.out.println("\t\tUkupan broj uloga za predstavu: " + sopDTO.getTotalNumOfRoles());
 							System.out.println("\t\t--------------------------------------------------------");
 							System.out.println();
@@ -253,5 +254,49 @@ public class ComplexQueryUIHandler {
 			e.printStackTrace();
 		}
 	}
-
+	
+	public void showAllNotAssignedRoles() {
+		try {
+			List<RoleDTO> roles = complexQueryService.showRoles();
+			
+			if (roles.isEmpty()) {
+				System.out.println("Nema podataka.");
+			} else {
+				for (RoleDTO pd : roles) {
+					System.out.println(pd.getRole().getName());	
+					for (Actor a: pd.getActor()) {
+						System.out.println(a.toString());
+					}
+					for (Theatre a: pd.getTheatre()) {
+						System.out.println(a.toString());
+					}								
+				}
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	/*public void showActorsAndTheirRoles() {
+		try {
+			List<Query8> roles = complexQueryService.showActorsAndTheirRoles();
+			
+			if (roles.isEmpty()) {
+				System.out.println("Nema podataka.");
+			} else {
+				for (RoleDTO pd : roles) {
+					System.out.println(pd.getRole().getName());	
+					for (Actor a: pd.getActor()) {
+						System.out.println(a.toString());
+					}
+					for (Theatre a: pd.getTheatre()) {
+						System.out.println(a.toString());
+					}								
+				}
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
+*/
 }

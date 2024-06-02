@@ -99,40 +99,62 @@ public class TheatreDAOImpl implements TheatreDAO {
 	public Iterable<Theatre> findAllById(Iterable<Integer> ids) throws SQLException {
 		List<Theatre> theatreList = new ArrayList<>();
 
-		StringBuilder stringBuilder = new StringBuilder();
+        StringBuilder stringBuilder = new StringBuilder();
 
-		String queryBegin = "select id_th, name_th, address_th, website_th, place_id_pl  from theatre where id_th in(";
-		stringBuilder.append(queryBegin);
+        String queryBegin = "select id_th, name_th, address_th, website_th, place_id_pl  from theatre where id_th in(";
+        stringBuilder.append(queryBegin);
 
-		for (@SuppressWarnings("unused")
-		Integer id : ids) {
-			stringBuilder.append("?,");
-		}
+        for (@SuppressWarnings("unused")
+        Integer id : ids) {
+            stringBuilder.append("?,");
+        }
 
-		stringBuilder.deleteCharAt(stringBuilder.length() - 1); // delete last ','
-		stringBuilder.append(")");
+        stringBuilder.deleteCharAt(stringBuilder.length() - 1); // delete last ','
+        stringBuilder.append(")");
 
-		try (Connection connection = ConnectionUtil_HikariCP.getConnection();
-				PreparedStatement preparedStatement = connection.prepareStatement(stringBuilder.toString());) {
+        try (Connection connection = ConnectionUtil_HikariCP.getConnection();
+                PreparedStatement preparedStatement = connection.prepareStatement(stringBuilder.toString());) {
 
-			int i = 0;
-			for (Integer id : ids) {
-				preparedStatement.setInt(++i, id);
-			}
+            int i = 0;
+            for (Integer id : ids) {
+                preparedStatement.setInt(++i, id);
+            }
 
-			try (ResultSet resultSet = preparedStatement.executeQuery()) {
-				while (resultSet.next()) {
-					theatreList.add(new Theatre(resultSet.getInt(1), resultSet.getString(2), resultSet.getString(3),
-							resultSet.getString(4), resultSet.getInt(5)));
-				}
-			}
-		}
+            try (ResultSet resultSet = preparedStatement.executeQuery()) {
+                while (resultSet.next()) {
+                    theatreList.add(new Theatre(resultSet.getInt(1), resultSet.getString(2), resultSet.getString(3),
+                            resultSet.getString(4), resultSet.getInt(5)));
+                }
+            }
+        }
 
-		return theatreList;
+        return theatreList;
 	}
 
 	@Override
 	public Theatre findById(Integer id) throws SQLException {
+		String query = "select id_th, name_th, address_th, website_th,place_id_pl  from theatre where id_th = ?";
+		Theatre pozoriste = null;
+
+		try (Connection connection = ConnectionUtil_HikariCP.getConnection();
+				PreparedStatement preparedStatement = connection.prepareStatement(query);) {
+
+			preparedStatement.setInt(1, id);
+
+			try (ResultSet resultSet = preparedStatement.executeQuery()) {
+				if (resultSet.isBeforeFirst()) {
+					resultSet.next();
+
+					pozoriste = new Theatre(resultSet.getInt(1), resultSet.getString(2), resultSet.getString(3),
+							resultSet.getString(4), resultSet.getInt(5));
+				}
+			}
+		}
+
+		return pozoriste;
+	}
+	
+	public Theatre findByScene(Integer id) throws SQLException {
 		String query = "select id_th, name_th, address_th, website_th,place_id_pl  from theatre where id_th = ?";
 		Theatre pozoriste = null;
 

@@ -1,0 +1,44 @@
+PRVI ZADATAK
+
+ping ftn.uns.ac.rs
+htop u novom terminalu
+F9 kad pronadjem proces
+
+
+DRUGI ZADATAK
+
+ping ftn.uns.ac.rs
+jobs
+fg %1
+Ctrl+C
+
+
+TRECI ZADATAK
+
+ping ftn.uns.ac.rs
+pgrep ping
+kill <PID>
+
+
+CETVRTI ZADATAK
+
+cd ~/os
+mkdir v7
+ls
+ls -l
+
+
+PETI ZADATAK
+
+chmod 723 v7
+ls -l
+
+
+SESTI ZADATAK
+
+sudo mkdir -p /mnt/os
+sudo mount --bind ~/os /mnt/os
+ls /mnt/os
+sudo umount /mnt/os
+
+
