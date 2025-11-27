@@ -71,8 +71,22 @@ public class RoleDAOImpl implements RoleDAO {
 
 	@Override
 	public Role findById(Integer id) throws SQLException {
+		String query = "select ID_RO, NAME_RO,GENDER_RO, TYPE_RO, PLAY_ID_PL from role where ID_RO=?";
+		Role r = null;
 
-		return null;
+		try (Connection connection = ConnectionUtil_HikariCP.getConnection();
+				PreparedStatement preparedStatement = connection.prepareStatement(query);) {
+			preparedStatement.setInt(1, id);
+			try (ResultSet resultSet = preparedStatement.executeQuery()) {
+				if (resultSet.isBeforeFirst()) {
+					resultSet.next();
+					r = new Role(resultSet.getInt(1), resultSet.getString(2), resultSet.getString(3), resultSet.getString(4), resultSet.getInt(5));
+				}
+
+			}
+		}
+
+		return r;
 
 	}
 
@@ -147,5 +161,6 @@ public class RoleDAOImpl implements RoleDAO {
 			}
 		}
 	}
+	
 
 }

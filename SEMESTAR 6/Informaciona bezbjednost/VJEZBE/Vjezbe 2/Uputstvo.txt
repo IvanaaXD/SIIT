@@ -1,0 +1,9 @@
+Uputstvo:
+
+Video je dostupan na sledećem linku: https://drive.google.com/file/d/15qgsjP5_f8Cq72xPg0dVMvD11MCEMq8X/view?usp=sharing
+
+Vaš zadatak nakon što odslušate video je da implementirate mini blockchain.
+Projekat i detaljnije uputstvo se nalaze u priloženom zipu.
+
+Ako bude bilo nekih problema prilikom pokretanja i/ili implementacije, pišite nam na
+kovacevic.ivana@uns.ac.rs i nenadtod@uns.ac.rs ili se javite na prvim sledećim vežbama.

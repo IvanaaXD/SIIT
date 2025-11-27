@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="cart" >Cart</string>
+    <string name="filters">Filters</string>
+    <string name="category">Category</string>
+    <string name="smartphone">Smartphone</string>
+    <string name="tablet">Tablet</string>
+    <string name="manufacturer">Manufacturer</string>
+    <string name="samsung">Samsung</string>
+    <string name="xiaomi">Xiaomi</string>
+    <string name="huawei">Huawei</string>
+    <string name="nokia">Nokia</string>
+    <string name="sort">Sort</string>
+    <string name="samsung_galaxy_s23_ultra_gray">Samsung Galaxy S23 Ultra Gray</string>
+    <string name="settings">Settings</string>
+    <string name="logout">Logout</string>
+    <string name="products">Products</string>
+    <string name="new_product">New product</string>
+    <string name="profile">Profile</string>
+    <string name="language">Language</string>
+</resources>

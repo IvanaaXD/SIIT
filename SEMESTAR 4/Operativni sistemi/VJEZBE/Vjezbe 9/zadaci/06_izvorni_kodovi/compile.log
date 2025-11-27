@@ -1,0 +1,7 @@
+06_primer3_ne_kompajlira.cpp: In function ‘void increment(int&)’:
+06_primer3_ne_kompajlira.cpp:18:7: error: expected ‘;’ before ‘}’ token
+   18 |    ++a
+      |       ^
+      |       ;
+   19 | }
+      | ~      

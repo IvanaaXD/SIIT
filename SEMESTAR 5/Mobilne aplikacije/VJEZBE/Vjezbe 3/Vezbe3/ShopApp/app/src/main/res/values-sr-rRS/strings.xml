@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="implicit_intention">Implicitna namera</string>
+    <string name="cart" >Korpa</string>
+    <string name="filters">Filteri</string>
+    <string name="category">Kategorija</string>
+    <string name="smartphone">Smartphone</string>
+    <string name="tablet">Tablet</string>
+    <string name="manufacturer">Proizvođač</string>
+    <string name="samsung">Samsung</string>
+    <string name="xiaomi">Xiaomi</string>
+    <string name="huawei">Huawei</string>
+    <string name="nokia">Nokia</string>
+    <string name="sort">Sort</string>
+    <string name="samsung_galaxy_s23_ultra_white">Samsung Galaxy S23 Ultra White</string>
+    <string name="samsung_galaxy_s23_ultra_gray">Samsung Galaxy S23 Ultra Gray</string>
+</resources>

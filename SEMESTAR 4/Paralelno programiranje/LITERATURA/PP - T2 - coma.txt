@@ -1,0 +1,30 @@
+	PP - T2
+
+1. Šta su hiperobjekti, čemu služe i koje probleme rješavaju?
+
+To su specijalno objekti koji koji omogućavaju siguran pristup dijeljenim objektima dajući svakoj paralelnoj liniji izvršenja posebnu instancu.
+
+
+2. Dat je TBB kod, gdje PRAZAN ZADATAK ima 2 child-a i aktivira se metodom spawn_and_wait_for_all. Treba nacrtati graf zadataka i za svaki čvor napisati refcount.
+
+refcount - broj zadataka čiji je on nasljednik
+
+
+3. Nabrojati 4 modela u OpenCl specifikaciji.
+
+Model memorije, model izvršenja, model programiranja, model platforme
+
+
+4. Kako se u OpenCL organizacuju paralelne operacije nad podacima?
+
+Tako što se podaci grupišu u radne stavke, koje se dalje grupišu na radne grupe.
+
+
+5. Nabrojati šablone strukturne paralelne kontrole toka. 
+
+Grananje-Pridruživanje
+Preslikavanje
+Obrada susjeda
+Redukcija
+Rekurencija
+Skeniranje

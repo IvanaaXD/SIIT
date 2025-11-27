@@ -12,6 +12,7 @@
 
 // Stvoriti 5 kamiona sa obicnom i 5 sa zapaljivom robom.
 
+/*
 #include <mutex>
 #include <condition_variable>
 #include <iostream>
@@ -112,7 +113,7 @@ void kamion(skladiste& s, int kolicina, bool zapaljivo) {
      else          cout << "; obicno)." << endl;
    }
 }
-
+*/
 /*
 int main() {
 

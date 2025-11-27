@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="home">Početni ekran</string>
+    <string name="fragment_1">fragment 1</string>
+    <string name="fragment_2">fragment 2</string>
+    <string name="hello_blank_fragment">Pozdrav prazan fragment</string>
+    <string name="explicit_intention">Eksplicitna namera</string>
+    <string name="implicit_intention">Implicitna namera</string>
+</resources>

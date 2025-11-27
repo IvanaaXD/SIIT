@@ -1,0 +1,24 @@
+<project xmlns="https://maven.apache.org/POM/4.0.0" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>ftn.ib</groupId>
+  <artifactId>Crypto</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>Crypto</name>
+  <description>A project that showcases cryptographic algorithms.</description>
+  
+  
+  <dependencies>
+	<dependency>
+	    <groupId>org.bouncycastle</groupId>
+	    <artifactId>bcprov-jdk18on</artifactId>
+	    <version>1.81</version>
+	</dependency>
+	
+	<!-- https://mvnrepository.com/artifact/org.bouncycastle/bcpkix-jdk18on -->
+	<dependency>
+	    <groupId>org.bouncycastle</groupId>
+	    <artifactId>bcpkix-jdk18on</artifactId>
+	    <version>1.81</version>
+	</dependency>
+  </dependencies>
+</project>

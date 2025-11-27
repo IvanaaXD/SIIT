@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/base_navigation"
+    app:startDestination="@id/nav_products"
+    >
+    <fragment
+        android:id="@+id/nav_products"
+        android:name="com.example.shopapp.fragments.products.ProductsPageFragment"
+        android:label="Products"
+        tools:layout="@layout/fragment_products_page"
+        />
+
+    <fragment
+        android:id="@+id/nav_new"
+        android:name="com.example.shopapp.fragments.new_product.NewProductFragment"
+        android:label="New product"
+        tools:layout="@layout/fragment_new_product"
+        app:popUpTo="@+id/nav_products"
+        app:popUpToInclusive="true"
+        />
+
+    <fragment
+        android:id="@+id/nav_profile"
+        android:name="com.example.shopapp.fragments.profile.ProfileFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile"
+        app:popUpTo="@+id/nav_products"
+        app:popUpToInclusive="true"
+        />
+
+    <fragment
+        android:id="@+id/nav_logout"
+        android:name="com.example.shopapp.fragments.login.LoginFragment"
+        android:label="Login"
+        tools:layout="@layout/fragment_login"
+        app:popUpTo="@+id/nav_products"
+        app:popUpToInclusive="true"
+        />
+
+    <fragment
+        android:id="@+id/nav_settings"
+        android:name="com.example.shopapp.fragments.SettingsFragment"
+        android:label="Settings"
+        tools:layout="@layout/fragment_settings"
+        app:popUpTo="@+id/nav_products"
+        app:popUpToInclusive="true"
+        />
+
+    <fragment
+        android:id="@+id/nav_language"
+        android:name="com.example.shopapp.fragments.SettingsFragment"
+        android:label="Language"
+        tools:layout="@layout/fragment_settings"
+        app:popUpTo="@+id/nav_products"
+        app:popUpToInclusive="true"
+        />
+
+
+</navigation>

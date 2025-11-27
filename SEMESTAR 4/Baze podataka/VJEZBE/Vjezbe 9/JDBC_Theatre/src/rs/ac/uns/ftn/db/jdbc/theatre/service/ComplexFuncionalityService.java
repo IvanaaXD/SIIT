@@ -21,6 +21,8 @@ import rs.ac.uns.ftn.db.jdbc.theatre.dao.impl.SceneDAOImpl;
 import rs.ac.uns.ftn.db.jdbc.theatre.dao.impl.ShowingDAOImpl;
 import rs.ac.uns.ftn.db.jdbc.theatre.dao.impl.TheatreDAOImpl;
 import rs.ac.uns.ftn.db.jdbc.theatre.dto.complexquery1.ScenesForTheatreDTO;
+import rs.ac.uns.ftn.db.jdbc.theatre.dto.complexquery10.ComplexQuery10;
+import rs.ac.uns.ftn.db.jdbc.theatre.dto.complexquery10.ComplexQuery101;
 import rs.ac.uns.ftn.db.jdbc.theatre.dto.complexquery2.PlayShowingsStatsDTO;
 import rs.ac.uns.ftn.db.jdbc.theatre.dto.complexquery2.ShowingsForPlayDTO;
 import rs.ac.uns.ftn.db.jdbc.theatre.dto.complexquery3.PlayStatsDTO;
@@ -28,7 +30,7 @@ import rs.ac.uns.ftn.db.jdbc.theatre.dto.complexquery3.PlaysForSceneDTO;
 import rs.ac.uns.ftn.db.jdbc.theatre.dto.complexquery4.PlayDTO;
 import rs.ac.uns.ftn.db.jdbc.theatre.dto.complexquery5.ShowingDTO;
 import rs.ac.uns.ftn.db.jdbc.theatre.model.Actor;
-import rs.ac.uns.ftn.db.jdbc.theatre.model.Play;
+import rs.ac.uns.ftn.db.jdbc.theatre.model.Assignment;
 import rs.ac.uns.ftn.db.jdbc.theatre.model.Role;
 import rs.ac.uns.ftn.db.jdbc.theatre.model.Scene;
 import rs.ac.uns.ftn.db.jdbc.theatre.model.Showing;
@@ -195,6 +197,48 @@ public class ComplexFuncionalityService {
         }
 		
 		return roles;
+	}
+	
+	// complex query 10
+	public List<ComplexQuery10> getQuery10() throws SQLException{
+		List<ComplexQuery10> query = new ArrayList<ComplexQuery10>();
+		
+		HashMap<Integer, Integer> mapa = assignmentDAO.findAverage();
+		
+		
+		for(Actor actor: actorDAO.findAll()) {
+			ComplexQuery10 dto = new ComplexQuery10();
+			dto.setActor(actor);
+			
+			List<ComplexQuery101> qq = new ArrayList<ComplexQuery101>();
+			for (Assignment r: assignmentDAO.findByActor(actor.getId())) {
+				ComplexQuery101 c = new ComplexQuery101();
+				c.setRole(roleDAO.findById(r.getPartId()));
+				qq.add(c);
+			}
+			
+			for (ComplexQuery101 c: qq) {
+				List<Assignment> aa = assignmentDAO.findByRole(c.getRole().getId());
+				List<Actor> aaa = new ArrayList<Actor>();
+				List<Double> l = new ArrayList<>();
+				
+				for (Assignment a: aa) {
+					Actor k = actorDAO.findById(a.getActorId());
+					if (k.getId() != actor.getId()) {
+						aaa.add(k);
+						l.add(a.getHonorar());
+					}
+				}
+				
+				c.setActors(aaa);
+				c.setHonorars(l);
+			}
+			
+			dto.setCc(qq);	
+			query.add(dto);
+		}
+		
+		return query;
 	}
 
 }

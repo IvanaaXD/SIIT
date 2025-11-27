@@ -5,9 +5,11 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 import rs.ac.uns.ftn.db.jdbc.theatre.connection.ConnectionUtil_HikariCP;
+import rs.ac.uns.ftn.db.jdbc.theatre.connection.Hikari_Practice;
 import rs.ac.uns.ftn.db.jdbc.theatre.dao.AssignmentDAO;
 import rs.ac.uns.ftn.db.jdbc.theatre.model.Assignment;
 
@@ -53,7 +55,6 @@ public class AssignmentDAOImpl implements AssignmentDAO{
 		
 		try (PreparedStatement ps = connection.prepareStatement(query);
 				ResultSet rs = ps.executeQuery()){
-			
 			while (rs.next()) {
 				Assignment ass = new Assignment(rs.getInt(1), rs.getDouble(2), rs.getDate(3), rs.getDate(4), rs.getInt(5), rs.getInt(6));
 				asses.add(ass);
@@ -115,4 +116,68 @@ public class AssignmentDAOImpl implements AssignmentDAO{
 		return listOfIds;
 	}
 
+	public List<Assignment> findByActor(int idActor) throws SQLException {
+	    
+	    String query = "select ID_AS, HONORAR_AS, STARTDATE_AS, ENDDATE_AS, ACTOR_ID_AC, ROLE_ID_RO from assignment where actor_id_ac=?";
+	    
+	    List<Assignment> roles = new ArrayList<Assignment>();
+	    
+	    
+	    try (Connection connection = ConnectionUtil_HikariCP.getConnection();
+	    		PreparedStatement ps = connection.prepareStatement(query)) {
+	        ps.setInt(1, idActor);
+	        
+	        try (ResultSet sr = ps.executeQuery()) {
+	            while (sr.next()) {
+	                Assignment r = new Assignment(sr.getInt(1), sr.getInt(2), sr.getDate(3), sr.getDate(4), sr.getInt(5), sr.getInt(6));
+	                roles.add(r);
+	            }
+	        }
+	    }
+	    
+	    return roles;
+	}
+
+	
+	public List<Assignment> findByRole(int idRole) throws SQLException {
+		
+		String query = "select ID_AS, HONORAR_AS, STARTDATE_AS,ENDDATE_AS,ACTOR_ID_AC,ROLE_ID_RO from assignment where ROLE_ID_RO=?";
+		
+		List<Assignment> roles = new ArrayList<Assignment>();
+				
+	    try (Connection connection = ConnectionUtil_HikariCP.getConnection();
+	    		PreparedStatement ps = connection.prepareStatement(query)) {
+	        ps.setInt(1, idRole);
+	        
+	        try (ResultSet sr = ps.executeQuery()) {
+	            while (sr.next()) {
+	                Assignment r = new Assignment(sr.getInt(1), sr.getInt(2), sr.getDate(3), sr.getDate(4), sr.getInt(5), sr.getInt(6));
+	                roles.add(r);
+	            }
+	        }
+	    }
+		
+		return roles;	
+	}
+	
+	public HashMap<Integer, Integer> findAverage() throws SQLException {
+		
+		HashMap<Integer, Integer> mapa = new HashMap<Integer, Integer>();
+		
+		String query = "SELECT ROLE_ID_RO, AVG(honorar_as) FROM assignment GROUP BY role_id_ro";
+		
+		Connection connection = ConnectionUtil_HikariCP.getConnection();
+		
+		try (PreparedStatement ps = connection.prepareStatement(query);
+				ResultSet rs = ps.executeQuery()) {
+			
+			while (rs.next()) {
+				mapa.put(rs.getInt(1), rs.getInt(2));
+			}
+			
+		}
+		
+		return mapa;
+		
+	}
 }

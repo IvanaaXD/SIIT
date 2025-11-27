@@ -1,0 +1,26 @@
+DRUGI TEST IZ PREDMETA PARALELNO PROGRAMIRANJE - 10.6.2023.
+================================================================
+
+1. Šta omogućavaju hiperobjekti u Cilk jeziku? Kako?
+
+Hiperobjekti omogucavaju siguran pristup dijeljenim objektima dajuci svakoj paralelnoj liniji posebnu instancu. Obracanje hiperobjektu rezultuje u referenci koja se naziva pogled. 
+
+2. Koje su mane konkurentnih redova u TBB-u?
+
+Konkurentni redovi imaju vise mana:
+- zbog FIFO redoslijeda, red je usko grlo
+- nit moze cekati besposlena u redu
+- red je pasivna struktura pa se ubaceni element moze "ohladiti" u baferu
+- jos je gore ukoliko element preuzima nit u drugom jezgru, jer on i sve sto referencira moraju se prebaciti u bafer tog jezgra
+
+3. Čemu služe događaji izazvani komandama u OpenCL-u?
+
+Događaji izazvani komandama u OpenCL-u služe za upravljanje i sinhronizaciju izvršavanja komandi u okviru komandnog reda (engl. command queue). Oni omogućavaju programerima da prate status komandi, uspostave zavisnosti između njih i obezbede pravilno redosledno izvršavanje.
+ 
+4. Šta znači "relaksirani model konzistentnosti memorije" u OpenCL-u?
+
+U OpenCL-u, "relaksirani model konzistentnosti memorije" se odnosi na način na koji se pristupi memoriji mogu organizovati i optimizovati tokom izvršavanja paralelnih programa. To znači da se u OpenCL-u ne garantuje striktna konzistentnost memorije kao što je to slučaj u nekim drugim modelima. Relaksirani model dozvoljava različitim hardverskim i softverskim optimizacijama da preuređuju instrukcije kako bi poboljšali performanse. Da bi se obezbedila pravilna komunikacija između različitih niti (work-items) i radnih grupa (work-groups), OpenCL koristi mehanizme sinhronizacije kao što su barijere (barrier) i atomske operacije (atomic operations).
+
+5. Šta znači Popločavanje u šablonu Obrada suseda?
+
+To je tehnika koju koristi optimizovana implementacija sablona Obrada susjeda koja omogucava ponovnu upotrebu podataka u skrivenim memorijama.

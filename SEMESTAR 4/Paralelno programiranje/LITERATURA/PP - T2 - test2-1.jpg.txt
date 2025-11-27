@@ -1,0 +1,27 @@
+	PP - T2 - test2-1.jpg
+
+1. a) out[5:4] = in[index[2:4:2]]
+   b) out[index[2:4:2]] = in[3:4:2]
+
+
+2. Navesti prednosti atomskih operacija u odnosu na operacije sa ključevima u programskom modelu TBB.
+
+Atomske operacije su brže od operacija sa ključevima. Nema međusobnog zaključavanja niti konvoja. 
+
+
+3. Kako se u OpenCL organizuju paralelne operacije nad podacima?
+
+U radne stavke, koje se grupišu u radne grupe.
+
+
+4. Kada je memorijski objekat koji dijele OpenCL komande sigurno konzistentan?
+
+- u sinhronizacionim tačkama
+- između dvije komande u redu sa očuvanjem redoslijeda
+- kod komunikacionih događaja gdje prva komanda generiše događaj koji druga komanda čeka
+
+
+5. Koji su nedostaci šablona Paralelno Skeniranje?
+
+Paralelna implementacija skeniranja može zahtijevati više posla nego što je potrebno u serijskom slučaju, čak do dva puta više posla i u najboljem slučaju raspon od najmanje teta(lg n). Takođe, linearno ubrzanje nije moguće. 
+	

@@ -4,6 +4,8 @@ import java.sql.SQLException;
 import java.util.List;
 
 import rs.ac.uns.ftn.db.jdbc.theatre.dto.complexquery1.ScenesForTheatreDTO;
+import rs.ac.uns.ftn.db.jdbc.theatre.dto.complexquery10.ComplexQuery10;
+import rs.ac.uns.ftn.db.jdbc.theatre.dto.complexquery10.ComplexQuery101;
 import rs.ac.uns.ftn.db.jdbc.theatre.dto.complexquery2.ShowingsForPlayDTO;
 import rs.ac.uns.ftn.db.jdbc.theatre.dto.complexquery3.PlayStatsDTO;
 import rs.ac.uns.ftn.db.jdbc.theatre.dto.complexquery3.PlaysForSceneDTO;
@@ -24,7 +26,7 @@ public class ComplexQueryUIHandler {
 	private static final ComplexFuncionalityService complexQueryService = new ComplexFuncionalityService();
 	private static final ShowingService showingService = new ShowingService();
 
-	public void handleComplexQueryMenu() {
+	public void handleComplexQueryMenu() throws SQLException {
 		String answer;
 		do {
 			System.out.println("\nOdaberite funkcionalnost:");
@@ -111,7 +113,7 @@ public class ComplexQueryUIHandler {
 				// TODO implementirati
 				break;
 			case "10":
-				// TODO implementirati
+				query10();
 				break;
 			case "11":
 				// TODO implementirati
@@ -299,4 +301,24 @@ public class ComplexQueryUIHandler {
 		}
 	}
 */
+	 
+	public void query10() throws SQLException {
+		
+		List<ComplexQuery10> l = complexQueryService.getQuery10();
+		
+		for (ComplexQuery10 kk : l) {
+			
+			System.out.println(kk.getActor());
+
+			for (ComplexQuery101 c: kk.getCc()) {
+				
+				System.out.println(c.getRole());
+				System.out.println(c.getActors());
+				System.out.println(c.getHonorars());
+
+			}
+			
+		}
+		
+	}
 }

@@ -1,10 +1,9 @@
 from math import ceil
 
-# Pogledajte sadrza csv fajla SalesJan2009. Treba da se za svaku drzavu nadje najskuplja transakcija za svaku od
-# kreditnih kartica:
-# Primer resenja: Amerika - [visa-1200,Mastercard-3420,dina-1234,amex-3452] Srbija - [visa-1111,
-# mastercard-2341,dina-1167]
 
+# Pogledajte sadrza csv fajla SalesJan2009. Treba da se za svaku drzavu nadje najskuplja transakcija za svaku od
+# kreditnih kartica: Primer resenja: Amerika - [visa-1200,Mastercard-3420,dina-1234,amex-3452] Srbija - [visa-1111,
+# mastercard-2341,dina-1167]
 
 # Pomocna funkcija za pretvaranje hash mape (dict) u listu parova. Trebace vam u map_implementatipon funkciji
 def dict_to_list_of_tuples(dict):
@@ -18,7 +17,7 @@ def dict_to_list_of_tuples(dict):
 
 # Pomocna funkcija koja list "list" deli na "n" podlista
 def split_list(list, n):
-    step = ceil(len(list)/n)
+    step = ceil(len(list) / n)
     return [list[i:i + step] for i in range(0, len(list), step)]
 
 
@@ -31,7 +30,9 @@ def shuffle_implementation(data):
 def map_1(data):
     list = []
     for x in data:
-        list.append((x[2] + "_" + x[1], int(x[0])))
+        key = x[2] + '_' + x[1]
+        value = int(x[0])
+        list.append((key, value))
     return list
 
 
@@ -48,22 +49,22 @@ def reduce_1(data):
 
 # Drugi map transformise podatke iz oblika drzava_kartica:cena u oblik drzava: [(kartica:cena)]
 def map_2(data):
-    processed_data = []
+    list = []
     for pair in data:
         [country, card] = pair[0].split('_')
         amount = pair[1]
-        processed_data.append((country, [(card, amount)]))
-    return processed_data
+        list.append((country, [(card, amount)]))
+    return list
 
 
 def reduce_2(data):
-    aggregated_values = {}
+    dict = {}
     for pair in data:
-        if pair[0] in aggregated_values:
-            aggregated_values[pair[0]].extend(pair[1])
+        if pair[0] in dict:
+            dict[pair[0]].extend(pair[1])
         else:
-            aggregated_values[pair[0]] = pair[1]
-    return dict_to_list_of_tuples(aggregated_values)
+            dict[pair[0]] = pair[1]
+    return dict_to_list_of_tuples(dict)
 
 
 def parse_single_line(line):
@@ -75,10 +76,16 @@ def parse_single_line(line):
 
 if __name__ == "__main__":
     with open("./data/SalesJan2009.csv") as file:
-        lines = [line for line in file][1:]
+        all_lines = []
+        for line in file:
+            all_lines.append(line)
+
+        lines = all_lines[1:]
+
         processed_data = []
         for line in lines:
-            processed_data.append(parse_single_line(line))
+            processed_line = parse_single_line(line)
+            processed_data.append(processed_line)
 
     # Podela fajla na 4 manje delove koji ce se 'paralelno' obradjivati
     data_chunks = split_list(processed_data, 4)
@@ -87,16 +94,13 @@ if __name__ == "__main__":
     for chunk in data_chunks:
         ret_segment = map_1(chunk)
         data_after_map1.extend(ret_segment)
-    
+
     data_after_reduce1 = reduce_1(data_after_map1)
 
     data_chunks = split_list(data_after_reduce1, 4)
-
     data_after_map2 = []
     for chunk in data_chunks:
         ret_segment = map_2(chunk)
         data_after_map2.extend(ret_segment)
-
     final_result = reduce_2(data_after_map2)
-
     print(len(final_result))

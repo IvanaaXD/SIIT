@@ -1,0 +1,45 @@
+<project xmlns="https://maven.apache.org/POM/4.0.0" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>ftn.ib</groupId>
+  <artifactId>IBEmailClient</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>IBEmailClient</name>
+  
+  <dependencies>
+  	<dependency>
+	    <groupId>com.google.api-client</groupId>
+	    <artifactId>google-api-client</artifactId>
+	    <version>1.35.2</version>
+	</dependency>
+	
+	<dependency>
+	  <groupId>com.google.http-client</groupId>
+	  <artifactId>google-http-client-gson</artifactId>
+	  <version>1.43.3</version>
+	</dependency>
+	
+	<dependency>
+	    <groupId>com.google.oauth-client</groupId>
+	    <artifactId>google-oauth-client-jetty</artifactId>
+	    <version>1.39.0</version>
+	</dependency>
+	
+	<dependency>
+	    <groupId>com.google.apis</groupId>
+	    <artifactId>google-api-services-gmail</artifactId>
+	    <version>v1-rev110-1.25.0</version>
+	</dependency>
+	
+	<dependency>
+	    <groupId>javax.mail</groupId>
+	    <artifactId>javax.mail-api</artifactId>
+	    <version>1.6.2</version>
+	</dependency>
+
+	<dependency>
+	    <groupId>com.sun.mail</groupId>
+	    <artifactId>jakarta.mail</artifactId>
+	    <version>1.6.7</version>
+	</dependency>
+  </dependencies>
+</project>

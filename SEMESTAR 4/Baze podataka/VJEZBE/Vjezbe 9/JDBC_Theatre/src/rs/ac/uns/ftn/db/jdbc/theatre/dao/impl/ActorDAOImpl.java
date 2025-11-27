@@ -7,10 +7,13 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.zaxxer.hikari.HikariConfig;
+
 import rs.ac.uns.ftn.db.jdbc.theatre.connection.ConnectionUtil_HikariCP;
 import rs.ac.uns.ftn.db.jdbc.theatre.dao.ActorDAO;
 import rs.ac.uns.ftn.db.jdbc.theatre.model.Actor;
-import rs.ac.uns.ftn.db.jdbc.theatre.model.Theatre;
+import rs.ac.uns.ftn.db.jdbc.theatre.model.Play;
+import rs.ac.uns.ftn.db.jdbc.theatre.model.Role;
 
 public class ActorDAOImpl implements ActorDAO {
 
@@ -71,9 +74,27 @@ public class ActorDAOImpl implements ActorDAO {
 
 	@Override
 	public Actor findById(Integer id) throws SQLException {
-		// TODO Auto-generated method stub
-		return null;
+
+		String query = "SELECT ID_AC, NAME_AC, DOB_AC, STATUS_AC, SALARY_AC, BONUS_AC,THEATRE_ID_TH FROM ACTOR WHERE ID_AC = ?";
+		
+		Actor a = null;
+			
+		try (Connection connection = ConnectionUtil_HikariCP.getConnection();
+				PreparedStatement preparedStatement = connection.prepareStatement(query);) {
+			preparedStatement.setInt(1, id);
+			try (ResultSet resultSet = preparedStatement.executeQuery()) {
+				if (resultSet.isBeforeFirst()) {
+					resultSet.next();
+					a = new Actor(resultSet.getInt(1),resultSet.getString(2),resultSet.getDate(3),resultSet.getString(4), resultSet.getInt(5), resultSet.getInt(6), resultSet.getInt(7));
+				}
+
+			}
+		}
+		
+		
+		return a;
 	}
+	
 
 	@Override
 	public boolean save(Actor entity) throws SQLException {

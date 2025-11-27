@@ -28,53 +28,57 @@ using namespace chrono;
 const int N = 11;
 
 class Lopta {
+private:
     mutex m;
+    condition_variable cv;
     int potrebno_za_gol;
     int broj_dodavanja;
-    bool lopta_slobodna;
-    condition_variable red_za_loptu;
-    bool pao_gol;
+    bool slobodna;
+    bool gol;
 
-    public:
+public:
 
-        Lopta(int n) : potrebno_za_gol(n) {};
+    Lopta(int n) : potrebno_za_gol(n) {
+        broj_dodavanja = 0;
+        slobodna = true;
+        gol = false;
+    };
 
-        int dodaj_loptu(int broj_dresa) {
-            unique_lock<mutex> l(m);
+    int dodaj_loptu(int broj_dresa) {
 
-            while (!lopta_slobodna && !pao_gol) {
-                red_za_loptu.wait(l);
-            }
+        unique_lock<mutex> l(m);
 
-            if (pao_gol) {
-                return 0;
-            }
+        while (!slobodna && !gol) {
+            cv.wait(l);
+        }
 
-            lopta_slobodna = false;
+        if (gol) {
+            return 0;
+        }
 
-            l.unlock();
-            this_thread::sleep_for(seconds(rand() % 3 + 1));
-            l.lock();
+        slobodna = false;
 
-            bool naprijed = rand() % 3 == 2 ? false : true;
+        l.unlock();
+        this_thread::sleep_for(chrono::seconds(rand() % 3 + 1));
+        l.lock();
 
-            if (naprijed) {
-                broj_dodavanja++;
-            }
+        bool naprijed = rand() % 3 == 2 ? false : true;
 
-            lopta_slobodna = true;
+        if (naprijed) {
+            broj_dodavanja++;
+        }
+        slobodna = true;
 
-            if (broj_dodavanja = potrebno_za_gol) {
-                pao_gol = true;
-                red_za_loptu.notify_all();
-                return broj_dresa;
-            } else {
-                red_za_loptu.notify_one();
-                return -1;
-            }
+        if (broj_dodavanja==potrebno_za_gol) {
+            gol=true;
+            cv.notify_all();
 
-
-        };
+            return broj_dresa;
+        } else {
+            cv.notify_one();
+            return -1;
+        }
+    };
 };
 
 mutex term_m;
@@ -95,20 +99,19 @@ void igrac(Lopta &lopta, int broj_dresa) {
     } while (strelac == -1);
 }
 
-/*
+const int IGRACA = 11;
+
 int main() {
 
     Lopta l(12);
-    thread t[N];
+    thread igraci[IGRACA];
 
-    for (int i = 0; i < N; i++) {
-        t[i] = thread(igrac, ref(l), i);
-    }
+    for (int i = 0; i < IGRACA; ++i)
+        igraci[i] = thread(igrac, ref(l), i+1);
 
-    for (int i = 0; i < N; i++) {
-        t[i].join();
-    }
+    for (int i = 0; i < IGRACA; ++i)
+        igraci[i].join();
 
     return 0;
 }
-*/
+

@@ -27,7 +27,7 @@ def consumer1():
 
 @app.route("/consumer2", methods=['POST'])
 def consumer2():
-    print("CONSUMERrrr 2")
+    print("CONSUMER 2")
     message = json.loads(request.data)
     print(json.dumps(message, indent=2))
     return "", 200

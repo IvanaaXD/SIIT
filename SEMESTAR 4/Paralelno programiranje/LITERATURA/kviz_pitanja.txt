@@ -1,0 +1,20 @@
+predavanje 8 pitanje 11: Pipeline, filter i linearna protocna obrada (navodno)
+pitanje 16: Fino zakljucavanje (fine grained locking) samo onih delova
+kontejnera koji se moraju zaključati; Tehnike bez zaključavanja – niti uračunavaju i popravljaju
+efekte drugih niti koje ih ometaju
+Predavanje 9 od pitanja 6:
+Jezik za programiranje uredjaja i API na domacinu za upravljanje sistemom.
+Paralelizam zadataka i geometrijska dekompozicija
+OPENCL kernel je jezgro obrade na GPU.
+Radna stavka je jedinica konkurentnog izvrsenja.
+NDO je 1, 2 ili 3-dimenzioni prostor indeksa koji se najcesce preslikava na ulazne i izlazne podatke.
+Podelom datog NDO na manje radne grupe iste velicine.
+Mogu koristiti barijerne operacije radi sinhronizacije. Dele zajednicki memorijski adresni prostor.
+Postoji jedan domacin koji ima vise racunarskih uredjaja koji imaju vise racunarskih jedinica koje imaju vise procesnih jedinica.
+Kontekst je apstraktni kontejner koji koordinira mehanizme interakcije domacin-uredjaj,rukuje memorijskim objektima koji su raspolozivi za uredjaje i vodi evidenciju o programima za svaki uredjaj.
+Radne stavke se izvrsavaju na nekoj od komponenata(CPU, GPU...).
+Labav model izvrsenja je model gde su radne stavke nezavisne jedne od drugih.
+Radne grupe se izvrsavaju na jednoj racunarskoj jedinici.
+Globalne sinhronizacione tacke se nalaze kod komande clFinish; pri cekanju na zavrsetak zadatog dogadjaja;Izvrsenje blokirajuce memorijske komande.
+Komande za izvrsenje jezgra, sinhronizacione komande, memorijske komande
+Sa ocuvanjem redosleda i bez ocuvanja redosleda. u slucaju reda bez biblioteka moze da rasporedi operacije u paraleli.

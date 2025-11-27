@@ -1,45 +1,71 @@
 # depslib dependency file v1.0
-1713293207 source:d:\siit\semestar 4\operativni sistemi\vjezbe\vjezbe 5\zadaci\vjezbe5\fudbal.cpp
+1715759756 source:d:\siit\semestar 4\operativni sistemi\vjezbe\vjezbe 5\zadaci\vjezbe5\fudbal.cpp
 	<thread>
 	<iostream>
 	<cstdlib>
 	<mutex>
 	<condition_variable>
 
-1713289353 source:d:\siit\semestar 4\operativni sistemi\vjezbe\vjezbe 5\zadaci\vjezbe5\kernel.cpp
+1715759756 source:d:\siit\semestar 4\operativni sistemi\vjezbe\vjezbe 5\zadaci\vjezbe5\kernel.cpp
 
-1713299961 source:d:\siit\semestar 4\operativni sistemi\vjezbe\vjezbe 5\zadaci\vjezbe5\parkingx3.cpp
+1715759756 source:d:\siit\semestar 4\operativni sistemi\vjezbe\vjezbe 5\zadaci\vjezbe5\parkingx3.cpp
 	<thread>
 	<iostream>
 	<cstdlib>
 	<mutex>
 	<condition_variable>
 
-1713289367 source:d:\siit\semestar 4\operativni sistemi\vjezbe\vjezbe 5\zadaci\vjezbe5\skladiste.cpp
+1718022946 source:d:\siit\semestar 4\operativni sistemi\vjezbe\vjezbe 5\zadaci\vjezbe5\skladiste.cpp
+	<mutex>
+	<condition_variable>
+	<iostream>
+	<thread>
 
-1713289376 source:d:\siit\semestar 4\operativni sistemi\vjezbe\vjezbe 5\zadaci\vjezbe5\zatvor.cpp
+1715759756 source:d:\siit\semestar 4\operativni sistemi\vjezbe\vjezbe 5\zadaci\vjezbe5\zatvor.cpp
 
-1713289384 source:d:\siit\semestar 4\operativni sistemi\vjezbe\vjezbe 5\zadaci\vjezbe5\turnir.cpp
+1718039115 source:d:\siit\semestar 4\operativni sistemi\vjezbe\vjezbe 5\zadaci\vjezbe5\turnir.cpp
 
-1713289430 source:d:\siit\semestar 4\operativni sistemi\vjezbe\vjezbe 5\zadaci\vjezbe5\tenis.cpp
+1715759756 source:d:\siit\semestar 4\operativni sistemi\vjezbe\vjezbe 5\zadaci\vjezbe5\tenis.cpp
 	<cstdlib>
 
-1713299950 source:d:\siit\semestar 4\operativni sistemi\vjezbe\vjezbe 5\zadaci\vjezbe5\pivnica.cpp
+1715759756 source:d:\siit\semestar 4\operativni sistemi\vjezbe\vjezbe 5\zadaci\vjezbe5\pivnica.cpp
 	<iostream>
 	<mutex>
 	<condition_variable>
 	<thread>
 
-1713292950 source:d:\siit\semestar 4\operativni sistemi\vjezbe\vjezbe 5\zadaci\vjezbe5\biblioteka.cpp
+1718026877 source:d:\siit\semestar 4\operativni sistemi\vjezbe\vjezbe 5\zadaci\vjezbe5\biblioteka.cpp
 	<thread>
 	<iostream>
 	<cstdlib>
 	<mutex>
 	<condition_variable>
 
-1713290896 source:d:\siit\semestar 4\operativni sistemi\vjezbe\vjezbe 5\zadaci\vjezbe5\benzinska_pumpa.cpp
+1715759756 source:d:\siit\semestar 4\operativni sistemi\vjezbe\vjezbe 5\zadaci\vjezbe5\benzinska_pumpa.cpp
 	<thread>
 	<mutex>
 	<condition_variable>
 	<iostream>
+
+1718028888 source:d:\siit\semestar 4\operativni sistemi\vjezbe\vjezbe 5\zadaci\vjezbe5\atletika.cpp
+	<iostream>
+	<mutex>
+	<thread>
+	<condition_variable>
+	<chrono>
+	<random>
+
+1718033991 source:d:\siit\semestar 4\operativni sistemi\vjezbe\vjezbe 5\zadaci\vjezbe5\granicni_prelaz.cpp
+	<iostream>
+	<thread>
+	<set>
+	<string>
+	<mutex>
+	<condition_variable>
+
+1718038035 source:d:\siit\semestar 4\operativni sistemi\vjezbe\vjezbe 5\zadaci\vjezbe5\banka.cpp
+	<iostream>
+	<thread>
+	<mutex>
+	<condition_variable>
 

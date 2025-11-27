@@ -1,0 +1,431 @@
+
+Dve vrste arhitektura
+Homogene (samo CPU) i heterogene (mešavina CPU, GPU, FPGA, ...)
+
+Tri vrste itenzivnih aplikacija
+Aplikacije sa intenzivnim upravljačkim operacijama, operacijama nad podacima i računanjima
+
+
+Šta OpenCL obezbeđuje?
+Jezik za programiranje uređaja i API na domaćinu za upravljanje sistemom
+
+
+Šabloni koije podržava OpenCL
+Geomterijska dekompozicija i Paralelizam zadataka
+
+
+Modeli u OpenCL-u
+Model platforme
+Model memorije
+Model izvršenja
+Model programiranja
+
+
+Model platforme
+Jedan procesor (domaćin) koordinira izvršenje i više procesora izvršava OpenCL C kod (uređaji)
+
+Model izvršenja
+Kako treba podesiti OpenCL okruženje na domaćinu i kako se jezgra izvršavaju na uređajima
+
+Model memorije (OpenCL)
+Hijerarhija memorije u OpenCL koju koriste jezgra
+
+Model programiranja (OpenCL)
+Kako se model konkurencije preslikava na fizičke komponente sistema
+
+OpenCL kontekst
+Za rukovanje izvršenjem Komande za izvršenje jezgra Komande za razmenu podataka između uređaja i domaćina
+
+Apstraktni kontejner koji:
+Koordinira mehanizme interakcije domaćin-uređaj
+Rukuje mem. objektima, koji su raspoloživi za uređaje Vodi evidenciju o programima za svaki uređaj 
+
+
+Kako OpenCL organizuje operacije nad podacima?
+U radne stavke
+
+OpenCL radna stavka
+Jedinica konkurentnog izvršenja u OpenCL
+Izvršava telo funkcije jezgra 
+Biblioteka preslikava iteracije na njih 
+Može sama sebe da identifikuje
+
+
+
+Brojač petlje za OpenCL radnu stavku
+get_global_id
+
+N-dimenzioni opseg
+Način zadavanja broja radnih stavki da bi se opisao način izvršenja jezgra
+N-dimenzioni prostora indeksa, koji se najčešće preslikava na ulazne ili izlazne podatke
+
+
+Radna grupa
+Jedinica podele N-dimenzionog opsegaNačin obezbeđavanja skalabilnosti u OpenCL Sadrži više radnih stavki koje dele memoriju
+Radne stavke unutar radne grupe mogu koristiti barijerne operacije za sinhronizaciju
+
+
+
+Model platforme (OpenCL)
+"Uređaj = implemantacija OpenCL API-a<img src=""Model platforme.png""> Uređaji koje platforma može da cilja su ograničeni na one sa kojima platforma proizvođača ume da rukuje 
+
+"
+
+Komandni red
+Mehanizam preko kog domaćina zahteva akciju od uređajaFunkcije: clEnqueueWriteBuffer, clEnqueueNDKernel, clEnqueueReadBuffer
+Unutar konteksta treba da se napravi po jedan komandni red za svaki uređaj
+
+
+Događaji u OpenCL
+Služe za predstavljanje zavisnosti i obezbeđuju mehanizam za profilisanje
+Proizvode ih komande
+
+
+Vrste memorijksih objekata u OpenCL
+Baferi: Nalik C-ovskim nizovima. Prave se sa malloc.Slike: Objekti nepoznatog tipa, omogućavaju razne optimizacije
+
+
+Funkcija za kreiranje memorijskih objekata u OpenCL
+clCreateBuffer
+
+Slike (OpenCL)
+Omogućavaju optimizacije specifične za uređajeNe možemo im pristupati kao nizovima
+Kanalima se specificira kako je slika smeštena u memoriji
+Redosled kanala - koliko elemenata čini jedan element slike (npr. 4 za RGBA piksel)
+Tip kanala - veličina svakog elementa (1-4B). 
+Za čitanje iz njih je potreban odabirač.
+ 
+
+
+Funkcije za pravljenje slika u OpenCL
+clCreateImage2D/3D
+
+Pražnjenje i završetak
+Funkcije nad dva različita tipa barijera
+Završetak - Blokira se dok se sve komande u komandnom redu ne završe (sinhroni poziv)
+Pražnjenje - Blokira se dok se ne uklone sve komande iz komandnog reda završile se one ili ne
+ 
+Funkcije:
+Završetak - clFinish
+Pražnjenje - clFlush
+
+
+Funkcije za pražnjenje i završetak
+clFlush i clFinishObe funkcije kao parametar primaju komandni red
+
+
+Program (OpenCL)
+OpenCL C kod upisan u uređajSastoji se od više funkcija, tj. jezgara koje se mogu rasporediti na uređaju
+Omogućene su optimizacije specifične za uređaj
+Prevodi se u toku izvršenja korišćenjem API funkcija
+
+
+Kreiranje OpenCL jezgra
+1. OpenCL C kod za jezgro upisujemo u string
+2. Kreiramo programski objekat funkcijom clCreateProgramWithSource na osnovu tog stringa
+3. Programski objekat prosledimo funkciji clBuildProgram, koja će prevesti programski objekat za dati uređaj
+
+
+Izdvajanje jezgra
+Funkcija clCreateKernel kreira jezgro od programskog objekta.Pre izvršavanja se moraju postaviti parametri jezgra sa clSetKernelArg. Postavljanje parametara mora da se radi na ovaj način jer su oni perzistentni u OpenCL (ne postavljaju se ponovo za svako raspoređivanje jezgra).
+
+
+Pokretanje jezgra
+Funkcija clEnqueueNDRangeKernel.Asinhrona - njen kraj se čeka sa clWaitForEvents ili clFinish
+Parametri funkcije clEnqueueNDRangeKernel: 
+ Komandni red, jezgro, Br. dimenzija (1, 2 ili 3) prostora radnih-stavki, Br. radnih-stavki po svakoj dimenziji NDO, Br. radnih-stavki po svakoj dimenziji radne-grupe, Parametrom global_work_offset se mogu zadavati globalne ID radnih-stavki koje ne kreću od 0, Br. događaja u listi čekanja, lista čekanja, itd. 
+
+
+Model memorije u OpenCL
+Hijerarhijski nivoi memorije: 
+GLOBALNA MEMORIJA: vidljiva svim RJ u uređaju; podaci koji se prebacuju između domaćina i uređaja 
+KONSTANTNA MEMORIJA: podaci kojim pristupaju sve radne-stavke; uključujući samo čitanje 
+LOKALNA MEMORIJA: dele je radne-stavke u radnoj grupi; pokazivači (parametri jezgra i lokalni) i nizovi 
+PRIVATNA MEMORIJA: jedinstvena za radnu-stavku; lokalni podaci i parametri jezgra koji nisu pokazivači
+
+Pisanje OpenCL jezgara
+Jezgra moraju početi ključnom rečju __kernel i da vraćaju voidParametri koji su baferi:
+__global - u globalnoj memoriji
+__constant - u konstantnoj memoriji
+Slike se pridružuju globalnoj memoriji
+
+
+Pisanje OpenCL jezgara - Lokalna memorija
+Kvalifikator __local definiše memoriju koju dele radne stavke u radnoj grupiAko je parametar jezgra - promenljive dimenzije niza
+Ako je ispred lokalne promenljive jezgra - unapred određene dimenzije niza
+
+
+Pisanje OpenCL jezgra - baferovanje
+Koristi se kada se istom podatku pristupa više puta u okviru jedne radne grupe od strane jedne ili više radnih stavki.Izvodi se dodelom globalnog pokazivača (__global parametar) lokalnom (__local parametar)
+
+
+Perzistentnost lokalne memorije
+Sadržaj memorije se gubi nakon završteka rada radne stavke.Mora se prebaciti u globalnu memoriju da se ne bi izgubio.
+
+
+
+Šta se dešava kada se pozove clEnqueueNDRangeKernel
+Stvara sa N-dimenzioni opseg radnih stavki
+N-dimenzioni opseg = 1-3D rešetka radnih stavki
+
+
+Labav model izvršenja u OpenCL
+Radne stavke su nezavisne jedna od drugih
+Postoji hijerarhija uređaja i memorijskih struktura
+Ovako se obezbeđuje skalabilnost na velik broj jezgara
+
+
+Kako se NDO preslikava na fizičku arhitekturu
+Jedna radna stavka se dodeljuje jednom procesnom elementuJedan PE može dobiti više radnih stavki
+
+
+Na čemu se izvršava radna grupa
+Na računarskoj jedinici
+
+Pozicija radne stavke u NDO
+Intrinističke funkcije: 
+get_work_dim: broj dimenzija u NDO 
+get_global_size(dim): br. RS u zadatoj dimenziji 
+get_global_id(dim): indeks tekuće RS u dimenziji 
+get_local_size(dim): veličina RG u zadatoj dimenziji 
+get_local_id(dim): indeks tekuće RS
+get_num_groups(dim): Br. RG u zadatoj dim 
+get_group_id(dim): Indeks tekuće RG
+
+Model konkurentnog izvršavanja OpenCL
+Relaksiran model sinhronizacije - Radne stavke nezavisne jedna od drugeRelaksiran model konzistetntnosti memorije - Konzistentnost se uspostavlja na kraju izvršavanja
+OpenCL eksplicitno definiše sinhronizacione tačke jer u heterogenim sistemima gde GPU-ovi imaju svoje fizičke niti može da dođe do deadlock-a
+Radne stavke unutar radne grupe se grupišu u fizičke niti na GPU (wavefront)
+
+
+Sinhronizacija u OpenCL
+Globalne sinhronizacione tačke na kraju svakog jezgraBarijere
+
+
+Operacija barijere
+Važi za radne stavke u okviru jedne radne grupeKada jedna radna stavka dođe do barijere mora sačekati da sve ostale radne stavke u radnoj grupi dođu do barijere da bi nastavila
+Ponašanje barijere kroz koju ne prolaze sve RS u RG nije definisano - može doći do deadlock-a 
+
+
+Vrste sinhronizacionih komandi u OpenCL
+Komande izvršenja jezgra
+Memorijske komande 
+Sinhronizacione komande
+
+Primarne sinhronizacione tačke u OpenCL
+Komanda clFInish - blokira program domaćina dok se sve komande u redu ne izvrše
+Blokirajuće memorijske komande
+Čekanje na završetak nekog događaja
+
+
+Kako se ulančavaju komande u OpenCL
+Asinhrono.Završetak komande je jedino garantovan u sinhronizacionim tačkama.
+
+
+Mem. objekt koji dele ulančane komande je sigurno konzistentan:
+U sinhronizacionim tačkama Između dve komande u redu sa očuvanjem redosleda (eng. in-order queue) Kod komunikacionih događaja gde jedna komanda generiše događaj koji druga komada čeka
+
+Konzistentnost memorijskog objekta deljenog između različitih uređaja
+Biblioteka održava konzistentnost takvog objekta, kopirajući podatake između uređaja po potrebiMemorijski objekti se dodeljuju kontekstima, a ne uređajima
+Ceo ovaj proces je transparentan za korsiničku aplikaciju
+
+
+Tipovi OpenCL redova
+Sa očuvanjem redosleda
+Bez očuvanja redosleda - biblioteka može rasporediti operaciji u paraleli, ne možemo praviti pretpostavke o redu izvršavanja
+
+
+Kako se izvršavaju operacije kada ima više redova u OpenCL
+Ne možemo pretpostaviti redosled izvršavanja operacija
+
+Graf zadataka u OpenCL
+Konstruiše se na osnovu događajaFunkciji za ulančavanje komandi možemo proslediti događaj ili listu događaja koji treba da se dese pre nego što bi se izvršila komanda
+Mogu se ulančavati komande iz bilo kog komandnog reda koji pripada kontekstu
+
+
+Modeli programiranja više uređaja
+Dve vrste:Protočne obrade - jedan uređaj čeka na rezultate drugog; Samo jedan uređaj pokreće jezgro u datom momentu
+Nezavisna obrada - više uređaja pokreće jezgra u isto vreme nezavisno jedni od drugih
+
+
+Povratni pozivi u OpenCL
+Funkcija povratnog poziva se poziva za zadato stanje izvršenja komande u redu komandiMože se koristiti za ulančavanje novih komandi ili pozivanje funkcija domaćina
+Definišu se pomoću funkcije clSetEventCallback
+
+
+Dobavljanje informacije o komandi na osnovu događaja
+Funkcija clGetInfoDobavlja: Red komandi, kontekst događaja u kom se nalazi komanda, tip komande, trenutno stanje komande
+
+
+Korisnički defnisan događaj
+Definiše se sa clCreateUserEventMože se proslediti kao ulaz komandi
+Eksplcitno mu se postavlja status sa clSetUserEventStatus
+
+
+Urođena jezgra
+Alternativa povratnim pozivima
+Mogu biti izvršavane u grafu zadataka, pokretati dogđaja i biti pokrenute događajem
+Kada se kreriraju prosleđuje se pokazivač do obične C funkcije
+ 
+Argumenti se prosleđuju kroz niz args
+Memorijski objekti se ne nalaze u args nego u mem_list parametru
+Njihove lokacije u args nizu su null.
+args_mem_loc parametar sadrži niz pokazivača na te null lokacije. Govori koje lokacije u args su null zbog memorijskih objekata.
+ 
+Pokreću se funkcijom clEnqueueNativeKernel
+
+
+Markeri (OpenCL)
+Završavaju se kada se svi prethodni elementi u redu završe
+Za razliku od barijera ne blokiraju izvršenje
+Izlaz mu je pobuđivanje događaja
+ 
+Ulančavaju se sa clEnqueueMarker
+
+clWaitForEvents
+Blokira izvršavanje sve dok se zadati skup događaja ne završi
+
+Glavne osobine strukturnog PP
+Postoji konačan broj upravljačkih struktura
+Zansovan na šablonima - Šabloni algoritamske strategije
+
+
+Nivo apstrakcije šablona algoritamske strukture
+Srednji nivo
+ŠAS su na nivou između: PROJEKTANTSKIH ŠABLONA (eng. design patterns) i IMPLEMENTACIONIH ŠABLONA (eng. impl. patterns)
+
+Delovi šablona algoritamske strukture
+Implementacija
+Semantika - kako se koristi šablon kao gradivni blok algoritma.&nbsp;
+&nbsp; Apstrakcija od toga da li je izvršavanje zaista paralelno i u kojim režimu se izvršvaju operacije
+Različite implementacije ne bi trebalo da menjaju semantiku
+
+
+Najvažniji problemi u implementaciji šablona algoritamske strukture
+Kontrola granularnostiDobra upotreba skrivene memorije (cache)
+
+
+Grupe šablona algoritamske strukture
+Grupe ŠAS su: I Grupa (Šablon kompozicije) II Grupa (Šabloni strukturne serijske kontrole toka) III Grupa (Šabloni strukturne paralelne kontrole toka) IV Grupa (Šabloni serijskog rukovanja podacima) V Grupa (Šabloni paralelnog rukovanja podacima) VI Grupa (Preostali paralelni šabloni) VII (Nedeterministički šabloni)
+
+Ideja ŠAS Ugnježdavanje
+Specificirati NEOBAVEZNI PARALELIZAM umesto OBAVEZNOG PARALELIZMA
+
+ŠAS Preslikvanje
+Podela većeg problema na jednake podproblemeOmogućava efikasnu vektorizaciju i paralelizaciju
+
+
+ŠAS Grananje-pridruživanje ideja
+Rekurzivno deli problem na podproblemeKoristan i za regularan i iregularan paralelizam Strategija divide et impera
+
+
+
+ŠAS Paralelizam podataka
+Paralelizam operacija nad podacima - skalabilnost Broj podproblema raste sa ukupnom veličinom problema
+
+ŠAS Ugnježdavanje
+Hijerarhijsko i rekurzivno komponavanje šablonaBlokovi zadataka su mesta za kod ili šablon
+Dubina ugnježdavanja je neograničena
+Sadržavajući šablon ne sme da ovodi ograničenja u vrsti sadržanih šablona
+ Svi šabloni podržavaju ugnježdavanje
+
+
+Vrste ugnježdavanja u ŠAS ugnježdavanje
+Statičko - specificirano u koduDinamičko - rekurzija
+Dinamičko je skalabilnije zbog dinamičnog paralelizma podataka
+
+
+Problemi ŠAS Ugnježdavanje
+Ograničenost fizičkih resursaPokretanje prevelikog broj zadataka dovodi do oversubscription-a
+Treba uzeti u obzir kako se potencijalan paralelizam preslikava na fizički
+
+
+Šabloni serijske kontrole toka
+Sekvenca, Izbor, Iteracija i Rekurzija
+
+ŠAS Sekvenca
+Niz zadataka koji se izvršavaju serijski u određenom redosledu bez obzira na (ne)postojanje zavisnosti između njih.Očuvava redosled ivičnih efekata zadataka 
+
+
+ŠAS Superskalarana sekvenca
+Paralelna generalizacija sekvenceZadaci se uređuju po zavisnostima. Redosled izvršvanja nije strogo određen.
+Viđa se kod procesora koji mogu da izvrše instrukcije van redosleda
+
+
+Šablon izbor
+Najpre se izračuna uslov c Ako je uslov istinit, izvrši se zadatak a, a ako nije izvrši se zadatak b Dve pretpostavke: a i b se ne mogu izvršavati pre nego se izračuna uslov c Izvršava se samo jedan od ova dva zadatka 
+ 
+Romb na dijagramu zadatka
+
+ŠAS Iteracija
+WHILE petlja Broj iteracija zavisi od podataka Raspon ne odgovara visini dijagrama (ima strelica na gore) već se petlja mora mentalno izvršiti (tj. razmotati) Raspon = visina traga tog izvršenja
+
+Problem šablona iteracija
+Petljom-nošene zavisnosti - Jedna iteracija može zavisiti od prethodnihU for petlji ovo ide preko brojača i
+Načini za paralelizaciju postaju raznovrsni
+ 
+Neke zavisnosti sprečavaju paralelizacju
+Zavisnosti mogu biti skrivene zbog nasumičnog pristupa memoriji i pokazivača
+
+
+ŠAS Rekurzija
+Dinamička forma ugnježdavanja u kojoj funkcija poziva samu sebe, direktno ili indirektno
+
+Šabloni strukturne paralelne obrade podataka
+Grananje-Pridruživanje Preslikavanje Obrada suseda Redukcija Skeniranje Rekurencija
+
+ŠAS Grananje-Pridruživanje
+Kontrolni tok se razgrana na nekoliko paralelnih tokova, koji se kasnije spajajuCilk: paralelna stabla poziva. Mrešćenje umesto poziva.
+
+
+Razlika između grananja-pridruživanja i barijere
+Nakon spajanja izmrešćenih niti samo jedna nastavlja sa radomKod barijere sve niti nastvljaju sa radom
+
+
+ŠAS Preslikavanje
+Preslikavanje se replicira preko skupa indeksa 
+Primenjuje osnovnu (elementnu) funkciju na svaki element zbirke podatakaKoristi se za menjanje petlje gde je jedina zavisnost brojač i
+Elementna funkcija ne sme imati ivične efekte (tj. mora biti čista)
+
+
+ŠAS Obrada suseda
+Generalizacija preslikavanjaFunkcija elementa i suseda
+Susedi se određuju relacijom odstojanja
+Poplovačanje - optimizacija ovog šablona koja bolje koristi keš
+Moraju se uzeti u obzir ivični uslovi - na ivicama ulaznih podataka može doći do izlaska van opsega
+Primena: filtriranje slike ...
+
+
+ŠAS Redukcija
+Kombinuje sve elemente iz zbirke u jedan elementKombinujuća funkcija mora biti asocijativna
+
+
+ŠAS Paralelna redukcija
+Redukcija se može paralelizovati korišćenjem strukture stablaMenja se redosled operacija iskorišćavanjem asocijativnosti kombinujuće funkcije
+Zahteva isti broj operacija kao i&nbsp;serijska verzija 
+
+
+ŠAS Skeniranje
+Svaki element izlazne zbirke je redukcija do te tačkeMogućnost paralelizacije nije očigledna jer svaka iteracija zavisi od prethodne
+ 
+Paralelizacija zahteva:
+- Čak do dva puta više posla
+- Raspon bar ;[$]\Theta{\log n}[/$]
+- Ne može pružiti linearno ubrzanje
+ 
+Skeniranje = Pakovanje + Razvacivanje
+Pakovanje je deterministično, a razbacivanje nije
+
+
+ŠAS Rekurencija
+Generalizacija petlje gde iteracije mogu biti međusobno zavisne
+Slična obradi suseda, ali se susedima može pristupati i za pisanje, a ne samo za čitanje
+ 
+Posmatraju se samo proste rekurencije sa konstantnim odstojanjima između elemenata 
+
+Rekurencije koje se mogu paralelizovati: 1D rekurencija, čiji el. sadrže asocijativne operatore nD rekurencija, koja nastaje iz tela ugnježdenih petlji
+
+Posledična rekurencija
+Rekurencija gde sledeći element zavisi isključivo od prethodnih
+
+

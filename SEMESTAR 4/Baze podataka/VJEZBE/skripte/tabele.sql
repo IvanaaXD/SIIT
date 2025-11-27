@@ -8,7 +8,7 @@ CREATE TABLE radnik(
 	 God date NOT NULL,
 	 CONSTRAINT radnik_PK PRIMARY KEY (Mbr),
 	 CONSTRAINT radnik_FK FOREIGN KEY (Sef) REFERENCES Radnik (Mbr),
-     	 CONSTRAINT radnik_CH CHECK (Plt>500) 
+     CONSTRAINT radnik_CH CHECK (Plt>500) 
 );
 
 

@@ -27,5 +27,5 @@ def checkup():
 
 
 if __name__ == "__main__":
-    subscribe("zadatak1", "test_grupa", "checkup")
+    subscribe("niz2", "grupa2", "checkup")
     app.run(host="localhost", port=port, debug=True)

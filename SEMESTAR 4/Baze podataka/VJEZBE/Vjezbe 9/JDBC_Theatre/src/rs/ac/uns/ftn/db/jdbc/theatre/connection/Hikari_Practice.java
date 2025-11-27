@@ -15,9 +15,9 @@ public class Hikari_Practice {
 		hikariConfig.setJdbcUrl(ConnectionParams.LOCAL_CONNECTION_STRING);
 		hikariConfig.setUsername(ConnectionParams.USERNAME);
 		hikariConfig.setPassword(ConnectionParams.PASSWORD);
-		hikariConfig.setMaximumPoolSize(5);
+		hikariConfig.setMaximumPoolSize(5); // ovo treba zatvoriti
 		hikariConfig.addDataSourceProperty("cachePrepStmts", "true");
-		hikariConfig.addDataSourceProperty("cachePrepStmts", "true");
+		hikariConfig.addDataSourceProperty("prepStmtCacheSize", "250");
 		hikariDS = new HikariDataSource(hikariConfig);
 	}
 	
@@ -27,11 +27,11 @@ public class Hikari_Practice {
 		return hikariDS.getConnection();
 	}
 	
-	public static void closeDataSource() {
+	public static void closeConnection() {
 		hikariDS.close();
 	}
 	
-	@Override 
+	@Override
 	protected void finalize() throws Throwable {
 		hikariDS.close();
 		super.finalize();

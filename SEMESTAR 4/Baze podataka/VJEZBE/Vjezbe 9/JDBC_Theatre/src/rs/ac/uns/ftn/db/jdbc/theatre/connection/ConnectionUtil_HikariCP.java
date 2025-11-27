@@ -14,7 +14,7 @@ public class ConnectionUtil_HikariCP {
 		hikariConfig.setJdbcUrl(ConnectionParams.LOCAL_CONNECTION_STRING);
 		hikariConfig.setUsername(ConnectionParams.USERNAME);
 		hikariConfig.setPassword(ConnectionParams.PASSWORD);
-		hikariConfig.setMaximumPoolSize(5); // default - 10
+		hikariConfig.setMaximumPoolSize(20); // default - 10
 		hikariConfig.addDataSourceProperty("cachePrepStmts", "true");
 		hikariConfig.addDataSourceProperty("prepStmtCacheSize", "250");
 		hikariDS = new HikariDataSource(hikariConfig);

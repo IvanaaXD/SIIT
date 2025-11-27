@@ -1,37 +1,35 @@
 package examples;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
 import java.io.InputStream;
-import org.apache.lucene.index.Term;
-import org.apache.lucene.document.TextField;
+import java.io.InputStreamReader;
 import java.io.Reader;
 import java.io.StringReader;
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
-import org.apache.lucene.document.LongPoint;
-import org.apache.lucene.index.IndexableField;
-import org.apache.lucene.document.StringField;
-import org.apache.lucene.document.Field;
-import org.apache.lucene.document.Document;
-import java.nio.file.OpenOption;
-import java.nio.file.FileVisitResult;
-import java.nio.file.FileVisitor;
+import java.nio.file.Files;
 import java.nio.file.LinkOption;
-import org.apache.lucene.analysis.Analyzer;
-import org.apache.lucene.store.Directory;
+import java.nio.file.OpenOption;
 import java.nio.file.Path;
-import java.io.IOException;
-import org.apache.lucene.index.IndexWriter;
-import org.apache.lucene.index.IndexWriterConfig;
-import org.apache.lucene.analysis.standard.StandardAnalyzer;
-import org.apache.lucene.store.FSDirectory;
+import java.nio.file.Paths;
 import java.util.Date;
 import java.util.List;
 import java.util.stream.Collectors;
-import java.nio.file.Files;
-import java.nio.file.Paths;
-import java.nio.file.SimpleFileVisitor;
-import java.nio.file.attribute.BasicFileAttributes;
+
+import org.apache.lucene.analysis.Analyzer;
+import org.apache.lucene.analysis.standard.StandardAnalyzer;
+import org.apache.lucene.document.Document;
+import org.apache.lucene.document.Field;
+import org.apache.lucene.document.LongPoint;
+import org.apache.lucene.document.StringField;
+import org.apache.lucene.document.TextField;
+import org.apache.lucene.index.IndexWriter;
+import org.apache.lucene.index.IndexWriterConfig;
+import org.apache.lucene.index.IndexableField;
+import org.apache.lucene.index.Term;
+import org.apache.lucene.store.Directory;
+import org.apache.lucene.store.FSDirectory;
 
 public class IndexFiles
 {
@@ -116,7 +114,12 @@ public class IndexFiles
             doc.add((IndexableField)new TextField("contents", (Reader)new BufferedReader(new InputStreamReader(stream, StandardCharsets.UTF_8))));
             doc.add((IndexableField)new TextField("title", new StringReader(file.getFileName().toString())));
             //TODO prosiriti da indeks nije samo za polje "contents" (sadrzaj dokumenta) vec da ima i za naziv fajla-a
+            BufferedReader reader = new BufferedReader(new FileReader(file.toFile()));
+            String firstLine = reader.readLine();
+            doc.add((IndexableField)new TextField("articleTitle", new StringReader(firstLine)));
+            doc.add((IndexableField)new TextField("articleContents", reader));
             doc.add((IndexableField)new TextField("title", new StringReader(file.getFileName().toString())));
+            
             if (writer.getConfig().getOpenMode() == IndexWriterConfig.OpenMode.CREATE) {
                 System.out.println("adding " + file);
                 writer.addDocument((Iterable)doc);

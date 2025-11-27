@@ -20,6 +20,6 @@ if __name__ == "__main__":
         for _ in range(n):
             send('zadatak1', {
                 'tip_kartice': random.choice(moguci_tipovi_kartica),
-                'kolicina': random.randint(100,10000)
+                'kolicina': random.randint(100, 10000)
             })
 

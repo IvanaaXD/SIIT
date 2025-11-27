@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="shop_app" translatable="false">Shop App</string>
+    <string name="home">Home</string>
+    <string name="fragment_1">fragment 1</string>
+    <string name="fragment_2">fragment 2</string>
+    <string name="explicit_intention">Explicit intention</string>
+    <string name="implicit_intention">Implicit intention</string>
+</resources>

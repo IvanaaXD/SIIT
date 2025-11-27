@@ -10,4 +10,5 @@ def create(queue_name):
 
 
 if __name__ == "__main__":
-    create("zadatak1")
+    create("niz1")
+    create("niz2")

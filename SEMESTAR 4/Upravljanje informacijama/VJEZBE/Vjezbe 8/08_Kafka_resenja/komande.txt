@@ -5,4 +5,4 @@ Server ispisuje u terminal kad god se neka akcija izvrsi, te vam moze biti koris
 Primer consumer se "pretplacuje" na niz, i zatim na standardni izlaz ispisuje svaku poruku koju dobije
 NAPOMENA: Da bi se consumer ispesno pretplatio na odredjen niz, taj niz treba da bude vec kreiran (za ovo mozete koristiti create_queue.py skriptu)
 
-Za kraj, producer salje poruke na odredjen niz. Takodje je potrebno da taj niz vec postoji
+Za kraj, producer šalje poruke na odredjen niz. Takodje je potrebno da taj niz vec postoji

@@ -1,0 +1,5 @@
+7*6=42 tacno
+1*1=1 tacno
+9*7=63 tacno
+2*8=15 netacno
+6*6= netacno

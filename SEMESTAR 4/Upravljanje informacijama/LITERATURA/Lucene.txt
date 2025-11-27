@@ -1,0 +1,16 @@
+46. linija u indexFile -> docsPath = "../core";
+
+u indexDoc funkciji:
+
+BufferedReader reader = new BufferedReader(new FileReader(file.ToFile()));
+String firstLine = reader.readLine();
+doc.add((IndexableField) new TextField("articleTitle", new StringReader(firstLine)));
+doc.add((IndexableField) new TextField("articleContents", reader));
+
+
+king AND NOT nelson
+/.*king.*/
+"king of united states"~3
+aricleTitle:deceased AND aricleContents:deceased
+
+

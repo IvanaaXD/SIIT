@@ -117,6 +117,7 @@ public class TheatreDAOImpl implements TheatreDAO {
 
             int i = 0;
             for (Integer id : ids) {
+            	
                 preparedStatement.setInt(++i, id);
             }
 

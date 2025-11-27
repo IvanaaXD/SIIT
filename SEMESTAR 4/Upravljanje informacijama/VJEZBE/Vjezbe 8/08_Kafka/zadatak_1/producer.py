@@ -18,8 +18,7 @@ if __name__ == "__main__":
     while True:
         n = int(input("Koliko transakcija zelite da generisete: "))
         for _ in range(n):
-            send('zadatak1', {
+            send('niz1', {
                 'tip_kartice': random.choice(moguci_tipovi_kartica),
                 'kolicina': random.randint(100,10000)
             })
-        send("niz1", {"test":"poruka"})

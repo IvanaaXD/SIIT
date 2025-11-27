@@ -1,0 +1,275 @@
+PRETRAGE:
+-Agenti koji planiraju unapred
+ne isprobava nista!!!! zna tacno kako izgleda okruzenje (model okruzenja) (matrica, graf...), samo razmislja SBBKBB
+
+-optimalni planovi - optimalan broj akcija (najmanji broj akcija, odnosno najmanju cenu)
+-kompletni planovi - garantuje da ce resenje biti pronadjeno
+-planiranje i re-planiranje
+
+greedy metode uzimaju najbolju okciju u datom trenutku. "ne vide siru sliku"
+metode koje sagledavaju siru sliku su sporije, ali mogu dati bolje resenje
+
+kako za nas izgledaju problemi pretraga? imaju:
+okruzenje u kome agent radi ima puno stanja (prostor stanja)
+funkcije koje generisu sledeca stanja
+pocetak i kraj (pocetno i ciljno stanje)
+
+resenje je niz akcija koji nas dovodi od pocetnog do ciljnog stanja, ako ono postoji
+
+stanje sveta != stanje pretrage
+stanje sveta je apsolutno sve
+stanje pretrage je samo ono sto nas interesuje, sto nam treba za pretragu - zavisi od problema koji treba resiti
+
+planove mozemo da reprezentujemo kao stablo. mozemo ali obicno ne gradimo celo stablo.
+gradimo samo delove koji nas interesuju, algoritmima ga pretrazujemo
+
+graf prostora stanja - matematicka reprezentacija problema, okruzenje iz kojeg vucemo informacije, ne koje pretrazujemo!
+stabla pretrazivanja - "razmisljanje" agenta koje pretrazujemo, koristimo da resimo nas problem pretrage
+takodje se moze reci da predstavlja stanja (cvorovi) i akcije (grane) koje imaju svoje posledice (prelazak iz jednog u drugi cvor)
+u isto vreme pravimo i pretrazujemo stablo pretrazivanja
+
+stablo moze biti beskonacno ako ima petlji u grafu prostora stanja. u realnosti, to se resava tako sto agent ide do odredjene dubine
+kljucna razlika algoritma jeste koliko cvorova razvijaju (analiziraju) - sto manje, to bolje
+
+najopstije se moze opisati kao funkcija pretraga stabla za neki problem sa odredjenom strategijom (algoritmom), koji vraca resenje ili neuspeh
+resenje se na kraju dobija pracenjem roditeljskih vezi koje su izgenerisale ciljno stanje
+petlja: da li postoje cvorovi koje nismo obisli?
+da - na osnovu strategije (algoritma), izaberi sledeci cvor. ako je ciljni, vrati resenje. ako nije, izgenerisi nova stanja iz tog cvora
+ne - nema vise cvorova za obilazak - problem je neresiv ili ga nismo dobro postavili - vrati info da nema resenja
+
+za algoritam je direktno vezana struktura u kojoj se cuvaju izgenerisani ali neobradjeni cvorovi
+stack - DFS, queue - BFS, priority queue - UCS ili A*
+BITNO - pretraga NIJE 'setanje' kroz stablo. u smislu, u jednom trenutku mozemo da analiziramo jedan cvor, a u drugom da se analizira neki pedeseti (kao npr u UCS)
+----
+DFS - ide se skroz do lista (maks dubine)
+nema heuristike, nema logike, samo se setuje kojim redom se obilaze cvorovi
+najcesca reprezentacija prvo levo, pa sredina, pa desno, ALI TO NE MORA NEOPHODNO TAKO - SAMI DEFINISEMO KAKO HOCEMO
+implementacija: stack (LIFO)
+vremenska slozenost O(b^n) gde je b broj 'dece' koje jedan cvor ima, a n dubina; potencijalno veoma neefikasno
+prostorna slozenost O(b*n); samo jedna 'grana' u memoriji, ona koja se trenutno razvija; veoma, veoma dobro
+KOMPLETAN: jedino ako nema petlji
+OPTIMALAN: ne. nalazi resenje koje je "najvise levo"
+rezime - jedina korist je prostorna slozenost
+----
+BFS - nema spustanja na nivo ispod dok nisu svi na trenutnom obradjeni
+nema heuristike, nema logike, samo se setuje kojim redom se obilaze cvorovi
+implementacija: queue (FIFO)
+vremenska slozenost O(b^s) gde je b broj 'dece' koje jedan cvor ima, a s dubina resenja, odnosno broj akcija da bi se stiglo do resenja
+prostorna slozenost O(b^s) velika jer se sistematicno prolazi kroz sve 
+KOMPLETAN: da
+OPTIMALAN: da, ako sve akcije imaju jednake cene
+rezime - optimalan i brzi nego dfs, ali memorijski mnogo zahtevniji pa se vise koristi kao osnova za bolje algoritme
+
+BFS vs DFS
+BFS - bolji kada zelimo najkrace resenje
+DFS - bolji kada znamo da je resenje 'duboko', a nije nam primarno da bude optimalno
+----
+IDFS - DFS do odredjene dubine, ako ne nadje resenje, dubina + 1, krenuti skroz od pocetka, tako sve u krug
+malo zauzece DFS + optimalnost BFS
+vremenska slozenost: O(b^s) kao kod BFS, ali ipak malo neefikasniji od BFS zbog ponavljanja, koje nije strasno na pocetku, ali kasnije moze biti
+prostorna slozenost: O(b*s) kao kod DFS, samo malo manje zbog iteracija iznova i iznova, pa time ne prelazi nikada dubinu u datoj iteraciji
+KOMPLETAN: da
+OPTIMALAN: da, ako sve akcije imaju jednake cene
+----
+UCS (Uniform Cost Search), ekvivalent BFS sa cenama
+implementacija: priority queue, gde se prioritet gleda kao kumulativna cena (cena trenutnog cvora + cene svih parent cvorova)
+priority queue u ovom slucaju se sortira tako da cvorovi sa najmanjom k.c. budu obradjeni prvi
+spor, ali optimalan
+to sto je nivo kod BFS je (topografska) kontura u UCS
+vremenska slozenost O(b^(C/e)) gde je b broj 'dece' jednog cvora, C cena resenja, e minimalna akcija cena, sto je donekle sporo
+prostorna slozenost O(b^(C/e))
+KOMPLETAN: da, pod uslovom da nema negativnih cena i da nema beskonacnih cena
+OPTIMALAN: da sto se tice cene, ali ne neophodno i po broju akcija
+mane - ne uzima u obzir nikakve informacije o lokaciji cilja - pa zbog toga moze da ide 'svuda' umesto direktno ka cilju
+
+BFS DFS i UCS se danas generalno ne koriste, nego sluze vise kao uvod u bolje algoritme
+
+VODJENE(infomred) PRETRAGE
+pretraga sa heuristikom, greedy search, A*, graf pretraga
+
+heuristika - neka nasa funkcija koja procenjuje vrednost; u ovom kontekstu, funkcija za procenjivanje daljine trenutnog stanja od cilja
+primeri heuristike - Manhattan daljina, euklidksa daljina
+
+----
+GREEDY SEARCH - u svakom trenutku uzimaju akciju koja je najbolja, nece uraditi neoptimalnu akciju koja dovodi do boljeg rezultata na kraju
+ako je heuristika losa, bude kao DFS
+postoji rizik da dobijeni rezultat bude veoma skup
+
+OPTIMALAN: ne, bas zbog toga sto uvek gleda optimalnu samo u trenutku, sto nije neophodno optimalna u siroj slici
+KOMPLETAN: da
+
+----
+A* - najbolji algoritam za ovu vrstu pretraga, uvek nalazi najbolji put najbrze sto moze
+kombinacija UCS i Greedy search; UCS koristi kumulativnu cenu (cenu unazad, oznaka g), Greedy koristi cenu do cilja (cenu unapred, oznaka h)
+heuristika za A* - f(n) = g(n) + h(n)
+to sto smo razvili neku granu do kraja ne znaci da se algoritam zavrsava - uvek se uzima put sa najmanjom cenom u koracima,
+pa se to nastavlja dok se ne uzme grana koja jeste razvijena do kraja
+
+OPTIMALAN: ZAVISI, ako je heuristika za h DOPUSTIVA, da; ako nije (ako precenjuje cene do cilja), ne
+KOMPLETAN: da
+
+nije problem podceniti cenu ali jeste problem preceniti je
+
+DOPUSTIVA HEURISTIKA - heuristika koja nikada ne precenjuje cenu do cilja
+stvarna cena >= nasa procena >= 0
+
+UCS vs A*
+UCS razvija jednako svuda, A* razvija uglavnom prema cilju, ali ne ako ce to ugroziti optimalnost (ali i dalje razvija okolo)
+UCS sporiji
+
+A* se koristi u pathfindingu
+
+pravljenje heuristike
+zamisliti problem bez nekih ili svih pravila - vidimo kako izgleda heuristika
+trade-off izmedju kvaliteta i vremena - dobra heuristika koja se skupo racuna
+
+dominantnost heuristika - mozemo imati vise dopustivih heuristika. uzimamo 'najpesimisticniju' od njih
+
+---
+Graph search - cvorovi koje smo vec obisli ne bi trebali da obilazimo ponovo
+odnosno - NIKAD NE RAZVIJAMO DVA ISTA!!! STANJA
+samo se pita da li smo vec bili u stanju ili ne? ne pita se da li smo vec bili u stanju najkracim mogucim putem
+KOMPLETAN: da
+OPTIMALAN: ne, po defaultu kvari optimalnost
+
+kada sprecavamo vise puta da testiramo stanje, moramo biti sigurni da testiramo njegovu najbolju mogucu verziju
+da bi to obezbedili, potrebna nam je DOSLEDNA HEURISTIKA
+
+DOSLEDNA HEURISTIKA - heuristika koja ne precenjuje cenu grane
+stvarna cena grane >= nasa procena >= 0
+odnosno, stvarna cena grane >= procena cene (do cilja) prvog cvora - procena cene (do cilja) drugog cvora
+
+----------- Pretrage sa protivnicima -------------
+na pocetku sve rule based - kodirana pravila u racunar
+igre sa protivnicima su: 
+deterministicke ili stohasticke (nije luck-based ili jeste luck-based)
+imaju jednog, dva, vise igraca
+mozda zero-sum igre (ako jedan pobedjuje, drugi gubi)
+
+DETERMINISTICKE IGRE
+stanja (S), igraci (I), akcije (A), funkcija prelaza (S x A -> S), kranje stanje, ali
+NOVO - KORISNOST/KVALITETNOST stanja za nekog igraca, preslikava stanje u broj koliko je stanje dobro (slicno kao u sahu)
+
+resenje (politika agenta) - AKCIJA (znaci jedna akcija, ne ceo plan kao kod obicnih pretraga) koju da odigra sledecu
+moramo razmisljati o protivniku -> protivnik razmislja o nama -> mi razmisljamo o protivniku itd itd itd
+
+vrednost stanja - vredi onoliko koliko vredi njegov najbolji potomak
+
+----
+MINIMAX
+max agent smo mi, min agent je protivnik
+uvek se predpostavlja da je protivnik optimalan ("igras protiv najboljeg moguceg igraca koji postoji")
+kada se racunaju cvorovi koji su pod nasom kontrolom, uzimamo cvor sa max vrednoscu po nas
+kada se racunaju cvorovi koji su pod kontrolom protivnika, uzimamo cvor sa min vrednoscu po nas (jer predpostavljamo da ce najbolje odigrati za sebe)
+jedan od nacina realizacije - DFS
+
+ako je sledeci na redu max agent, traziti max vrednost; ako je sledeci min, traziti min vrednost; ako je kranji cvor, vraditi vrednost
+mi tezimo max vrednosti, protivnik tezi min vrednosti
+
+vremenska slozenost: O(b^m) kao kod DFS, sa tim da ponekad mora da obradi apsolutno sva stanja u nekoj dubini (ako nema listova)
+prostorna slozenost: O(b*m) kao kod DFS, samo jedna grana mora biti ucitana u nekom trenutku
+
+alpha-beta pruning - potencijalno smanjuje broj cvorova koje treba obraditi
+u algoritmu se propagira trenutno najbolja opcija koju max igrac moze da izabere (zove se alpha vrednost)
+ako pri obradi naidjemo na cvor (beta vrednost) koji bi trenutno-obradjivanu opciju izracunao da bude gora od trenutno najbolje, mozemo obustaviti dalje pregledanje te opcije
+zavisno je od redosleda generisanja naslednika
+za min igraca je simetricno (njegova najbolja vrednost je beta vrednost, a gora od nje bi bila alpha vrednost)
+
+znaci - alpha je najbolja vrednost za max igraca, beta je najbolja vrednost za min igraca
+ako kao max igrac nadjemo betu koja je manja od alphe, prekidamo racunanje za tu opciju
+ako kao min igrac nadjemo alphu koja je veca od bete, prekidamo racunanje za tu opciju
+
+moguce je izgubiti informaciju o tome da li je neki potez bolji ili ne kada imamo iste vrednosti
+(npr ako odigra jedan potez, zagarantovano dobija 10 bodova; ako odigra drugi, dobija 10 ili manje)
+po minimaxu, u drugoj grani bi dobio manje bodova zbog toga sto bi protivnik igrao potez koji je bolji po njega, sto je problem
+nacini kako se ovo moze resiti:
+1. raditi ab-pruning od potomaka korena, a ne od korena; nije bas dobro jer onda se povecava i broj minimax algoritama koji trenutno rade
+2. pamtimo gde smo prvi put dobili max (alpha) vrednost
+3. umesto >= i <= za ab-pruning koristimo > i <
+
+poboljsanje - ako imamo "savrsen redosled generisanja", vremenska slozenost pada na O(b^(m/2))
+
+protiv optimalnog protivnika je dobar izbor, protiv neoptimalnog protivnika nije
+
+PROBLEM - KOD VECINE IGARA NE MOZEMO DA RADIMO PRETRAGU DO LISTOVA!
+resenje - evalucione funkcije (ili kako smo zvali na ASP, heuristika), s tim da je tesko napraviti da dobro rade
+razvijamo cvorove do odredjene dubine, evaluiramo stanje, pa tu vrednost koristimo
+tradeoff izmedju kvaliteta eval. funkcije i dubine (ako se funkcija dugo izvrsava, na vecoj dubini ce predugo da traje; ako je losija, brza je ali mozda nedovoljno dobra)
+
+funkcije evaluacije idealno vracaju stvarnu minimax vrednost; u praksi, obicno su linearne kombinacije funkcija osobina
+
+GENERALIZACIJA MINIMAX-A
+sta ako nije zero sum igra, ili ako imamo vise igraca?
+umesto jedne vrednosti, imamo torke - koliko je stanje korisno za svakog od igraca
+svako igra u svoju korist; iz toga se moze vise razlicitih stvari desiti - saradnja, indiferentnost
+
+--- ali sta ako okruzenje nije deterministicko? odnosno, protivnik nije optimalan ili ishod zavisi od slucajnosti
+EXPECTIMAX (cvorovi - expectation/chance nodes), nesigurni ishodi sa jednim igracem
+mozemo rizikovati ako postoji veca verovatnoca da cemo pobediti (nije 100% garantovano!)
+max agent i expect agent
+ako je sledeci max agent, trazi max
+ako je sledeci expect agent, trazi prosek odnosno sumu [verovatnoca da se odigra potez * vrednost poteza] za sve mogucnosti (decu)
+
+verovatnoce nije uvek lako dobiti (npr za kockicu je lako, ali nije lako simulirati sta ce npr. sahista da uradi)
+slucajna promenljiva - dogadjaj ciji ishod nije siguran
+distribucija verovatnoce - dodela vrednosti tim dogadjajima
+verovatnoce nisu negativne i zbir verovatnoca svih ishoda za neku slucajnu promenljivu mora biti 1
+kako prikupljamo vise podataka, verovatnoce se menjaju (uslovna verovatnoca)
+
+ocekivana vrednost - prosek ishoda pomnozenih sa verovatnocama tih ishoda
+verovatnoce mogu biti uniformne (kockica) ili sofisticirane (zahtevaju jako puno izracunavanja)
+
+---
+MONTE CARLO TREE SEARCH (koristi se u danasnjici)
+evaluacija cvorova kroz simulacije - simuliramo sto vise partija od trenutnog do krajnjeg stanja, brojimo broj pobeda i poraza
+time vidimo sta se u proseku desava, a biranje poteza napravimo da bude brzo i jednostavno
+selektivna pretraga - ako znamo da neki potez ne vodi ka dobrom rezultatu, necemo ga puno ili uopste simulirati; fokusiramo se na cvorove koji ce nam pomoci
+
+PRVOBITNA VERZIJA (verzija 0) - uraditi N simulacija za svakog potomka, izabrati potez koji ima najveci udeo pobeda
+nije neophodno dobra jer i dalje simulira svih N simulacija i za cvorove koji si losi
+
+verzija 0.9 - povecati broj simulacija u cvorovima koji "vise obecavaju", smanjiti u onima koji "ne obecavaju"
+ne znamo kako postupiti kada imamo cvorove kod kojih je udeo pobeda i poraza skoro jednak
+
+verzija 1 - povecati broj simulacija u cvorovima koji "vise obecavaju", kao i "nesigurnim" cvorovima gde nije jasan odnos pobeda i poraza
+
+HEURISTIKA ZA MCTS - UCS (Upper Confidence Bounds)
+koliko je dobro da se za neki cvor n rade dalje simulacije, ODNOSNO "iz kog cvora treba da radimo dalje simulacije"
+
+exploration - koliko u nasu simulaciju ukljucujemo istrazivanje za sada nepoznatih delova stabla (ponekad radimo nesto novo ali moze biti bolje od navike)
+exploitation - povecanje simulacija u cvorovima u kojima nam dobro ide (navike - nesto sto nam prija i sto ponavljamo)
+kako se broj simulacija povecava, exploration opada
+
+UCB1
+n - trenutni cvor koji razmatramo
+N(n) - broj simulacija koji smo do sada imali iz tog cvora
+U(n) - vrednost tog cvora koji smo dobili iz simulacija do sada (na primer broj pobeda)
+C - konstanta, "balans" izmedju exploration-a i exploitation-a (dodaje exploration na pocetku kada treba), obicno koren iz 2, ali moze se dobiti fine-tuningom
+C se u realnosti menja kroz vreme
+logN(Parent(n)) - koliko puta smo bili u roditelju tog cvora (najcesce ln(Parent(n))
+
+UCB1 = (U/N) + C * sqrt(logN(PARENT)/N)
+
+odnosno, vrednost UCB1 je prosek vrednosti dobijenih simulacijama iz nekog cvora i njegove dece + exploration deo
+
+objasnjenje za sve pod korenom - ako smo bili puno u roditelju od cvora, super, ako smo bili puno u samom cvoru, znamo vec da li je dobar ili los pa zato delimo sa N(n)
+log i sqrt se koristi iskljucivo za smoothing, da vrednosti ne bi bile isuvise ogromne
+sto znaci, ako smo puno puta bili u roditelju (analizirali decu) od cvora ali nismo puno bili u ovom cvoru, treba istraziti i ovaj cvor
+
+znaci, sa UCB1 SE RACUNA IZ KOJEG CVORA TREBA DALJE DA SIMULIRAMO
+TO NIJE EVALUACIJA STANJA U CVORU!!!
+
+MCTS verzija 2 - dodavanje UCB1
+ciklus:
+da li je trenutno list? ako nije, predji u dete sa najvecom UCB1 vrednoscu i ponovi korak; ako jeste, sledeci korak
+da li je cvor bio ikada posecen? ako nije, zapocni simulaciju; ako jeste, razvij njegovu decu (za svako novo moguce stanje napravi dete)
+izaberi prvo novo dete i iz njega zapocni simulaciju
+
+simulacija - pustanje da se igra odigra do kraja, dobije se neki skor
+
+bilo bi dobro da imamo predstavu kako nas protivnik igra (predpostavke o svetu) da bi izabrali odgovarajuci algoritam
+ako smo previse optimisticni, igramo na to da protivnik igra nasumicno ali da je zapravo uvek optimalan
+ako smo previse pesimisticni, igramo na to da protivnik igra optimalno ali da zapravo moze biti slucajan
+TREBA NACI BALANS
+
+odnosno, ako protivnik igra optimalno, bolje koristiti minimax; ako igra slucajno, bolje koristiti expectimax

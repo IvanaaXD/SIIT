@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:theme="@style/Theme.ShopApp"
+    android:visibility="visible"
+    tools:context=".activities.HomeActivity"
+    tools:visibility="visible">
+
+    <LinearLayout
+        android:id="@+id/linear1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/linear2"
+        app:layout_constraintVertical_bias="0.001"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp">
+
+        <androidx.appcompat.widget.SearchView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/border_background"
+            android:theme="@style/Theme.ShopApp"
+
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/linear2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linear1"
+        app:layout_constraintBottom_toBottomOf="@id/linear1"
+        app:layout_constraintVertical_bias="0.001"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        >
+
+        <Button
+            android:id="@+id/btnFilters"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/filters"
+            tools:ignore="TextContrastCheck" />
+
+        <Button
+            android:id="@+id/btnSort"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_weight="1"
+            android:text="@string/sort"
+            tools:ignore="TextContrastCheck" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constrainedHeight="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linear2"
+        android:layout_margin="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <include
+                layout="@layout/product_card"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_marginBottom="5dp"/>
+            <include
+                layout="@layout/product_card_relative"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_marginBottom="5dp"/>
+            <include
+                layout="@layout/product_card"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_marginBottom="5dp"/>
+            <include
+                layout="@layout/product_card_relative"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_marginBottom="5dp"/>
+            <include
+                layout="@layout/product_card"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_marginBottom="5dp"/>
+            <include
+                layout="@layout/product_card_relative"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_marginBottom="5dp"/>
+        </LinearLayout>
+    </ScrollView>
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="15dp"
+        android:backgroundTint="@color/pink_300"
+        android:clickable="true"
+        android:contentDescription="@string/cart"
+        android:tooltipText="@string/cart"
+        android:theme="@style/Theme.ShopApp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/ic_shop_cart"
+        tools:ignore="ImageContrastCheck" />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

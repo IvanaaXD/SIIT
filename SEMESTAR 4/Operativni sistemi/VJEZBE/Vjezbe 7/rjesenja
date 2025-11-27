@@ -7,7 +7,7 @@ F9 kad pronadjem proces
 
 DRUGI ZADATAK
 
-ping ftn.uns.ac.rs
+ping ftn.uns.ac.rs &
 jobs
 fg %1
 Ctrl+C

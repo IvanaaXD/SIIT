@@ -1,0 +1,10 @@
+Resiti koriscenjem master metode T(n) = 3T(n/4) + n*lg(n)
+Napisati proizvoljan kod funkcije koja ima Teta(n^2)  vreme izvrsavanja
+Napisati zakone rada i raspona
+Izracunati rad raspon i paralelizam napisanog koda (2 ugnjezdene parallel_for petlje) i objasniti postupak
+Bernstajnov uslov za 2 zadatka T1 i T2
+Koje aplikacije se mogu razvijati koriscenjem tbb grafova zadataka (tako nesto)
+Koje parametre prima parallel_for
+Msm da je bilo napisati komande neke OpenCL nisam siguran
+Kako se postize Skalabilnost u OpenCL
+Da li je moguce u TBB koristiti Spekulativne sablone i zasto (msm da je ovk nesto bilo)

@@ -32,9 +32,12 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="atletika.cpp" />
+		<Unit filename="banka.cpp" />
 		<Unit filename="benzinska_pumpa.cpp" />
 		<Unit filename="biblioteka.cpp" />
 		<Unit filename="fudbal.cpp" />
+		<Unit filename="granicni_prelaz.cpp" />
 		<Unit filename="kernel.cpp" />
 		<Unit filename="parkingx3.cpp" />
 		<Unit filename="pivnica.cpp" />

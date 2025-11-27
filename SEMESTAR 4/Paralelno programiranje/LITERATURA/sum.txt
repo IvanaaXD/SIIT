@@ -1,0 +1,252 @@
+# CILK
+
+Cilk ima svoj rasporedjivac zadataka
+
+Programer vidi kljucne reci (spawn, sync, for), hiper promenjive, naznake za nizove, osnovne funkcije, SIMD
+spawn - paralelizam jezgara, #pragma simd - vektorske jedinice, moguce kombinovati
+ponasanje C++ - linearan niz iskaza, ponasanje cilk - usmeren aciklican graf
+
+Izvrsavanje zadataka - strand (do spawna / synca), mrescenje (spawn), sinhronizacija
+
+Linije se izvrsavaju po redosledu serijalizacije, ako ona nije definisana, nije definisano ponasanje
+Ranija linija je ona koja se pre izvrsava u serijskom izvrsenju
+
+Cilk for petlja ima kontrolnu promenjivu (int, pokazivac, tip klase) i uslov zaustavljanja
+Grain size se moze definisati za for petlju ispod (samo za nju) i oznacava broj serijskih iteracija za jednu pod-paralelnu petlju
+
+Mrescenje oznacava da se iskaz izvrsava paralelno sa sledecim iskazima (moguce nedefinisano ponasanje)
+Sledeci sync je onaj u tom bloku, a ne redosledni (postoji sync na kraju svakog bloka implicitno)
+Potomak - izraz u sync-u, nastavak - sledeca linija
+Sync - svi potomci se izvrsavaju pre nastavka, ako nema potomaka sync nema efekta
+
+Hiperobjekat omogucava siguran pristup deljenim objektima jer svaka paralelna linija ima svoju instancu
+Obracanje hiperobjektu rezultuje u referenci, pogled je isti pre i posle spawn / sync i pre i posle cilk_for
+
+Hiperobjekti su najcesce reduktori koji imaju funkciju reduce (spaja dva pogleda) koja je asocijativna za elemente tipa V i imaju funkciju identitiy (inicijalizuje pogled) koja ne menja tip V. (V, reduce, entity) je monoid
+Reduktor se modifikuje samo preko funkcije reduce jer je onda isto izmenjen kao da smo pokretali program serijski (dodavanje na kraj liste je isto paralelno i serijski)
+
+CEAN omogucava rad sa nizovima na visokom nivou, kompajler sve apstrahuje
+Operator sekcije je arr[od:koliko:korak], koliko >= 1, korak != 0, ceo niz je [:]
+Moguce nad nizovima vise dimenzija A[:][:] - cela matrica, A[0:2][1:3] - za red 0 i 1, izaberi kolone 1, 2, A[0:2:3] - A[0] i A[3]
+Rang - broj trojaka (od, koliko, korak)
+A[4:3] = A[3:3], (broj elemenata mora da se poklapa) - A[4] = A[3], A[5] = A[4], A[6] = A[5]
+Gather - stavljamo elemenete iz niza in u niz out, po indexu index: out[a:b:c] = in[index[x:y:z]], Scatter - obrnuto: out[index[x:y:z]] = in[a:b:c]
+Map: out[x:y:z] = fn(in[x:y:z], in2[x:y:z])
+
+# TBB
+
+Pravimo klasu gde operator () overloadujemo sa funkcionalnoscu jednog iteracionog prostora
+blocked_range<T> opisuje jednodimenzioni prostor, a blocked_range2d dvodimenzioni
+
+Parallel for deli neki iteracioni prostor na podprostore koji se izvrsavaju serijski
+
+gransize iteracija operatora() treba da traje oko 100_000 ciklusa procesora - podesiti empirijski za najbolje rezultate
+Prevelik gransize moze da redukuje paralelizam, al bolje da bude veci nego manji jer kad je manji onda moze da redukuje i serijski kod sto jako usporava siste
+
+Particioneri: (sluze za sugestije kompajleru koliko da bude serijskih blokova obrade)
+    simple,
+    auto,
+    affinity - kada su podaci dovoljno mali pa mogu da stanu u cache i kad se radi nad istim podacima
+    static
+
+Parallel reduce je kao Parallel for al glumi redukciju uz pomoc nekog objekta reduktora koji ima join metodu i konstruktor deljenja
+
+Parallel for each se koristi kada ne znamo iteracioni prostor u napred (slozena obrada)
+
+Protocna obrada je obrada po pajpovima 1. | 2. | 3. | ... | n.
+Omogucava kompleksno obradjivanje zadataka paralelno i serijski preko sledecih filtera: serial_in_order, parallel, serial_out_of_order; gde svaki filter moze da radi jednu funkcionalnost (u vidu jedne funkcije transformacije podataka)
+Broj tokena ogranicava kreiranje novih obrada na ulazu dok se ne obrade svi na izlazu
+Najsporiji filter je usko grlo, a paralelna obrada moze biti ogranicena i velicinom prozora (ne staje u cache) i brojem zetona
+
+Nelinearna protocna obrada se svodi na linearnu, al se gubi malo na kasnjenju
+
+Kod grafova toka, grane su komunikacioni kanali a cvorovi su zadaci
+Grafovi toka podataka objasnjavaju kako ce zadaci prosledjivati podatke jedni do drugih i gde ce zavrsiti
+Grafovi zavisnosti objasnjavaju sta treba da se uradi (i kada, u smislu pre cega) da bi se postigao nekakav cilj
+Objekat grafa predstavlja kolekciju cvorova i grana. Cvor grafa obavlja operacije na dolazim porukama i generise izlazne poruke. Grane omogucavaju komunikaciju cvorova: neki cvor nekad nece moci da primi poruku, pa grana moze da ide u modove pull i push, da bi grana ostala efikasna. Moguce je gurnuti poruku samo jednom sledbeniku ili svim sledbenicima. Nekada grana nece moci nikome da gurne poruku, pa je moze sacuvati ili odbaciti. Moguce je rezervisati poruke, a cvor koji rezervise nema bafere.
+
+Kontejneri su zasticeni semaforima. TBB koristi dve metode: fino zakljucavanje i druge niti popravljaju efekte ometanja. Trebaju se koristiti samo ako postoji paralelizam. Konstruktor i destruktor ne smeju paralelno.
+
+Konkurentna hes mapa koristi hash compare strukturu za poredjenje.
+Konkurentan vektor ceka da i-ti element bude konstruisan.
+Konkurentan red odrzava redosled ubacivanja, a konkurentni bounded queue ima ogranicenu velicinu i ima blokiranje. Za redove su for_each i protocna obrada efikasniji. Oni su usko grlo zbog odrzavanja FIFO strukture.
+
+Mutex je objekat koji nit moze zakljucati i samo jedna nit ima kljuc.
+Spin mutex koristan samo ako se kljuc drzi kratko. Scoped lock je alternativan nacin koriscenja spin mutexa, zakljucava se sa acquire (umesto u konstruktoru), prepusti rad na kraju scope-a, a moze i pre sa release.
+Mutexi su potrebni ako neka nit pise u objekat, ali nije strasno ako vise niti cita iz objekta. Mozemo podici nivo mutexa za citanje u mutex za pisanje.
+Problemi: deadlock, convoying (kada OS prekine nit koja drzi mutex, pa ostale moraju cekati da ta nit dobije procesor i uradi svoje i tek onda otkljuca)
+
+Atomske operacije su bolje od operacija sa kljucem u nekim situacijama. Izbegavaju convoying. Osnovne operacije su citanje, upis, upis i vracanje stare vrednosti, dodavanje i vracanje stare vrednosti i zamena i vracanje stare vrednosti.
+
+scallable_allocator<T> resava problem skalabilnosti
+cache_aligned_allocator<T> rasava probleme sa baferom
+
+Rasporedjivac zadataka rasporedjuje zadatke na sve niti umesto jedan zadatak jedna nit, nije pravedan pa postize efikasnost
+Zadaci su puno laksi od niti jer ne istiskuju jedni druge, nemaju kontekst
+Dva nacina startovanja zadataka: parallel_invoke i task_group
+Obezbedjuje graf zadataka, svaki zadatak je cvor. Zadatak ima refcount, a to je koliko zadataka je on naslednik
+Algoritam rasporedjivanja balansira izvrsenje u dubinu i sirinu, hibridno. Dubina omogucava efikasnost cache-a, a sirina omogucava visok paralelizam
+
+# OpenCL
+
+OpenCL je okruzenje za heterogene arhitekture (arhitekture sa vise uredjaja CPU, GPU, FPGA)
+Kad imamo GPU, CPU moze da postane domacin i da sluzi za upravljacke delove, a GPU da radi glavne stvari
+OpenCL podrzava geometrijsku dekompoziciju i paralelizam zadataka
+
+Intenzivne aplikacije su intenzivne na nacine: upravljacke operacije, operacije nad podacima i racunanja
+
+Model platforme: domacin koordinira izvrsenje i vise procesora izvrsava OpenCL kod
+Model izvrsenja: definise kako treba konfigurisati okruzenje na domacinu i kako se jezgra izvrsavaju na uredjajima
+Model memorije: apstraktna hijerarhija memorije koju koriste jezgra
+Model programiranja: kako se model konkurencije preslikava na fizicke komponente sistema
+
+Ceo model je slican C funkciji, razlika je u modelu izvrsavanja
+
+Radna stavka je jedinica konkurentnog izvrsenja i izvrsava kernel funkciju, identifikuje sama sebe pomocu intrinzickih funkcija, biblioteka moze pokrenutni mnogo radnih stavki
+
+N-Dimenzioni Opseg oznacava kako da se radne stavke preslikaju na nacin izvrsenja jezgara
+
+Radna grupa ima radne stavke i moraju biti iste dimenzije kao N-Dimenzioni opseg
+Radne stavke u okviru radne grupe dele memoriju i mogu se sinhronizovati
+
+Platforma = implementacija OpenCL API-ja
+
+Kontekst je kontejner koji koordinira domacina i uredjaje, rukovodi memorijom uredjaja i vodi evidenciju o programima
+
+Za svaki uredjaj, mora da se napravi komandni red u okviru konteksta, a svaki dogadjaj postoji clEnqueue funkcija
+
+Memorijski objekti se dele na dve vste: bufferi i slike
+
+Zavrsetak (blokiranje dok se sve komande ne zavse) i praznjenje (blokiranje dok sve komande ne budu uklonjene iz reda)
+
+Pravljenje jezgara (kernel funkcija): prevodi se u fazu izvrsenja pomocu API funkcija OpenCL-a (clCreateProgramWithSource + clBuildProgram). Potom se postavljaju parametri jezgra (clSetKernelArg). I na kraju se pokrece jezgro (kernel funkjcija) sa clEnqueueNDRangeKernel.
+
+Memorija je podeljena na:
+    Globalna - svi je vide
+    Konstanta - podaci kojima pristupaju sve radne stavke
+    Lokalna - dele je radne stavke u okviru radne grupe
+    Privatna - privatna za svaki radnu stavku
+
+Start jezgra stvara NDO i stvara se resetka radnih stavki gde je svaka nezavisna od drugih, takodje se stvara resetka radnih grupa koje sadrze te stavke
+Vise radnih stavki se moze izvrsavati u jednoj niti
+
+Pozicija radne stavke u NDO se dobija pomocu intrinzickih funkcija (identifikovanje same sebe)
+
+Radne stavke se izvrsavaju kompletno nezavisne jedna od druge i nema garancija redosleda upisa / citanja. Ovim dobijamo potpunu konkurenciju ali je koriscenje semafora otezano
+
+OpenCL omogucuje sinhronizacione tacke i globalne su one koje omogucuju sinhronizaciju radnih stavki razlicitih grupa, a barijere su one koje omogucuju sinhronizaciju izmedju radnih stavki iste grupe (sve moraju doci do barijere da bi se sinhronizovale)
+
+Memorijski objekti koji dele ulancane komande su konzistentni:
+    u sinhronizacionim tackama
+    izmedju dve komande u redu sa ocuvanjem redosleda
+    kada jedna komanda generise dogadjaj koji druga ceka
+
+Memorija se pridruzuje kontekstima, a ne uredjajima pa OpenCL odrzava konzistentnost memorije preko vise uredjaja
+
+Redovi komandi mogu biti sa ocuvanjem redosleda dogadjaja i bez ocuvanja redosleda dogadjaja (onda mogu da se izvrsavaju paraleleno)
+
+Graf zadataka (OpenCL) se konstruise od dogadjaja, povezuje zadatke ulancane u bilo kom redu komandi, u okviru istog konteksta
+
+Postoje dva modela programiranja: rezim protocne obrade (jedan uredjaj ceka rezultate drugog) i rezim nezavisne obrade (vise uredjaja radi nezavisno)
+
+Povratni pozivi i ugradjena jezgra su mehanizmi radjenja nekog zadatka nazad u biblioteci
+
+# Strukturno PP
+
+Klasicno strukturno programiranje je stara paradigma sa operacijama poput do, while, ... i koristi se za programiranje od opsteg ka posebnom (top-down)
+
+Strukturno paralelno programiranje je zasnovano na >sablonima algoritamske strategije< koji su na srednjem nivou apstrakcije
+
+ŠAS je izmedju design-patterna i implementation-patterna
+ŠAS je algoritamski skelet i sastoji se od sematnike i implementacije
+
+3 Sablona su bitna:
+    ugnjezdavanje - specifirati neobavezni umesto obaveznog paralelizma
+    preslikavanje - deljenje problema na potprobleme
+    grananje-pridruzivanje - rekurzivno deli problem na potprobleme
+
+Sablon Ugnjezdavanje (blok A predstavlja neki program, blok A se koristi kao jedan podprogram u vecem bloku B):
+    Dubina ugnjezdavanja je neogranicena, svi sabloni podrzavaju ugnjezdavanje
+    Staticko, dinamicko
+    Problem - nemamo beskonacno resursa, a neki modeli programiranja oganicavaju nivo ugnjezdavanja
+
+Sabloni serijske kontrole toka:
+    Sablon sekvenca:
+        Zadaci se izvrsavaju redom
+
+    Sablon Izbor:
+        bira se koji od zadataka se izvrsava i moze se izvrsiti samo jedan
+
+    Sablon Iteracija (while petlja):
+        Problem - zadatak tela petlje moze zavisiti od prethodnih poziva (petljnom-nosene zavisnosti)
+        for je petlja sa zavisnoscu prethodnih poziva od promenjive i (iterator), ali se moze paralelizovati jer se znaju indexi i u napred
+        Mogu postojati neocigledne zavisnosti od prethodnih iteracija (x[a[i]] = x[b[i]], ovo nekad moze a nekad ne moze da se paralelizuje)
+
+    Sablon rekurzija:
+        Dinamicka forma ugnjezdavanja
+        Rekurzija na repu - moze se pretvoriti u teraciju
+
+Sabloni strukturne paralelne kontrole toka:
+    Sablon grananje-pridruzivanje:
+        Mrescenje u Cilk-u
+        Nije isto sto i barijera jer posle barijere sve niti nastavljaju, a posle sync-a samo jedna nastavljaju
+
+    Sablon preslikavanje (isto sto i map (reduce ha ha)):
+        Za svaki element niza se primenjuje funkcija koja ne sme da ima bocne efekte
+
+    Sablon obrade suseda:
+        Generalizuje preslikavanje (nisam siguran sta znaci)
+
+    Sablon redukcije:
+        Serijska redukcija kombinuje vise elemenata u jedan, funkcija asocijativna (monoid iz TBB)
+
+        Paralelna redukcija je isto kao serijska samo se moze iskoristiti osobina asocijativnosti pa se redosled sme menjati i tako se paralelizovati
+
+    Sablon skeniranja:
+        Scan je isto sto i reduce al vraca medjurezultate
+
+        Paralelni scan nije ocigledan jer svaka iteracija zavisi od prethodne, mnogo posla a linearno ubrzanje nije moguce
+
+    Sablon rekurencije:
+        Generalizacija petlje gde iteracije jesu medjusobno zavisne
+
+        Paralelizuju se 1D i nD rekurencije ciji el sadrze asocijativne operatore
+
+Sabloni serijskog rukovanja podacima:
+    Slucajno citanje i pisanje:
+        Apstrakcija memorije, problem alijasa
+
+    Dodela steka:
+        LIFO, svaka nit svoj stek
+
+    Funkcijski objekti:
+        Lambda funkcije
+
+    Objekti:
+        Zasto ovo ucimo na paralelnom programiranju
+        Pridruzuju podatke funkcijama, ako imamo subklasu koja overrajduje metodu, mozda GPU nema tu vtabelu
+
+Sabloni paralelnog rukovanja podacima:
+    Sablon pakovanja:
+        Eliminisanje nekoriscenog prostora u zbirci podataka
+
+    Sablon protocne obrade:
+        Koristi ga TBB i OpenCL, mala skalabilnost
+
+    Sablon geometrijske dekompozicije:
+        Zbirka podataka na skup zbirki (ne mogu da shvatim detaljnije)
+
+    Sablon skupljanja:
+        Map + samo neki elementi
+
+    Razbacivanje:
+        Suprotno od skupljanja (ne razumem poentu)
+
+Drugi paralelni sabloni:
+    Sablon Superskalarna sekvenca:
+        vise ne postoji redosled izvrsavanja kao kod obicne sekvence (uredjene liste zadataka) i zadaci se rasporedjuju samo u skladu sa zavisnostima
+
+    Buduce vredosti, spekulativni izbor, gomilanje posla, pretraga, segmentacija, prosirivanje, redukcija kategorija, prepisiavanje delova grafa
+
+Nedeterministicki sabloni:
+    Grananje i ogranicavanje, Transakcije

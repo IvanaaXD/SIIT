@@ -78,6 +78,21 @@ t3) merge f1
 * 5df919d t0
 ```
 
+git init
+git commit t0
+git branch f1
+git branch f2
+git commit t1
+git checkout f1
+git commit t2
+git checkout main
+git merge f1
+git checkout f2
+git commit t3
+git commit t5
+git checkout main
+git merge f2
+
 t0) foo > 0
 t1) baz > 1
 t2) f1 : foo > 11
@@ -110,6 +125,10 @@ t6) merge f2
 |/
 * eb503a0 t0
 ```
+
+git init
+git commit
+
 
 upustvo za konvenciju ispod: f2(t0) - znači da se grana f2 napravila sa početnim commit-om t0.
 
@@ -154,6 +173,10 @@ t11) main merge f1
 |/
 * cffbfab t0
 ```
+
+git init
+git commit t0
+
 
 t0) foo > 0
 t1) f1 : foo > 2

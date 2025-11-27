@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name" translatable="false">ShopApp</string>
+    <string name="shop_app" translatable="false">Shop App</string>
+    <string name="home">Home</string>
+    <string name="fragment_1">fragment 1</string>
+    <string name="fragment_2">fragment 2</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="explicit_intention">Explicit intention</string>
+    <string name="implicit_intention">Implicit intention</string>
+</resources>

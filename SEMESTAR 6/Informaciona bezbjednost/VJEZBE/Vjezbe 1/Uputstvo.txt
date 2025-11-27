@@ -1,0 +1,11 @@
+Uputstvo:
+
+Video je dostupan na sledećem linku: https://drive.google.com/file/d/1_HHu3hibq87GS88Om06pBQwDgugZI4w9/view?usp=share_link
+
+Međutim! Projekte sam pretvorio u Maven projekte kako bih vam olakšao rukovanje zavisnostima. Kroz Eclipse ih samo importujte kao Maven projekte, i trebalo bi da radi...
+
+
+Takođe, kako biste mogli da odradite IBMailClient zadatak, morate mi se javiti kako bih dodao vaš mail u listu testnih korisnika. 
+Dok vam ne dodam mail, Google aplikaciji neće dozvoliti pristup vašem sandučetu.
+
+Ako budete imali bilo kakvih poteškoća, slobodno mi se obratite na samom terminu vežbi, ili mi pišite.

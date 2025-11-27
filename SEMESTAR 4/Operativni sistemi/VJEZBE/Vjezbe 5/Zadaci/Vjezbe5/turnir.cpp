@@ -15,6 +15,7 @@ Povratna vrednost ove operacije je mesto koje je takmicar osvojio.
 Podrazumeva se dva takmicara nikad nece osvojiti isti broj poena.
 
 */
+
 /*
 class Turnir {
 public:
@@ -43,5 +44,4 @@ void takmicar(Turnir& t) {
              << ". mesto." << endl;
     }
 }
-
 */
